@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Mempelajari mengenai penggunaan git dan juga membahas tentang apa yang perlu dipelajari pada saat magang.
+
+Pembelajaran yang Diperoleh
+Penggunaaan git, sistem kerja yang diterapkan pada saat magang, materi basic yang digunakan pada saat magang.
+
+Kendala yang Dialami
+Materi masih diluar jangkauan peserta dan peserta masih malu untuk bertanya sehingga susah memahami materi yang diberikan.

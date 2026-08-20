@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Mencoba STM32U575VGT6 LED Blink menggunakan CubeIDE dan CMake serta melakukan flash menggunakan CubeProgrammer.
+
+Pembelajaran yang Diperoleh
+Memahami cara dari STM32U575VGT6 LED Blink menggunakan CubeIDE dan CMake serta melakukan flash menggunakan CubeProgrammer.
+
+Kendala yang Dialami
+Laptop tidak bisa membaca STM32U575VGT6 sehingga flash dilakukan menggunakan laptop lain yang bisa terhubung.

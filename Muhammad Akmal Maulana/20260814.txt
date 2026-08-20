@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Melakukan simulasi gerbang logika menggunakan nMOS dan pMOS serta melakukan presentasi mengenai hal yang telah dilakukan hari ini.
+
+Pembelajaran yang Diperoleh
+Memahami gerbang logika menggunakan nMOS dan pMOS, simulasi arduino dan praktik simpel pada mikropython.
+
+Kendala yang Dialami
+tidak ada kendala berarti hanya kendala ringan dalam memahami susunan chip dan tidak bisa melakukan presentasi dengan percaya diri.

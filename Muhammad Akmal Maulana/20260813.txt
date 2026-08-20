@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Mempelajari mengenai gerbang logika, transistor FET dasar, mencoba simulasi latch dan flip flop dasar, dan mempelajari arsitektur komputer.
+
+Pembelajaran yang Diperoleh
+Memahami dasar dari gerbang logika sehingga bisa mensimulasikannya dan juga memahami dasar dari komponen komputer.
+
+Kendala yang Dialami
+Merasa sulit untuk memahami control unit, ALU, dan Memori dan mencoba simulasi gerbang logika enable flipflop.

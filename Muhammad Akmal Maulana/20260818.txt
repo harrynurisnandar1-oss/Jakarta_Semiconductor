@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Mempelajari STM32U5VG secara dasar beserta menginstall aplikasi yang akan digunakan yaitu STM32CubeMX.
+
+Pembelajaran yang Diperoleh
+Memahami fitur dasar dari STM32U5VG dan persiapan konfigurasi sistem menggunakan aplikasi STM32CubeMX.
+
+Kendala yang Dialami
+Karena WFA maka tidak bisa melakukan diskusi seperti biasanya dan komunikasi hanya lewat chat Whatsapp.

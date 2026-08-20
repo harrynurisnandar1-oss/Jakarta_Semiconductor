@@ -1,0 +1,9 @@
+Uraian Aktivitas
+
+Berdiskusi mengenai materi yang berkaitan dengan semikonduktor di bidang fisika dan teknik elektro serta di berikan referensi terkait. Dan mencoba melakuak git untuk dokumentasi.
+
+Pembelajaran yang Diperoleh
+Saya mempelajari gambaran umum semikonduktor dalam fisika dan teknik elektro, serta mencari referensi untuk memperdalam pemahaman. Saya juga mencoba menggunakan Git untuk mendokumentasikan hasil belajar agar lebih terstruktur dan mudah dilacak.
+
+Kendala yang Dialami
+Kendala yang saya alami adalah masih kesulitan memahami beberapa konsep dasar semikonduktor dan istilah dalam teknik elektro. Selain itu, saya juga masih perlu beradaptasi dengan penggunaan Git, terutama dalam proses dokumentasi dan pengelolaan perubahan.

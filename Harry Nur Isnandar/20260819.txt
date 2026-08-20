@@ -1,0 +1,19 @@
+Uraian Aktivitas
+
+08:02 19/08/2026 belajar tentang STM32U575VGT6
+08:31 19/08/2026 belajar tentang STM32 CubeMX dan CMake
+09:17 19/08/2026 instalasi dari configure dan ninja dan gnui arm 
+
+# download ninja dengan sudo apt install ninja
+# download gnu-toolchains-for-arm https://www.st.com/en/development-tools/stm32cubeclt.html
+
+- Menyediakan toolchain lintas platform untuk sistem operasi host Microsoft Windows.
+- Menyediakan berbagai varian toolchain yang dapat digunakan untuk pengembangan embedded bare-metal dan untuk pengembangan kernel dan aplikasi Linux.
+
+12:17 19/08/2026 belajar
+
+13:06 19/08/2026 instalasasi STM32CubeProgrammer
+
+13:36 19/08/2026 melakukan uji coba cmake dan STM32CubeProgrammer menggunakan STM32U575GT6
+
+14:41 19/08/2026 melakukan uji coba cmake dan STM32CubeProgrammer menggunakan STM32G030F6P6

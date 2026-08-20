@@ -1,0 +1,10 @@
+Uraian Aktivitas
+
+men install example app, mulai dari GPIO untuk LED blink, lalu ke UART, cek ThreadX RTOS, dan mempelajari UART DMA
+
+Pembelajaran yang Diperoleh
+menambah pengetahuan akan STM32CubeMX dan STM32CubeU5, dan mempelajari isi dari STM32U5 itu sendiri.
+
+Kendala yang Dialami
+
+Laptop yang saya punya menjadi lemot alhasi saya mencoba satu-satu sehingga efisiensi menjadi kurang maksimal.

@@ -1,0 +1,43 @@
+- Uraian aktivitas
+
+08:26 14/08/2026 Pengarahan untuk melenceng atau tidak, dan ada evaluasi kerja.
+
+09:09 14/08/2026 Belajar tentang sistem digital kombinasional dari ALU.
+
+12:54 14/08/2026 melanjutkan mempelajari resing edge.
+
+13:42 14/08/2026 depression layer buat supaya jadi konduktor.
+
+14:00 14/08/2026 belajar menyampaikan sesuatu secara urut.
+
+14:17 14/08/2026 pengetahuan resistor, kalua pull down input akan selalu low.
+
+14:24 14/08/2026 belajar tentang falling time dan prasing time slew rate.
+
+14:27 14/08/2026 belajar materi training, agar bisa berkembang.
+
+14:29 14/08/2026 sering ke jurnal git.
+
+14:31 14/08/2026 belajar tools ai.
+
+15:00 14/08/2026 belajar stm32 minimal datasheet aristektur U5.
+
+15:03 14/08/2026 belajar i2j UART.
+
+15:05 14/08/2026 belajar assembler, pake tools cimic.
+
+15:06 14/08/2026 tool chain di compile jadi Bahasa mensin pake linker .hack atau .bin asci.
+
+15:11 14/08/2026 kalo komunikasi 10 pangkat, kalau byte 2 pangkat.
+
+15:19 14/08/2026 presentasi dibantu validasi ada watermark nya. kalua alat dilihat sampai terakhir dikalibrasi kapan/ tanggal berlalu kalibrasi sampai kapan.
+
+15:24 14/08/2026 belajar op amp ( cara kerja sampai dan apa itu secara garis besar)
+
+- Pembelajaran yang Diperoleh
+
+Belajar tentang mosfet, dan teori yang mendasari pembuatan produk. Beserta presentasi materi yang sudah dipelajari.
+
+- Kendala yang Dialami
+
+Masih bingung bagaimana materi yang akan digunakan dan mencoba micropython. Beserta banyak teori yang harus dikejar.

@@ -1,0 +1,11 @@
+Uraian Aktivitas
+
+Mempelajari aristektur komputer dari sistem digital, bahasa assembly, dan mencoba simulasi dari 16 bit AND, OR, Adder, Substractor, ALU. Yang kemudian mempelajari tentang apa itu ODM, dan pengaplikasian smart meteran, seperti DLMS/COSEM.
+
+Pembelajaran yang Diperoleh
+
+Saya lumayan memahami DLMS/COSEM, dan menambah ilmu tentang gerbang logika, dan arsitektur komputer secara konsep, dan mempunya berberapa pertanyaan yang dapat di diskusikan
+
+Kendala yang Dialami
+
+karena banyak yang harus dipelajari, maka banyak mencari referensi buku. Saya Mengabiskan sehari untuk mempelajari materi dasar.

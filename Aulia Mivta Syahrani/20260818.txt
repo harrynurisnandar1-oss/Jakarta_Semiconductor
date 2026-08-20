@@ -1,0 +1,10 @@
+Laporan Harian 18 Agustus 2026 Aulia Mivta Syahrani
+
+Uraian Aktivitas:
+Saya mempelajari STM32U575VG dan membuat rangkaian Op-Amp menggunakan Proteus. Selanjutnya, saya menginstal software STM32CubeMX dan STM32CubeU5. Setelah itu, saya mencoba menjalankan STM32CubeU5 melalui STM32CubeMX dan mempelajari beberapa aplikasi yang tersedia.
+
+Pembelajaran yang Diperoleh:
+Saya memahami karakteristik STM32U575VG, khususnya bahwa batas tegangan HIGH dan LOW pada pin input ditentukan berdasarkan parameter VIH dan VIL pada datasheet. Saya juga memahami bahwa pin I/O STM32U575VG dirancang kompatibel dengan level logika CMOS dan TTL, yang memiliki karakteristik batas tegangan berbeda sehingga perlu mengacu pada spesifikasi VIH dan VIL STM32U575VG. Selain itu, saya memahami dasar penggunaan Proteus untuk simulasi rangkaian Op-Amp serta penggunaan STM32CubeMX dan STM32CubeU5 beserta beberapa contoh aplikasinya, seperti GPIO, UART, dan ThreadX RTOS.
+
+Kendala yang Dialami:
+Pada kegiatan magang hari ini tidak terdapat kendala. Proses instalasi software, pembelajaran materi, dan pembuatan rangkaian Op-Amp menggunakan Proteus dapat dilakukan dengan baik.

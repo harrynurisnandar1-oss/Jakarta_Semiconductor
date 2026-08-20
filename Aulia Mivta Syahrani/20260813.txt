@@ -1,0 +1,10 @@
+Laporan Harian 13 Agustus 2026 Aulia Mivta Syahrani
+
+Uraian Aktivitas:
+Hari ini saya mempelajari dasar Git dan Version Control, CU, ALU, memory, sistem bilangan, logic gates, transistor, dan flip-flop. Saya juga melakukan simulasi rangkaian logic gate AND, OR, dan Adder, serta belajar membuat repository di GitHub. Selain itu, saya menyaksikan peluncuran Motor Listrik Nasional (Molinas) secara daring melalui live streaming di YouTube.
+
+Pembelajaran yang Diperoleh:
+Saya memahami cara menggunakan Git dan GitHub serta mengetahui bahwa Version Control merupakan sistem yang merekam perubahan pada file dari waktu ke waktu. Saya juga memahami Git sebagai salah satu contoh Distributed Version Control; perbedaan CU, ALU, dan memory; cara konversi bilangan; serta karakteristik input dan output pada logic gates. Selain itu, saya mengetahui cara membuat repository di GitHub dan memahami peran PT Len Industri (Persero) sebagai lead integrator dalam pengembangan ekosistem Motor Listrik Nasional (Molinas).
+
+Kendala yang Dialami:
+Kendala yang saya hadapi adalah terdapat beberapa materi yang belum pernah dipelajari sebelumnya dan masih cukup awam sehingga membutuhkan waktu untuk memahami konsep dan penerapannya.

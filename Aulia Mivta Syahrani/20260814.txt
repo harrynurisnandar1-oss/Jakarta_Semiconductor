@@ -1,0 +1,10 @@
+Laporan Harian 14 Agustus 2026 Aulia Mivta Syahrani
+
+Uraian Aktivitas:
+Mempelajari embedded system dan Raspberry Pi USB Type-C RP2040, kemudian saya membuat Simulasi Sistem Pencahayaan Otomatis Berbasis Sensor LDR menggunakan Arduino Uno melalui Tinkercad dan mempresentasikannya ke rekan setim dan mentor. Selanjutnya, dilakukan diskusi dan evaluasi terkait pelaksanaan kegiatan magang. Saya bersama tim mendapat arahan untuk melaporkan kegiatan kerja secara kolaboratif menggunakan Git, serta mempelajari STM32U575VG beserta datasheetnya, CMake, dan Op-Amp. Selain itu, mentor memberikan arahan mengenai pembelajaran yang perlu dipersiapkan untuk minggu berikutnya, meliputi penggunaan avometer dan power supply, karakterisasi device, serta pembuatan kurva karakteristik transistor.
+
+Pembelajaran yang Diperoleh:
+Memahami konsep dasar embedded system dan pemrograman Arduino Uno. Memahami konfigurasi pin Raspberry Pi USB Type-C RP2040 beserta pemrogramannya melalui Micropython. Memperoleh pemahaman dasar mengenai transistor NMOS dan PMOS serta instruksi rising edge.
+
+Kendala yang Dialami:
+Selama kegiatan magang tidak terdapat kendala teknis. Kegiatan dapat berjalan dengan baik dengan adanya arahan, pendampingan, dan evaluasi dari mentor. Beberapa materi seperti STM32U575VG, CMake, karakterisasi device, dan Op-Amp masih perlu dipelajari dan diperdalam secara mandiri.

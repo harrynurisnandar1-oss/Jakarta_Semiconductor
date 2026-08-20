@@ -1,0 +1,10 @@
+Laporan Harian 19 Agustus 2026 Aulia Mivta Syahrani
+
+Uraian Aktivitas:
+Saya menginstal beberapa software yang diperlukan untuk pemrograman mikrokontroler STM32, yaitu CMake, STM32CubeProgrammer, STM32TrustedPackageCreator, dan STM32CubeCLT. Saya mempelajari debugging pada STM32, serta berhasil membuat dan menjalankan program untuk LED Blink pada STM32U575VGT6. Saya juga menjalankan program Raspberry Pi Pico melalui software Thonny.
+
+Pembelajaran yang Diperoleh:
+Saya mempelajari penggunaan beberapa software untuk pemrograman mikrokontroler STM32, serta memahami tahapan dasar dalam melakukan build, pemrograman, dan debugging. Saya memperoleh pengalaman dalam membuat serta menjalankan program LED Blink pada STM32U575VGT6. Selain itu, saya mempelajari penggunaan Thonny untuk menjalankan program pada Raspberry Pi Pico.
+
+Kendala yang Dialami:
+Kendala yang saya hadapi adalah proses instalasi beberapa software membutuhkan kapasitas penyimpanan cukup besar. Untuk mengatasinya, saya membersihkan beberapa file yang sudah tidak digunakan sehingga tersedia ruang penyimpanan yang cukup.

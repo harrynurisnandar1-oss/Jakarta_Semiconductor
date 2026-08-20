@@ -1,0 +1,10 @@
+Laporan Harian 12 Agustus 2026 Aulia Mivta Syahrani
+
+Uraian Aktivitas:
+Hari ini saya mulai melaksanakan magang di kantor Jakarta Selatan, saya mendapatkan gambaran mengenai pekerjaan dan tanggung jawab selama magang, khususnya terkait pengembangan Original Design Manufacturing (ODM) pada bidang semikonduktor. Saya juga mendapatkan arahan mengenai pentingnya percaya diri, bertanggung jawab, serta menjaga nilai dan integritas dalam bekerja. Selain itu, dilakukan diskusi dan sharing mengenai industri semikonduktor dan elektronika, serta pengenalan terhadap materi yang akan dipelajari, seperti penurunan rumus, dasar Linux dan Windows, arsitektur komputer, transistor, dioda, kriptografi, keamanan siber dan data, debugging, Git dan GitHub, serta dasar pembuatan PCB.
+
+Pembelajaran yang Diperoleh:
+Memahami gambaran awal pekerjaan di bidang semikonduktor, khususnya terkait pengembangan Original Design Manufacturing (ODM), serta mengetahui berbagai kompetensi teknis yang perlu dipelajari, seperti dasar Windows, Linux dan Windows, arsitektur komputer, transistor, dioda, kriptografi, keamanan data, debugging, Git/GitHub, dan pembuatan PCB. Memahami cara membuat GitHub Repository. Selain itu, saya memahami pentingnya percaya diri, bertanggung jawab, berintegritas, dan aktif belajar dalam melaksanakan pekerjaan.
+
+Kendala yang Dialami:
+Selama pelaksanaan magang pada hari ini, tidak terdapat kendala teknis. Saya mendapatkan arahan dari mentor untuk selalu percaya diri, aktif belajar, bertanggung jawab terhadap setiap tugas yang diberikan, serta memperdalam pemahaman mengenai bidang semikonduktor.

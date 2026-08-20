@@ -1,0 +1,13 @@
+Rabu, 19 Agustus 2026 
+
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Hari ini saya mencoba board development STM32U575VGT6 menggunakan STM32CubeIDE, berhasil melakukan konfigurasi pin melalui STM32CubeMX, generate code, dan flashing program ke board. Saya menguji program blink LED pada GPIOB Pin 7 dan GPIOC Pin 7 dan berhasil menyalakan LED sesuai program. Selain itu mencoba melakukan setup environment development menggunakan VSCode dengan menginstall extension C/C++ dan CMake sebagai alternatif dari STM32CubeIDE.
+
+Pembelajaran yang Diperoleh
+Saya belajar cara melakukan konfigurasi GPIO pada mikrokontroler STM32 menggunakan STM32CubeMX, mulai dari pemilihan pin hingga generate code otomatis ke STM32CubeIDE. Selain itu saya belajar bahwa beberapa board STM32 sudah memiliki ST-Link bawaan sehingga tidak memerlukan programmer eksternal untuk proses flashing.
+
+Kendala yang Dialami
+Mengalami kendala saat mencoba melakukan flashing program pada board STM32H562VGT6 menggunakan environment VSCode dengan CMake. Proses flashing tidak menghasilkan output yang diharapkan karena LED pada board tersebut belum menyala setelah program dijalankan. 

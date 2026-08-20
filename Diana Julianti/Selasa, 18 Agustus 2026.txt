@@ -1,0 +1,13 @@
+Selasa, 18 Agustus 2026 
+
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Hari ini berhasil melakukan instalasi STM32CubeIDE dan STM32CubeU5 untuk mendukung pengembangan program pada mikrokontroler STM32U575VG. Selanjutnya mempelajari konsep dasar GPIO untuk LED Blink. Saya juga mempelajari struktur dan informasi pada datasheet STM32U575VG. Saya juga berhasil melakukan instalasi STM32CubeMX dan STM32CubeProgrammer.
+
+Pembelajaran yang Diperoleh
+Saya memahami dasar penggunaan STM32CubeIDE dan STM32CubeU5 serta konsep GPIO sebagai output digital melalui simulasi LED Blink. 
+
+Kendala yang Dialami
+Kendala yang dialami adalah proses instalasi STM32CubeIDE dan STM32CubeU5 sempat mengalami beberapa error dan kendala saat mengakses atau mengunduh software. Saya perlu mencoba beberapa langkah untuk menyelesaikan masalah instalasi dan memastikan software dapat digunakan dengan baik. Setelah melakukan beberapa percobaan dan penyesuaian, proses instalasi akhirnya berhasil.

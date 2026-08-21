@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Mempelajari mikrokontroler STM32H562VGT6 dan American Standard Code for Information Interchange (ASCII). Mengunggah jurnal kerja ke GitHub. Menjalankan komunikasi UART pada STM32H562VGT6 menggunakan software STM32CubeMX, STM32CubeProgrammer, CMake, dan PuTTY. Mendapat arahan dari Prof. Yoga Darma Setiawan, Ph.D. dan Ibu Amalia Maya Fitri agar melaksanakan magang dengan aktif untuk membangun pengalaman profesional serta menjadi pionir dalam pengembangan semikonduktor dan AI Agent.
+
+Pembelajaran yang Diperoleh
+Memahami dasar mikrokontroler STM32H562VGT6 dan alur pengkodean ASCII. Berhasil mengirim data menggunakan protokol komunikasi UART dengan menampilkan pesan "Hello World" pada PuTTY. Semakin termotivasi untuk berkontribusi dalam mengembangkan teknologi semikonduktor dan AI Agent di Indonesia.
+
+Kendala yang Dialami
+Belum dapat menjalankan komunikasi UART pada STM32H562VGT6 menggunakan ST-Link karena STM32CubeProgrammer mengalami freeze akibat kapasitas penyimpanan laptop yang hampir penuh. Untuk mengatasinya, saya menghapus beberapa aplikasi yang sudah tidak diperlukan agar tersedia ruang penyimpanan yang cukup.

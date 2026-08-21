@@ -1,0 +1,37 @@
+Uraian Aktivitas
+
+08:13 21/08/2026 Mempelajari buku Making Embedded System.
+
+09:00 21/08/2026 Membaca sistem arsitektur.
+
+09:35 21/08/2026 Mempelajari bagaimana code bekerja.
+
+11:00 21/08/2026 Mempelajari Manajemen task.
+
+13:03 21/08/2026 Mempelajari komunikasi dengan peripheral.
+
+13:44 21/08/2026 Mempelajari buku tentang debugging the 9 indispensable rules.
+
+15:25 21/08/2026 Membaca chapter 4 make it fail
+
+16:30 21/08/2026 Membaca chapter 5 Quit Thinking and Look
+
+Pembelajaran yang Diperoleh
+
+Memahami cara men debugging sesuatu. Dimulai dari membaca buku manual atau data sheet, dan buat suatu program bermasalah agar tahu keseluruhan program.
+
+Kendala yang Dialami
+
+Masih belum memahami dan membaca sepenuhnya buku tersebut sehingga di lanjutkan kemudian agar bsisa dipahami sepenuhnya.
+
+Pertanyaan 
+
+di hal 29-30 maksud dari Stimulate the failure dan But don't simulate the failure?
+
+di hal 33-34 bagian what if it's intermittent, saat sudah dilakukan testing suatu produk di lakukan debug lagi?
+
+di hal 35 bagian A hard Look at Bad Luck harus bersiap segala kemungkinan terburuk?
+
+di hal 37 berarti jangan percaya statistik sepenuhnya karena kemungkinan hanya beruntung?
+
+

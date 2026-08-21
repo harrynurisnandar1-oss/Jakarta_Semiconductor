@@ -1,0 +1,12 @@
+07:51 21/08/2026 Mencoba Receive DMA
+09:11 21/08/2026 mengulang program dari awal
+11:17 21/08/2026 istirahat menyoba Receive DNA
+13:14 21/08/2026 Belajar DMA, GPDMA, dan LPDMA
+15:07 21/08/2026 melanjutkan membaca MicroPython
+16:38 21/08/2026 Hal 92 
+
+Pembelajaran yang Diperoleh
+Mengetahui perbedaan DMA, GPDMA, dan LPDMA dan mengetahui proyek-proyek sederhana menggonakan Raspberry Pi Pico.
+
+Kendala yang Dialami
+Masih belum bisa melakukan Receive DMA pada STM32 H562T6 karena belum mengenal GPDMA yang digunakan pada MCU tersebut

@@ -1,0 +1,15 @@
+07:50 20/08/2026 Belajar mengenai UART
+09:11 20/08/2026 flash mencoba program UART STM32H562VGT6
+09:51 20/08/2026 Pembahasan Job yang dilakukan tetapi belajar istilah istilah terlebih dulu
+13:28 20/08/2026 Mencari informasi mengenai Receive DMA
+
+CIP DNS motor controller
+STM32M
+
+Next target Receive DMA
+
+Step In step out
+
+Confidentiality, integrity, and availability
+
+

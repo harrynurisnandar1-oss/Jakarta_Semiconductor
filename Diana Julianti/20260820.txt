@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Hari ini belajar mengenai STM32H562VG, UART, ASCII, serta mendapat arahan dari mentor untuk mempelajari lebih lanjut terkait konsep dan cara penggunaan GIT. Selain itu mempelajari perbedaan antara MCU dan MPU, alur ASCII hingga dapat mengirimkan data, serta mencoba langsung menggunakan STM32H562VGT6. Berhasil mengirim data menggunakan komunikasi UART, dan mendapat arahan dari mentor untuk selanjutnya mempelajari DMA. Selain itu juga mencoba menghubungkan STLink STM32F723 dengan STM32H562VGT6 tapi belum berhasil.
+
+Pembelajaran yang Diperoleh
+Memahami dasar STM32H562VG dan ASCII. Mengetahui perbedaan mendasar antara MCU dan MPU, serta memahami bahwa security itu sudah harus ada dari awal desain sistem, bukan sekadar tambahan (add on) di akhir. Memahami alur kerja ASCII hingga proses pengiriman data, serta berhasil mempraktikkan komunikasi UART pada STM32H562VGT6.
+
+Kendala yang Dialami
+Belum berhasil melakukan flash dan single step menggunakan STLink STM32F723 dengan STM32H562VGT6, sehingga proses debugging masih terkendala dan perlu dipelajari lebih lanjut cara mengatasinya. 

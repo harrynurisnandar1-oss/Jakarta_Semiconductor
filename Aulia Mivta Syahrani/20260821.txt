@@ -1,0 +1,20 @@
+Kehadiran
+Hadir
+
+Uraian aktivitas
+08:09 21/08/2026 Membaca buku "Get started with MicroPython on Raspberry Pi Pico" dan mempelajari bab 3, "Physical computing".
+09:48 21/08/2026 Mempelajari kembali materi mengenai cara membaca nilai resistansi pada resistor.
+11:32 21/08/2026 Mempelajari datasheet STM32H562VGT6.
+13:13 21/08/2026 Mempelajari Embedded SRAMs dan Flexible Memory Controller (FMC) pada STM32H562VGT6.
+15:25 21/08/2026 Membaca buku "Making Embedded Systems", bab 1, "Introduction".
+16:19 21/08/2026 Mempelajari bab 2, "Creating a System Architecture" mengenai software block diagram.
+
+Pembelajaran yang diperoleh
+Memahami konsep physical computing pada Raspberry Pi Pico, meliputi konfigurasi pin, komponen elektronika yang digunakan untuk membuat suatu proyek, serta pembacaan nilai resistor berdasarkan kode warna.
+Memahami RAM sebagai memori sementara yang terdiri dari beberapa jenis, seperti SRAM dan DRAM. SRAM memiliki akses yang lebih cepat dan tidak memerlukan refresh, sedangkan DRAM memerlukan refresh secara berkala untuk mempertahankan data.
+Mengetahui bahwa proses debugging pada embedded system melibatkan komunikasi antara PC dan processor target melalui debug interface seperti JTAG.
+Memahami fungsi software block diagram untuk menggambarkan struktur dan hubungan antar-komponen perangkat lunak dalam suatu sistem.
+
+Kendala yang dialami
+Terdapat beberapa istilah teknis pada datasheet dan buku referensi yang masih belum familiar, sehingga perlu dipelajari dan dipahami secara bertahap.
+Terdapat beberapa materi yang memerlukan waktu untuk dipahami karena memiliki konsep yang cukup teknis.

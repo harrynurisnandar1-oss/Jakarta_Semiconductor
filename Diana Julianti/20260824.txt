@@ -1,0 +1,50 @@
+7:42 AM 8/24/2026 Nanti setelah uji coba, Bikin rencana kerja
+
+9:13 AM 8/24/2026 Berhasil receive data "hello word" menyelesaikan masalah kenapa pada UART STLink STM32H562VGT6 tidak berhasil di PuTTY, dan akhirnya berhasil, masalah itu disebabkan karena saya salah isi COM brpa, saya menggunakan COM dri STLink di device manager seharusnya menggunakan UCB di device manager untuk tau COM brpa yang digunakan di PuTTY
+
+9:17 AM 8/24/2026 Mempelajari STM32 NUCLEO-U575ZI
+9:34 AM 8/24/2026 Mencoba blinking STM32 NUCLEO-U575ZI (CMake: Configure dan CMake: Build)
+10:15 AM 8/24/2026 Blinking berhasil 
+10:17 AM 8/24/2026 Mempelajari receive\transmit DMA 
+
+Transmit (TX) : board mengirim data keluar (misal ke PC lewat PuTTY atau ke modul lain)
+Receive (RX) : board menerima data masuk (misal dari yang aku ketik di keyboard PC via PuTTY)
+
+10:59 AM 8/24/2026 Mencoba receive/transmit DMA
+
+
+Menjalankan example yang sudah ada, jangan diubah
+
+3:03 PM 8/24/2026 Mendengarkan tutorial 
+
+Donwload STM32g
+buka hasil doanwload, project, pilih nucleo yang mana, examples, uart, pilih dma, di copy di simpen di UART_HyperTerminal_DMA
+buka ide, klik kanan, import pilih STM32CubeIde, klik centang terus finish
+langsung klik debug, klik switch, langsung resume kalau mau lihat step nya klik step over. Kalau udah debug otomatis keluar di Arduino, pastikan no line ending,  115200 baud.
+
+3:16 PM 8/24/2026 Mempelajari UART (settinganya apa aja) dan DMA
+
+dotC dan dotH di lf untuk diflash jdi 
+3:22 PM 8/24/2026 Representasi bilangan binnery
+
+Hal_OK = 0X00U
+Hal_ERROR = 0X01U
+Hal_BUSY = 0X02U
+Hal_Timout = 0X03U 
+ 
+
+untuk cek pemograman isinya apa di VSCode itu caranya: klik F12/ klik kanan Go To Definition
+
+3:32 PM 8/24/2026 Coba dipelajari onion:satu lokasi memori dibaca
+3:40 PM 8/24/2026 pakai Doxygen untuk dokmentasi pemograman
+
+
+3:45 PM 8/24/2026 Meteran yang kita pakai 3 fasa, listrik 3 fasa dan 1 fasa itu apasih? bagaimana cara ngukur arus listrik dan tegangan, bagaimana cara mikrokontroler bisa baca itu dan bisa mengukur arus dkk.
+3:47 PM 8/24/2026 Belajar tentang step down, step into dan step lainnya 
+
+Gak selalu semuanya bisa menggunakan single step
+
+
+3:49 PM 8/24/2026 Belajar circular buffer, call stack, LIFO (Last In, First Out), Stack Frame dan lingkup lainnya.
+
+3:57 PM 8/24/2026 Benar-benar harus belajar GIT dari yang dasar. 

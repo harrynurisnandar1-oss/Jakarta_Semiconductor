@@ -1,0 +1,21 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:19 26/08/2026 Mengevaluasi pelaksanaan magang selama dua minggu dengan menyampaikan kesan, pesan, serta kendala yang dialami.
+09:32 26/08/2026 Mempelajari Logic Analyzer 24MHz 8CH untuk memahami fungsi dan penggunaannya.
+10:25 26/08/2026 Membuat rencana kerja untuk seminggu ke depan.
+11:36 26/08/2026 Membaca buku "PRACTICAL ELECTRONICS FOR INVENTRORS" mengenai dasar-dasar elektronika. 
+13:37 26/08/2026 Mempelajari cara membaca sinyal logika serta memahami konversi data dari kode ASCII ke bentuk biner.
+15:33 26/08/2026 Melakukan pengujian komunikasi UART menggunakan aplikasi Docklight dan Logic Analyzer, tetapi gagal.
+16:04 26/08/2026 Berhasil melakukan pengujian komunikasi UART dengan mengirimkan data serial serta menganalisis sinyal digital yang diterima pada aplikasi Saleae Logic.
+
+Pembelajaran yang Diperoleh
+Memahami pentingnya memperkuat teori dasar sebelum melakukan praktik, terutama konsep teknis yang berkaitan dengan pengujian embedded system.
+Mengetahui bahwa logic analyzer digunakan untuk menangkap dan menganalisis sinyal digital.
+Mengetahui bahwa simbol ground memiliki beberapa jenis dan fungsi, seperti Earth Ground, Frame/Chassis Ground, dan Digital/Analog Ground, sehingga penggunaannya perlu disesuaikan dengan rangkaian.
+Mengetahui bahwa ASCII merupakan standar pengkodean karakter menjadi nilai numerik yang dapat direpresentasikan dalam bentuk biner.
+Memahami cara merepresentasikan karakter ASCII ke dalam bentuk biner melalui nilai heksadesimal.
+
+Kendala yang Dialami
+Sempat terkendala dalam melakukan pengujian komunikasi UART menggunakan aplikasi Docklight dan Logic Analyzer karena kabel USB tidak dapat terhubung dengan baik ke laptop. Kendala tersebut dapat diatasi dengan menghubungkan kabel USB ke port USB lainnya pada laptop.

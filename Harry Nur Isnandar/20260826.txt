@@ -1,0 +1,20 @@
+07:45 26/08/2026 Membuat panduan Kerja
+
+08:25 26/08/2026 Menyiapkan Peripheral Kerja
+
+09:06 26/08/2026 Menyusun apa yang mau di foto copy 3 jilid
+jilid 1 dari bab 1-3 basic wiring yang ke 
+Jilid 2 4-11 sensor dan analog 
+jilid 3 12-16 dan Apendix Digital MCU jilid 4 
+manapun minta daftar isi lengkap dan soft cover di setiap jilid 
+
+10:10 26/08/2026 Membaca buku tentang Cryptography for Dummies
+		 
+14:10 26/08/2026 Belajar tentang menampilkan dan membaca sinyal UART, dengan menggunakan logic analyzer
+
+14:15 26/08/2026 Menampilkan sinyal dengan aplikasi Docklight dan Saleae Logic
+
+15:34 26/08/2026 Mempelajari XOR untuk cryptography.
+
+16:14 26/08/2026 Belajar tentang hasil cryptography saat di XOR.
+

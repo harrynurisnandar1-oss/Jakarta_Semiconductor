@@ -1,0 +1,23 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:04 24/08/2026 Menjalankan komunikasi UART pada STM32H562VGT6 dengan ST-LINK.
+09:20 24/08/2026 Berhasil menerima data "Hello World" melalui komunikasi UART dari STM32H562VGT6 melalui PuTTY.
+11:02 24/08/2026 Blinking LD1 pada STM32U575ZIT6QU.
+13:00 24/08/2026 Mempelajari Default Zephyr Peripheral Mapping pada Nucleo U575ZI Q.
+13:25 24/08/2026 Mempelajari Default Zephyr Peripheral Mapping pada Nucleo-G431RB.
+14:06 24/08/2026 Blinking LD2 pada STM32G431RBT6U.
+14:48 24/08/2026 Mencoba mengimplementasikan Direct Memory Access (DMA) untuk melakukan transmisi data pada STM32G431RBT6U, tetapi masih mengalami kendala.
+16:32 24/08/2026 Mengimplementasikan DMA pada STM32G431RBT6U menggunakan laptop rekan magang serta membuat dokumentasi langkah-langkahnya.
+
+Pembelajaran yang Diperoleh
+Memahami bahwa keberhasilan penerimaan data UART dapat diketahui melalui indikator LED. LED akan berkedip setiap kali data dikirim dari mikrokontroler, sehingga dapat digunakan sebagai indikator bahwa data berhasil diterima.
+Memahami bahwa pin-pin pada STM32 Nucleo harus dikonfigurasi sesuai dengan Default Zephyr Peripheral Mapping, misalnya LD1 STM32U575ZIT6QU menggunakan pin PC7.
+Mengetahui konsep dasar Direct Memory Access (DMA), yaitu teknik transfer data antara peripheral dan memory tanpa harus memprosesnya terlebih dahulu di CPU.
+Mengetahui bahwa implementasi DMA pada STM32G431RBT6U dapat dilakukan dengan menggunakan STM32CubeIDE dan Arduino IDE.
+
+Kendala yang Dialami
+Mengalami kendala dalam mengimplementasikan DMA pada STM32G431RBT6U karena STM32CubeIDE belum dapat diinstal, sebab aplikasi tersebut membutuhkan ruang penyimpanan yang cukup besar dan cukup berat saat dijalankan. Kendala tersebut diatasi dengan meminjam laptop rekan magang untuk melakukan implementasi DMA.
+
+

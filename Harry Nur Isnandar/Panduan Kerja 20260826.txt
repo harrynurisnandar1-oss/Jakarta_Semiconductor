@@ -1,0 +1,8 @@
+Panduan Kerja 20260826
+
+Membuat sebuah komunikasi DMA dari chip STM32
+
+Membuat presentasi yang saya kerjakan
+
+melakukan sebuah demonstrasi dan kita siap 
+

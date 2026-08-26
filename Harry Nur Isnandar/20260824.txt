@@ -1,0 +1,21 @@
+07:54 24/08/2026 Mencari refrensi terkait STM32G474RET6U Nucleo.
+
+08:05 24/08/2026 Mencoba UART_HyperTerminal_DMA.ioc.
+
+09:36 24/08/2026 Error di Serial Monitor PUTTY.
+
+11:01 24/08/2026 Mencoba dengan Example dari STM32.
+
+11:01 24/08/2026 Menginstal STM32CubeIDE.
+
+14:21 24/08/2026 Pengujian osiloskop tidak ada.
+
+14:21 24/08/2026 Mendengarkan presentasi tentang Receive dan Transmite.
+
+15:19 24/08/2026 Mempelajari tentang C dan penjelasan tentang kodingan blink led.
+
+15:54 24/08/2026 Mempelajari file dan konfigurasi dari kodingan ini.
+
+16:15 24/08/2026 Mempelajari tentang Nucleo G474RE
+
+

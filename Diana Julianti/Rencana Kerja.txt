@@ -1,0 +1,41 @@
+Rencana Kerja: 
+
+27/08/2026 Membaca chapter 1 - chapter 3
+
+CHAPT ER 1 Introduction to Electronics 
+CHAPT ER 2 Theory 
+CHAPT ER 3 Basic Electronic Circuit Components
+
+Mempelajari dan mencatat hal point penting yg ingin dipelajari lebih dalam terkait program kerja yang di lembar kertas 
+
+28/08/2026 Membaca chapter 4 - chapter 6
+
+CHAPT ER 4 Semiconductors
+CHAPT ER 5 Optoelectronics
+CHAPT ER 6 Sensors
+
+Mempelajari/Mencoba/Mencatat terkiat GIT (Git init, Git Clone, Git Add, Git Commit, Git status, Git Log, Git Push, Git Pull, Gitignore, Git Branch, Git Checkout, Git Switch, Git Merge, Git Rebase)
+
+30/08/2026 Membaca chapter 7 - chapter 9
+
+CHAPT ER 7 Hands-on Electronics
+CHAPT ER 8 Operational Amplifiers
+CHAPT ER 9 Filters
+
+31/08/2026 Membaca chapter 10 - chapter 12
+
+CHAPTER 10 Oscillators and Timers
+CHAPTER 11 Voltage Regulators and Power Supplies 
+CHAPTER 12 Digital Electronics
+
+Mempelajari tentang RTOS(task, semaphore, mutex, queue), Protokol Komunikasi (UART, SPI, 12C), Driver-level (NVS, Watchdog, RTC), Debuggging tools (breakpoint, step in/out/over) 
+
+01/09/2026 Membaca chapter 13 - chapter 16
+
+CHAPTER 13 Microcontrollers
+CHAPTER 14 Motors
+CHAPTER 15 Audio Electronics
+CHAPTER 16 Modular Electronics
+
+Mempelajari tentang 1 fasa dan 3 fasa, Step-Up dan Step-Down. 
+

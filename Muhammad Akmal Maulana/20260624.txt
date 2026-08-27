@@ -1,0 +1,18 @@
+08:32 24/08/2026 Transmit DMA
+10:55 24/08/2026 Receive DMA
+11:09 24/08/2026 error
+14:30 24/08/2026 sudah tidak error tapi tulisan aneh
+
+Belajar C
+
+Doxygen
+
+DMA
+
+3 fasa RST dkk
+
+Cara mikrokontroler mengukur arus dkk
+
+Call Back
+Circular Buffer
+Step down Step up

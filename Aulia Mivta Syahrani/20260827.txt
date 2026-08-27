@@ -1,0 +1,22 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:05 27/08/2026 Membaca e-book "PRACTICAL ELECTRONICS FOR INVENTRORS" bab 3 “Basic Electronic Circuit Components” mengenai komponen dasar elektronika.
+09:52 27/08/2026 Mempelajari rumus menghitung I, V, Q, P, R.
+11:34 27/08/2026 Melanjutkan membaca bab 4 “Semiconductors”.
+13:17 27/08/2026 Mempelajari jenis-jenis dioda.
+14:07 27/08/2026 Mempelajari Read-Only Memory (ROM).
+15:14 27/08/2026 Mempelajari Integrated Circuit (IC).
+15:31 27/08/2026 Melanjutkan membaca bab 5 "Optoelectronics".
+16:29 27/08/2026 Membaca e-book Pro Git mengenai GitHub dan Git Tools.
+
+Pembelajaran yang Diperoleh
+Memahami fungsi transistor sebagai sakelar, penguat, osilator, pengatur tegangan, dan bagian dari IC.
+Mengetahui jenis-jenis dioda, meliputi P-N junction/rectifier diode, silicon diode, germanium diode, Schottky diode, signal diode, switching diode, fast-recovery diode, dan high-speed diode.
+Mengetahui bahwa dioda dalam ROM digunakan sebagai rangkaian enkoder desimal ke biner.
+Memahami IC sebagai rangkaian yang mengintegrasikan berbagai komponen seperti resistor, kapasitor, dioda, dan transistor dalam satu keping silikon.
+Memahami dasar optoelektronika, khususnya LED, photoresistor, photodiode, solar cell, phototransistor, dan optoisolator.
+
+Kendala yang Dialami
+Tidak terdapat kendala selama pelaksanaan magang hari ini. Seluruh kegiatan dapat dilaksanakan dengan baik dan sesuai dengan rencana yang telah disusun.

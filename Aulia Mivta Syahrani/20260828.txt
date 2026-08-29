@@ -1,0 +1,24 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:02 28/08/2026 Mempelajari listrik 1 fasa dan 3 fasa.
+09:16 28/08/2026 Membaca buku "PRACTICAL ELECTRONICS FOR INVENTRORS" bab 6 "Sensors".
+11:11 28/08/2026 Mempelajari terkait Thermistor dan Resistive Temperature Detectors (RTD).
+13:21 28/08/2026 Mempelajari Photoresistor (LDR) dan Photodiode.
+14:46 28/08/2026 Mempelajari bagaimana ROM dapat mengubah input desimal menjadi output biner.
+14:56 28/08/2026 Mempelajari Efek Hall.
+15:06 28/08/2026 Melanjutkan membaca bab 7 "Hands-on Electronics".
+16:23 28/08/2026 Mempelajari terakit "Drawing a Circuit Schematic".
+
+Pembelajaran yang Diperoleh
+Memahami listrik 1 fasa menggunakan 2 kabel (1 fasa dan 1 netral) dengan tegangan sekitar 220 Volt untuk rumah tangga, sedangkan listrik 3 fasa menggunakan 4 kabel (3 fasa yaitu R, S, dan T serta 1 netral) dengan tegangan sekitar 380–415 Volt untuk kebutuhan daya besar.
+Mengetahui bahwa thermistor merupakan sensor yang bekerja berdasarkan perubahan resistansi terhadap perubahan suhu, sedangkan RTD merupakan sensor suhu yang bekerja berdasarkan perubahan hambatan listrik pada logam.
+Memahami bahwa LDR merupakan sensor cahaya yang bekerja berdasarkan perubahan resistansi akibat perubahan intensitas cahaya, sedangkan photodiode merupakan sensor cahaya yang bekerja dengan mengubah cahaya menjadi arus listrik.
+Memahami bahwa ROM menggunakan dioda sebagai enkoder untuk mengubah input desimal menjadi output biner.
+Mengetahui bahwa Efek Hall adalah fenomena kelistrikan yang terjadi ketika arus mengalir melalui konduktor yang berada dalam medan magnet.
+Memahami bahwa jika membuat circuit schematic diagram harus menempatkan input di sebelah kiri, output di sebelah kanan, sumber tegangan positif di bagian atas, dan ground di bagian bawah, serta memberikan penamaan dan informasi komponen yang sesuai.
+
+Kendala yang Dialami
+Tidak terdapat kendala selama pelaksanaan kegiatan magang hari ini. Seluruh kegiatan dapat berjalan sesuai dengan rencana yang telah disusun dan terlaksana dengan lancar.
+

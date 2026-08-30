@@ -1,0 +1,9 @@
+08:18 28/08/2026 298
+Switch
+Relay
+Resistor
+diode = n type phosporus, p type boron
+
+15:45 28/08/2026 Briefing
+15:56 28/08/2026 Modifikasi DMA, Blink, printf
+15:57 28/08/2026 452

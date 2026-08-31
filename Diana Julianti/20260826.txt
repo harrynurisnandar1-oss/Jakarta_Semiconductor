@@ -1,0 +1,11 @@
+Kehadiran 
+Hadir
+
+Uraian Aktivitas
+Hari ini melakukan evaluasi bersama mentor terkait kesan dan pesan selama pelaksanaan magang. Selain itu, mencoba menggunakan Logic Analyzer dengan aplikasi Logic 2 dan Docklight serta mempelajari dasar-dasar sinyal digital. Saya juga membuat rencana kerja dan mendapat arahan untuk menamatkan buku Practical Electronics for Inventors dalam waktu satu minggu.
+
+Pembelajaran yang Diperoleh
+Saya memperoleh pemahaman mengenai penggunaan Logic Analyzer untuk mengamati dan menganalisis sinyal digital menggunakan aplikasi Logic 2 dan Docklight. Selain itu, saya belajar mengenai dasar-dasar sinyal digital serta pentingnya perencanaan kerja. Saya juga mendapatkan arahan untuk memperdalam pengetahuan elektronika dengan membaca buku Practical Electronics for Inventors.
+
+Kendala yang Dialami
+Kendala yang dialami hari ini adalah kabel USB yang digunakan tidak terbaca atau tidak terdeteksi oleh laptop. Kendala tersebut menyebabkan proses persiapan dan pembelajaran penggunaan Logic Analyzer menjadi lebih lambat karena perlu melakukan pengecekan dan mencoba mencari penyebab masalah pada koneksi perangkat terlebih dahulu.

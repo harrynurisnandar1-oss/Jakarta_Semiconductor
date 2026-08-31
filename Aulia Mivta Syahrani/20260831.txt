@@ -1,0 +1,24 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:06 31/08/2026 Membaca buku "PRACTICAL ELECTRONICS FOR INVENTRORS" bab 10 Oscillators and Timers.
+09:19 31/08/2026 Mempelajari tentang LC Oscillator (Sinusoidal Oscillator).
+09:33 31/08/2026 Melanjutkan membaca bab 12 Digital Electornics.
+10:17 31/08/2026 Mempelajari konversi bilangan biner ke desimal, oktal ke desimal, heksadesimal ke desimal, oktal ke biner, dan heksadesimal ke biner.
+11:39 31/08/2026 Mempelajari cara mengubah nilai bit untuk merepresentasikan bilangan negatif atau melakukan operasi pengurangan.
+13:21 31/08/2026 Mempelajari Logic Gates.
+14:58 31/08/2026 Membaca bab 11 Voltage Regulators and Power Supplies.
+16:08 31/08/2026 Mempelajari UART, SPI, I2C, dan DMA.
+16:24 31/08/2026 Mempelajari Control Unit, ALU, Memory.
+
+Pembelajaran yang Diperoleh
+Mengetahui fungsi osilator dalam menghasilkan berbagai bentuk gelombang.
+Memahami konversi antar sistem bilangan biner, desimal, oktal, dan heksadesimal.
+Memahami penggunaan komplemen 2 untuk merepresentasikan bilangan negatif dalam biner.
+Mengetahui proses mengubah tegangan AC menjadi tegangan DC melalui transformer, rectifier, filter, dan voltage regulator.
+Mengetahui fungsi UART, SPI, I2C, dan DMA.
+Memahami fungsi Control Unit, ALU, dan Memory dalam sistem komputer.
+
+Kendala yang Dialami
+Tidak terdapat kendala dalam kegiatan hari ini. Seluruh kegiatan dapat dilaksanakan dengan baik sesuai dengan rencana kerja yang telah ditentukan.

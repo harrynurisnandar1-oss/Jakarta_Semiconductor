@@ -1,0 +1,11 @@
+Kehadiran 
+Hadir
+
+Uraian Aktivitas
+Pada hari ini saya membaca dan mempelajari materi dari buku referensi elektronika, mencakup Chapter 4 (Semiconductors), Chapter 5 (Optoelectronics), dan Chapter 6 (Sensors). Materi yang dipelajari meliputi dasar semikonduktor, dioda, transistor, thyristor, LED, fotoresistor, fotodioda, sel surya, fototransistor, hingga berbagai jenis sensor seperti sensor suhu, sensor jarak/sentuh, dan sensor gerak. Selain itu, saya juga mempelajari dan mencoba perintah-perintah dasar Git seperti git init, git clone, git add, git commit, git status, git log, git push, git pull, gitignore, git branch, git checkout, git switch, git merge, dan git rebase sebagai persiapan version control untuk proyek yang akan berjalan.
+
+Pembelajaran yang Diperoleh
+Saya memperoleh pemahaman mengenai prinsip kerja komponen semikonduktor seperti dioda dan transistor beserta aplikasinya, serta konsep optoelektronika termasuk cara kerja LED, fotodioda, dan fototransistor. Saya juga memahami prinsip dasar berbagai jenis sensor beserta parameter penting seperti presisi, akurasi, dan kalibrasi. Dari sisi tools, saya memahami alur kerja Git untuk version control, mulai dari inisialisasi repository, melakukan clone, menambahkan dan meng-commit perubahan, memeriksa status dan log, hingga mengelola branch, melakukan merge, dan rebase, yang berguna untuk kolaborasi tim dalam proyek pengembangan.
+
+Kendala yang Dialami
+Kendala yang saya alami adalah masih perlu memahami lebih dalam terkait gambar-gambar rangkaian dan diagram teknis yang ada pada buku Chapter 4, 5, dan 6, karena beberapa ilustrasi komponen dan skema masih cukup kompleks untuk dipaham.

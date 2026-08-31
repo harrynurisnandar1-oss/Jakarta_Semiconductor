@@ -1,0 +1,11 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+Membaca dan mempelajari Chapter 1 sampai Chapter 3 dari buku “Practical electronics for inventors - scherz paul”, yaitu Introduction to Electronics, Theory, dan Basic Electronic Circuit Components. Selama membaca, saya mencatat poin-poin penting yang ingin dipelajari lebih dalam. Kemudian saya membuat rencana kerja satu minggu kedepan.
+
+Pembelajaran yang Diperoleh
+Saya memperoleh pemahaman dasar mengenai konsep-konsep elektronika seperti arus, tegangan, resistansi, dan hukum dasar rangkaian listrik, serta pengenalan komponen elektronik dasar seperti resistor, kapasitor, dan induktor beserta fungsinya dalam sebuah rangkaian. Materi ini menjadi fondasi awal sebelum masuk ke topik yang lebih spesifik dan teknis terkait proyek yang akan dikerjakan.
+
+Kendala yang Dialami
+Saya masih mengalami kesulitan dalam memahami sebagian persamaan matematis dan gambar diagram rangkaian yang disajikan dalam buku, terutama pada bagian teori di Chapter 2 dan 3. Notasi serta simbol-simbol skematik elektronika masih terasa asing sehingga membutuhkan waktu lebih lama untuk dipahami. Saya berencana mengulang kembali bagian tersebut dan mencari referensi tambahan seperti video penjelasan untuk memperjelas pemahaman.

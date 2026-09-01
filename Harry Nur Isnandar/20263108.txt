@@ -1,0 +1,28 @@
+09:18 31/08/2026 make a STS kWh meter simulator
+
+10:06 31/08/2026 Creating an STS meter using the C language that can add and store added kWh.
+
+10:45 31/08/2026 Try using WOKWI with STM32 Nucleo-C031C6 I2C and mock keypad. The project encountered an error because the data could not be displayed via I2C. So I'm trying to debugging the project.
+
+11:35 31/08/2026 erorr yang terjadi karena ukuran program melebihi kapasitas Flash STM32 Nucleo-C031C6 di wokwi karena menggunakan wokwi-lcd2004 dan wokwi-membrane-keypad.
+
+Build failed!
+/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/13.2.1-1.1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld:/sketch.ino.elf section `.rodata' will not fit in region `FLASH'
+/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/13.2.1-1.1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: region `FLASH' overflowed by 2152 bytes collect2: error: ld returned 1 exit status Error during build: exit status 1
+
+
+13:05 31/08/2026 Mempelajari tentang token encoder dan decoder serta XOR
+
+14:32 31/08/2026 Mempelajari sts Data Types dengan output 
+STS Phase 1 IIN: 600727 TID bits: 24 TokenData bits: 66 DataBlock bits: 64
+
+15:36 31/08/2026 Mencoba membuat DRN (Decoder Reference Number) adalah nomor identifikasi unik global pada perangkat tersebut.
+dengan ouput 
+STS Phase 2
+IIN: 600727
+MfrCode: 01
+DSN: 12345678
+DRN Check Digit: 0
+DRN validation: PASS
+
+15:48 31/08/2026 Mencoba melakukan representasi dan pemisahan TokenData 66-bit, sebelum masuk ke decoder dan cryptography.

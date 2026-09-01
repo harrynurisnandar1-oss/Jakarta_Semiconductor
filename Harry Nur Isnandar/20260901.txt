@@ -1,0 +1,38 @@
+08:25 01/09/2026 Mempelajari Buku Standar PLN
+		 membaca buku Standar PLN SPLN D3.023:2021
+		 Modem Seluler Untuk Sistem Metering Dua Arah
+		 
+09:40 01/09/2026 Standar modem yang digunakan untuk komunikasi dua arah menggunakan teknologi jaringan seluler dengan koneksi dari meter memakai port komunikasi serial RS-232 berbasis protocol HDLC (High-Level Data Link Control).
+
+09:44 01/09/2026 Modem Menggunakan catu daya tertentu berfungsi untuk menggabungkan dan memisahkan data hasil pengukuran degan gelombang pembawa(sarana komunikasi) melalui antenna.
+
+09:49 01/09/2026 Modem didukung layer 4 transport (TCP).
+
+09:52 01/09/2026 Modem yang mendukung TCP/IP dilengkapi fitur parsing data, buffering data, dan lain lain.
+
+10:42 01/09/2026 Melakukan pembacaan tentang Head End System
+		 
+10:48 01/09/2026 Melakukan pembacaan terhadap karakteristik alat, rentang frekuensi modem LTE, serta komponen dan perangkat lunak yang sudah di stadarisasi oleh SPLN dan berbagai indicator lainnnya.
+
+11:30 01/09/2026 Mempelajari port RS-232 yang merupakan standar komunikasi protocol PLN berupa konektor RJ-45 8 pin female untuk terminal kabel data ke meter pin addres RJ-45
+
+11:45 01/09/2026 Mempelajari Modem PLN
+
+13:11 01/09/2026 Mempelajari Materi Statik Pasca Bayar Fase Tiga
+
+14:11 01/09/2026 Mempelajari desain dan spesifikasi meter/ meter dengan pasangan luar dengan frekuensi acuan 50 Hz.
+
+14:26 01/09/2026 Komponen Meter berupa : sensor arus, pencacah (ADC/DAC), kristal, prosesor (MCU), system memori, komponen untuk pengukuran system, superkapasitor, baterai, display, watchdog unit, relai/kontaktor, varistor dan komponen catu daya.
+
+Watch dog unit adapalah perangkat keselamatan berbasis perangkat keras yang secara otomatis memutus dan menyambungkan kembali daya ke sistem, *router*, atau komputer industri yang tidak merespons, dengan cara memantau sinyal *heartbeat* dan memicu *hard reboot* saat terjadi kondisi perangkat lunak macet.
+
+14:59 01/09/2026 Menpelajari komponen dan perangkat lunak (firmware) yang mendukung fungsinya sebagai DLMS_server dan memenuhi fitur dan fungsi di dalam standar SPLN D5.002.
+
+15:04 01/09/2026 Firmware menyediakan acknowledgment pada saat proses pemasukan Kembali beban secara Jarak jauh (remote reconnect) sebagai prosedur keselamatan, dimana sebelum relay output untuk shunt trip dapat melepas trip yang harus dilakukan aksi penekanan tombol atas dan Bawah pada meter secara bersamaan terlebih dahulu.
+
+15:26 01/09/2026 Membaca persyaratan teknis yang mengikuti SNI/IEC 62052-11 
+
+15:27 01/09/2026 desain kontak meter tidak dapat dibuka dengan cara apapun. 
+dan bila ingin dibuka harus merukan kotak meter. Untuk keperluan ini dapat menggunakan metode ultrasonic welding, die-casting.
+
+16:26 01/09/2026 Mempelajari terminal meter tiga fasa.

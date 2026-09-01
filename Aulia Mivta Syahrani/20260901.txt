@@ -1,0 +1,22 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:04 01/09/2026 Membuat draft laporan bulanan peserta MagangHub.
+09:17 01/09/2026 Membaca SPLN D3.0006-02: 2021 CSV mengenai Meter Statik Pascabayar Fase Tiga - Pemodelan Data dan Persayratan Kode Object Identification System (OBIS).
+10:16 01/09/2026 Mempelajari COSEM (Companion Specification for Energy Metering).
+10:33 01/09/2026 Melaporkan progres dan perkembangan kegiatan magang selama tiga minggu kepada Bapak Ridwan dan Albayruni.
+11:21 01/09/2026 Mempelajari Tegangan Swell.
+13:06 01/09/2026 Membaca proses pengiriman data push menggunakan modem seluler.
+13:27 01/09/2026 Membaca buku "PRACTICAL ELECTRONICS FOR INVENTRORS" Chapter 13 Microcontrollers.
+14:58 01/09/2026 Mempelajari struktur dasar mikrokontroler.
+16:30 01/09/2026 Mempelajari serial interface.
+
+Pembelajaran yang Diperoleh
+Mengetahui dasar COSEM dan OBIS pada pemodelan data meter energi.
+Memahami konsep Tegangan Swell sebagai kenaikan tegangan RMS di atas batas normal dalam waktu singkat, serta mempelajari konsep FIFO dan LIFO dalam pengelolaan data.
+Mengetahui proses pengiriman data push melalui modem seluler.
+Memahami struktur dasar mikrokontroler serta prinsip kerja serial interface.
+
+Kendala yang Dialami
+Masih terdapat beberapa istilah dan konsep dalam SPLN yang belum familiar sehingga membutuhkan waktu untuk mempelajarinya lebih lanjut. Selain itu, target pembelajaran yang telah ditentukan belum sepenuhnya tercapai. Sebagai solusi, pembelajaran akan dilanjutkan secara mandiri dengan membaca materi terhadap topik yang masih belum dipahami.

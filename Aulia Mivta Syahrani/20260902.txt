@@ -1,0 +1,23 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:10 02/09/2026 Membuat rangkuman materi COSEM pada meter energi listrik.
+08:35 02/09/2026 Upload catatan materi ke Git.
+09:02 02/09/2026 Membaca buku "PRACTICAL ELECTRONICS FOR INVENTRORS" bab 14 Programmable Logic.
+10:30 02/09/2026 Melanjutkan membaca bab 15 Motors.
+11:18 02/09/2026 Mempelajari perbedaan motor DC, Servo RC, dan Motor Stepper.
+14:21 02/09/2026 Upload catatan materi ke Git.
+14:24 02/09/2026 Melanjutkan membaca bab 16 Audio Electronics.
+15:34 02/09/2026 Mempelajari Audio Amplifier.
+16:26 02/09/2026 Melanjutkan membaca bab 17 Modular Electronics.
+
+Pembelajaran yang Diperoleh
+Mengetahui bahwa Programmable Logic adalah chip logika yang belum memiliki fungsi tetap saat dibuat, sehingga pengguna dapat memprogram dan mengatur fungsi logikanya sesuai kebutuhan. Programmable logic memungkinkan fungsi rangkaian logika digital dikonfigurasi atau diprogram sesuai kebutuhan tanpa melakukan perubahan pada rangkaian elektronik secara fisik.
+Mengetahui bahwa CMOS (Complementary Metal-Oxide-Semiconductor) adalah teknologi pembuatan IC yang menggunakan gabungan transistor tipe P dan tipe N untuk mengatur aliran listrik dalam perangkat elektronik.
+Memahami bahwa Motor DC digunakan untuk menghasilkan putaran dan mengatur kecepatan, Servo RC (Radio-Control Servo) digunakan untuk mengatur posisi sudut secara presisi, sedangkan Stepper Motor digunakan untuk menghasilkan putaran bertahap dengan kontrol posisi yang lebih presisi.
+Memahami bahwa audio amplifier berfungsi memperkuat sinyal audio. Penguat dapat menggunakan konfigurasi inverting, noninverting, dan digital amplifier.
+Mengetahui beberapa jenis modul dan breakout boards, contohnya modul komunikasi RF, modul audio, power control; modul display, serta modul sensor.
+
+Kendala yang Dialami
+Belum memahami konsep dan karakteristik PAL (Programmable Array Logic), FPGA (Field-Programmable Gate Array), dan CPLD (Complex Programmable Logic Device) dalam programmable logic.

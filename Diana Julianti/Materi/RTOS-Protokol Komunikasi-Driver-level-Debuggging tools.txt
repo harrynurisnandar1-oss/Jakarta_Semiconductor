@@ -1,0 +1,264 @@
+
+
+							Belajar Konsep Dasar STM32 dengan RTOS
+
+STM32 adalah keluarga microcontroller (MCU) dari STMicroelectronics, di dalam STM32 itu terdiri dari:
+
+                  STM32
+       
+       ↓           ↓            ↓
+      CPU         Memory     Peripheral
+       │           │           │
+       │           │       ┌───┼────┐
+       │           │       ↓   ↓    ↓
+       │           │      GPIO UART SPI
+       │           │
+       │           ├── Flash
+       │           └── RAM
+       │
+       ↓
+   menjalankan
+    program
+
+CPU : bagian yang mengeksekusi instruksi program.
+Memory : Flash (tempat program disimpan) dan RAM (tempat data sementara saat program berjalan).
+Peripheral : Bagian yang membuat STM32 bisa berinteraksi dengan dunia luar.
+
+GPIO  : LED / tombol 
+UART  : komunikasi serial 
+SPI   : komunikasi device
+I2C   : komunikasi sensor
+ADC   : membaca tegangan analog
+Timer : timing
+DMA   : transfer data tanpa CPU menangani setiap byte
+
+
+STM32 pada dasarnya adalah hardware. Supaya hardware itu melakukan sesuatu, berarti di kasih program/firmware. Misalnya ingin LED berkedip, terus membuat program, kemudian program itu di-compile dan dimasukkan ke STM32. Berarti alurnya (aku menulis kode, compiler, firmware, CPU menjalankan instruksi, LED berkedip).
+
+Kapan membutuhan RTOS dan kapan tidak membutuhkan RTOS?
+RTOS (Real-Time Operating System) : software yang membantu mengatur eksekusi berbagai pekerjaan di microcontroller. Salah satu RTOS yang digunakan pada STM32 itu ThreadX. Jadi ThreadX itu software RTOS yang berjalan di atas hardware STM32. 
+ThreadX adalah software yang menggunakan kemampuan CPU, RAM, timer, interrupt, dll. dari STM32 untuk mengatur program. Contohnya: 
+Aplikasi sedang menjalankan:
+Pekerjaan 1 → baca sensor
+Pekerjaan 2 → UART
+Pekerjaan 3 → LED
+	dengan ThreadX pekerjaan ini bisa dibuat menjadi Task/Thread.
+                 ThreadX
+                    │
+       ┌────────────┼────────────┐
+       ↓            ↓            ↓
+ Thread Sensor  Thread UART  Thread LED
+
+
+Thread/Task : Satu unit pekerjaan yang dapat dijadwalkan oleh RTOS. Contohnya sebagai berikut:
+Thread Sensor
+    ↓
+membaca sensor
+
+Thread UART
+    ↓
+mengirim data
+
+Thread LED
+    ↓
+mengatur LED
+
+Jadi dari pada semua pekerjaan berada disatu tempat, dapat di pisahkan secara konsep sebagai berikut:
+
+while(1)
+{
+   sensor();
+   uart();
+   led();
+}
+
+Jika CPU STM32 cuma satu, bagaimana yang terjadi?
+CPU bergantian dalam menjalankan thread, misalnya (Sensor-UART-LED-SENSOR-UART).
+
+Siapa yang mengatur pergantian tersebut?
+Scheduler (Penjadwalan) adalah bagian dari RTOS yang menentukan tugas atau task mana yang harus dieksekusi dan kapan waktu serta urutan pergantian tugas tersebut pada prosesor. Misalnya:
+
+              ThreadX
+                 │
+             Scheduler
+                 │
+       ┌─────────┼─────────┐
+       ↓         ↓         ↓
+    Sensor      UART      LED
+
+
+
+Berarti struktur pemahamannya seperti ini:
+
+                    STM32
+                      │
+                 Hardware
+                      │
+                      ↓
+                menjalankan
+                 firmware
+                      │
+                      ↓
+                   ThreadX
+                     RTOS
+                      │
+                      ↓
+                 Scheduler
+                      │
+            menentukan thread
+                      │
+       ┌──────────────┼──────────────┐
+       ↓              ↓              ↓
+   Thread A       Thread B       Thread C
+       │              │              │
+       └──────────────┼──────────────┘
+                      │
+             butuh komunikasi
+             & sinkronisasi
+                      │
+          ┌───────────┼───────────┐
+          ↓           ↓           ↓
+        Queue     Semaphore      Mutex
+
+
+STM32 : microcontroller atau hardware.
+Firmware : program yang dijalankan STM32.
+ThreadX : RTOS/software yang membantu mengatur firmware yang kompleks.
+Thread/Task : pekerjaan yang dikelola atau dijadwalkan ThreadX.
+Scheduler : bagian yang menentukan thread mana yang mendapatkan CPU.
+
+
+				BELAJAR RTOS(komponen utamanya : task, semaphore, mutex, queue)
+
+RTOS (Real-Time Operating System) adalah sebuah fungsi C yang berjalan secara independen dan memiliki stack (ruang memori) tersendiri.
+Task (Tugas) 
+
+// Fungsi untuk Task 1 (Prioritas Tinggi, misal: Membaca Sensor)
+void StartTaskSensor(void const * argument) {
+  for(;;) {
+    // Jalankan pembacaan sensor disini
+    osDelay(10); // Menunda task selama 10ms untuk memberi kesempatan task lain
+  }
+}
+
+// Fungsi untuk Task 2 (Prioritas Rendah, misal: Kedip LED)
+void StartTaskLED(void const * argument) {
+  for(;;) {
+    HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+    osDelay(500); 
+  }
+}
+
+
+Semaphore (Binary dan Counting) Semaphore adalah primitif sinkronisasi yang digunakan untuk mengelola dan melindungi akses ke sekumpulan sumber daya bersama (shared resources), atau untuk memberikan sinyal peristiwa antar tugas.
+Sering digunakan untuk menyinkronkan Task dengan Interrupt (ISR). Misalnya, Task akan tidur sampai data dari interupsi tombol atau UART selesai diterima.
+Contoh Kasus Penggunaan: Menunda eksekusi Task hingga sebuah tombol ditekan (diaktifkan via EXTI Interrupt).
+Fungsi Utama: osSemaphoreWait() untuk menunggu sinyal, dan osSemaphoreRelease() untuk memberikan sinyal dari interupsi.
+
+Mutex (Mutual Exclusion)Mutex adalah bentuk khusus dari binary semaphore yang menyertakan mekanisme Priority Inheritance (Pewarisan Prioritas) dan kepemilikan thread (thread ownership). Mutex dirancang khusus untuk memastikan bahwa hanya ada satu tugas yang dapat mengakses bagian kode kritis atau perangkat keras tertentu pada satu waktu.
+Digunakan ketika dua Task atau lebih ingin mengakses satu perangkat keras yang sama secara bergantian agar datanya tidak rusak atau tabrakan.
+Contoh Kasus Penggunaan: Jika Task A dan Task B sama-sama ingin mengirim data lewat UART1 atau menulis ke Layar LCD secara bersamaan.
+Cara Kerja: Task A mengambil Mutex -> UART dikunci -> Task A mengirim data -> Mutex dilepas. Selama dikunci, Task B harus menunggu hingga Mutex tersedia.
+
+Queue (Antrian Data)FreeRTOS, bentuk utama komunikasi antar tugas (inter-task communication) atau Queue adalah sebuah tempat penyimpanan terstruktur berkonsep FIFO (First In First Out) yang bersifat thread-safe (aman dari tabrakan memori). Ketika antrian penuh atau kosong, kernel RTOS akan secara otomatis mengatur pemblokiran (blocking) dan pembangunan tugas kembali demi efisiensi daya CPU.
+Digunakan untuk mengirim data terstruktur (seperti angka atau struct) dari satu Task ke Task lainnya secara aman tanpa merusak memori RAM.
+Contoh Kasus Penggunaan: Task Sensor membaca nilai suhu, lalu mengirimkan hasilnya lewat Queue ke Task Display untuk ditampilkan ke layar.
+Fungsi Utama: osMessagePut() untuk memasukkan data ke antrian, dan osMessageGet() untuk mengambil data dari antrian.
+
+
+
+
+				               BELAJAR Protokol Komunikasi (UART, SPI, I2C)
+
+Protokol komunikasi adalah seperangkat aturan standar yang mengatur bagaimana data dikirim, diterima, dan diproses oleh berbagai perangkat dalam jaringan atau aturan bagaimana dua perangkat bertukar data.
+
+Contoh:
+STM32 ingin mengirim: "Hello" ke perangkat lain, harus ada aturan mengenai (bit → byte → urutan pengiriman → timing → penerimaan).
+
+Data di dalam STM32 sebenarnya cuma bit. Komputer/microcontroller pada akhirnya bekerja dengan: 0 dan 1. 
+Misalnya: A direpresentasikan sebagai angka tertentu, kemudian menjadi bit 01000001
+Protokol komunikasi menentukan bagaimana bit-bit tersebut dikirim melalui jalur listrik.
+
+Kenapa STM32 perlu protokol komunikasi?
+Lalu STM32 ngomong ke perangkat tersebut pakai cara apa?
+
+UART, SPI, 12C itu protokol komunikasi serial, tetapi cara kerjanya berbeda. 
+UART (Universal Asynchronous Receiver/Transmitter) adalah protokol dan perangkat keras komunikasi serial yang menggunakan dua kabel untuk mengirim dan menerima data antar perangkat secara asinkron (tanpa sinyal clock bersama). 
+
+Contoh:
+
+STM32                 	        PC
+  │                  		    │
+  │ TX ───────────────→  │ RX
+  │                   		    │
+  │ RX ←───────────────   │ TX
+  │                             │
+  └─────────────────────┘
+
+Jalur kabel (pin),nada dua jalur utama :
+TX : Transmit (mengirim data) keluar
+RX : Receive (menerima data) masuk
+
+
+Kenapa UART disebut asynchronous?
+Karena UART tidak menggunakan jalur clock terpisah, tidak ada clock bersama, kedua perangkat harus sepakat mengenai baud rate.
+Contoh: 115200 baud
+
+jadi bisa menemukan settingan seperti:
+
+Baud rate : 115200
+Data bits : 8
+Parity    : None
+Stop bits : 1
+
+Ini yang sering di lihat di PuTTY ketika melakukan komunikasi UART STM32.
+
+SPI (Serial Peripheral Interface) adalah protokol komunikasi serial sinkron full-duplex (Bisa kirim dan terima data di saat yang sama) yang dikembangkan oleh Motorola. Protokol ini menghubungkan mikrokontroler dengan perangkat periferal jarak dekat seperti sensor, kartu SD, dan layar secara cepat (Memakai sinyal clock bersama untuk mengatur waktu kirim data). 
+
+Jalur kabel (pin) pada SPI:
+SCLK: Jalur Clock dari master.
+MOSI: Jalur kirim data dari Master Out Slave In.
+MISO: Jalur kirim data dari Master In Slave Out.
+SS / CS: Jalur Slave Select atau Chip Select untuk memilih perangkat.
+
+
+Kenapa SPI punya clock?
+Karena SPI termasuk komunikasi synchronous, artinya ada clock yang menjadi acuan kapan data dibaca atau diterima. SPI cocok untuk perangkat yang membutuhkan transfer data cepat. Tetapi konsekuensinya lebih banyak kabel yang digunakan dibanding UART.
+
+
+I2C (Inter-Integrated Circuit) adalah protokol komunikasi serial sinkron dua arah yang menggunakan dua kabel utama untuk menghubungkan mikrokontroler dengan perangkat berkecepatan rendah seperti sensor atau chip memori.
+
+Jalur kabel (pin) pada I2C:
+SDA (Serial Data): Jalur untuk mengirim dan menerima data.
+SCL (Serial Clock): Jalur untuk mengirim sinyal pewaktuan dari master.
+
+Kesimpulan :
+	UART	SPI	I2C
+Kabel Utama	TX, RX	SCK, MOSI, MISO, CS,	SDA, SCL
+Sifat	Asynchronous	Synchronous	Synchronous
+Clock	Tidak	YA	YA
+
+						
+
+					Belajar Driver-level (NVS, Watchdog, RTC)
+
+
+NVS (Non-Volatile Storage)(penyimpanan non-volatil) adalah media, chip, atau perangkat komputer yang dapat menyimpan dan mempertahankan data secara permanen meskipun perangkat atau aliran listrik dimatikan. Data di dalamnya tidak akan hilang tanpa memerlukan pasokan daya listrik terus-menerus.
+Watchdog Timer (WDT) adalah pengatur waktu elektronik atau perangkat lunak yang berfungsi untuk mendeteksi malfungsi sistem dan memulihkan komputer atau mikrokontroler secara otomatis. Jika sistem mengalami hang atau galat, WDT akan memicu reset agar perangkat kembali normal.
+RTC (Real-Time-Clock) adalah perangkat keras atau sirkuit terpadu (IC) penunjuk waktu elektronik yang berfungsi melacak detik, menit, jam, tanggal, bulan, hingga tahun secara akurat. Perangkat ini tetap berjalan dan mengingat waktu secara kontinu meskipun perangkat utama mati atau tidak ada catu daya.
+
+
+
+					Belajar Debuggging tools (breakpoint, step in/out/over)
+
+
+Breakpoint adalah titik khusus dalam kode program tempat eksekusi dihentikan sementara oleh alat debugger. Hal ini memungkinkan pembuat program melihat isi variabel dan alur data secara langsung.
+Step In adalah perintah untuk mengeksekusi baris kode saat ini. Jika baris tersebut berisi sebuah fungsi atau method, debugger akan masuk ke dalam kode fungsi tersebut dan berhenti di baris pertamanya. 
+	Digunakan ketika Anda ingin menganalisis secara detail logika di dalam fungsi spesifik yang sedang dipanggil.
+Step Over adalah Perintah untuk mengeksekusi baris kode saat ini dan langsung berpindah ke baris berikutnya di lingkup (scope) yang sama. Jika baris tersebut memanggil fungsi lain, fungsi itu tetap dijalankan oleh sistem, tetapi debugger tidak akan masuk ke dalam kodenya
+	Digunakan saat yakin fungsi tersebut tidak bermasalah dan hanya ingin melihat alur logika di fungsi utama.
+Step Out adalah : Perintah untuk melanjutkan eksekusi kode di dalam suatu fungsi secara cepat hingga fungsi tersebut selesai running dan mengembalikan kontrol ke baris yang memanggilnya semula.
+	Digunakan jika Anda terlanjur masuk (Step Into) ke dalam suatu fungsi, sudah menemukan informasi yang dicari, dan ingin segera keluar kembali ke fungsi utama.
+	
+
+

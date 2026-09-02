@@ -1,0 +1,90 @@
+07:36 02/09/2026 Learning a Fourier transform, A sinusoidal transform waveforms created by using Fourier analysis. You can create ideal source of other waveforms. 
+
+08:06 02/09/2026 Learning about AC, RMS.
+RMS (Root Mean Squre) : nilai efektif dari gelombang arus bolak-balik (AC) yang bervariasi. Nilai ini setara dengan arus searah (DC) konstan yang menghasilkan panas atau daya yang sama pada sebuah resistor dalam jangka waktu tertentu. Untuk gelombang sinus standar, arus RMS sama dengan arus puncak dibagi akar kuadrat dari 2 (≈ 0,707)
+
+08:34 02/09/2026 Mempelajari tentan teorema dalam rangkaian listrik.
+Hukum Arus Kirchhoff (KCL) menyatakan bahwa arus total yang masuk ke suatu simpul sama dengan arus total yang keluar darinya.
+
+Hukum Tegangan Kirchhoff (KVL) menyatakan bahwa jumlah semua tegangan di sepanjang setiap lingkaran tertutup dalam suatu rangkaian adalah nol.
+
+Teorema Superposition : Arus pada sebuah cabang rangkaian linier sama dengan jumlah arus yang dihasilkan oleh masing-masing sumber, dengan sumber lainnya dianggap nol.
+
+Teorema Thévenin menyatakan bahwa setiap rangkaian listrik linier kompleks yang terdiri dari sumber tegangan, sumber arus, dan resistansi dapat digantikan pada dua terminalnya oleh satu sumber tegangan ekivalen Vth yang dihubungkan secara seri dengan satu resistansi ekivalen VRth.
+
+Teorema Norton menyatakan bahwa setiap rangkaian listrik linier kompleks dapat digantikan oleh rangkaian ekivalen yang terdiri dari satu sumber arus yang dihubungkan secara paralel dengan satu resistor. Penyederhanaan ini membantu menentukan tegangan dan arus pada beban tertentu.
+
+Teorema Thevenin dan Norton pada dasarnya adalah sama, yang membedakan adalah Menghitung Arus Pada Teorema Norton.
+
+08:45 02/09/2026 Ac Circuit arus secara periodic mengubah arah, dan tegangan secara periodic terbalik.
+
+09:11 02/09/2026 mains power Alternating Current
+
+09:58 02/09/2026 Capacitors charge parallel conducting plates separated a small distance apart by an insulator such as air or a dielectric such as ceramic you created.
+
+An uncharged capacitor has zero voltage across its plates and no stored electrical energy. When first connected to a circuit, it acts like a temporary short circuit, allowing maximum current to flow before gradually charging up
+
+Charging capacitor is a When a battery connects to a capacitor, it moves electrons from one plate to the other. One plate becomes positive, and the other becomes negative. This process builds an electric field and stops when the voltage across the capacitor equals the battery voltage.
+
+Charged capacitor is a When a battery connects to a capacitor, it acts as a charge pump. It moves electrons from one plate to the positive terminal and pushes electrons onto the other plate from the negative terminal. This builds an electric field until the capacitor voltage matches the battery voltage.
+
+10:29 02/09/2026 Maxwell's Displacement Current
+
+Expressed in terms of electric field, area, and permittivity of free space.
+
+even if no real current passed from one capacitor plate, there was nevertheless a changing electric flux trough the gap of the capacitor that increased and decreased with magnitude and direction of the electric flux.
+Electric flux permeated the empty space between the capacitor plates and induced a current in other plate.
+
+10:45 02/09/2026 Energy in capacitor cannot  be dissipated in a ideal capacitor, energy can only be stored in the electric field or potential between the plates.
+
+RC time constant, a charger capacitor that's is shorted with a wire discharged. With some resistance added, the rate of charge or discharge follows an exponential pattern. 
+
+Alternating Current in a Capacitor will either pass or limit current flow, depending on frequency. Unlike a resistor that converts current energy into heat to reduce current flow, a capacitor stores electrical energy and returns it to circuit.
+
+11:07 02/09/2026 Capacitive reactance Xc is capacitive reactance in ohm.
+Capacitive divider can be used with ac inputs signals or even dc, since the capacitors will rapidly reach a ready state.
+
+11:18 02/09/2026 Quality Factor
+component that store energy, has be compared in terms of quality factor Q. Q is the ratio of its ability to store energy to the sum total of energy losses within component. The reactance in Ohm simply the capacitive reactance X = Xc / inductor X = XL (inductive reactance. R is the sum of all resistances associated with energy losses in the component.
+
+11:58 02/09/2026 Electromagnetism 
+Faraday's Law of induction
+
+13:15 02/09/2026 Inductors 
+
+14:15 02/09/2026 understanding the inductor equations
+
+14:18 02/09/2026 energizing RL Circuit 
+
+14:30 02/09/2026 alternating Current and Inductors
+
+15:03 02/09/2026 Nonideal inductor model
+
+15:18 02/09/2026 Complex Number. Can be expressed graphically on a complex plane (gaussian plane), with the horizontal axis representing the real axis and the vertical axis representing the imaginary axis.
+
+15:27 02/09/2026 Circuit with sinusoidal Source. To analyze the simpler of the two circuits, apply Kirchhoff's Voltage law.
+
+15:35 02/09/2026 Place a resistor, a capacitor, or an inductor across the source with the complex expression for the current though each component. Book Practical Electronics for Inventors page 169-170. Inductor the current is out phase with applied voltage by -90 . In other the currents lags the voltage by 90.
+
+15:51 02/09/2026 applying the complex form to Kirchhoff's law.
+
+15:58 02/09/2026 Impedance RL Circuit and odd phenomena in reactive circuits
+
+15:59 02/09/2026 Power in AC Circuits (Apparent Power, Real Power, Reactive Power)
+
+16:15 02/09/2026 Series Impedance (LC Circuit)
+
+16:18 02/09/2026 Parallel Impedance (LC Circuit)
+
+16:25 02/09/2026 Thevenin's Theorem in AC form
+
+16:26 02/09/2026 LC Series Resonant Circuit
+
+16:35 02/09/2026 RLC Series Resonant Circuit
+
+16:40 02/09/2026 Bandwidth : The sharpness of a series resonant circuit is using.
+
+16:47 02/09/2026 The Q of Loaded Circuits.
+
+16:53 02/09/2026 Input and Output Impedance
+

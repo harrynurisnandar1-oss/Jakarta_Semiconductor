@@ -1,0 +1,24 @@
+Kehadiran
+Hadir
+
+Uraian Aktivitas
+08:33 03/09/2026 Mempelajari perbededaan mikrokontroler dan Programmable Logic.
+10:53 03/09/2026 Menyelesaikan laporan bulanan.
+11:43 03/09/2026 Mengamati dan mempelajari KWH Paskabayar Fase Tunggal CSI-13.
+13:47 03/09/2026 Membaca majalah IEEE Spectrum.
+15:10 03/09/2026 Menilik lebih jauh mengenai adaptabilitas dalam engineering serta pentingnya kemampuan problem solving dan continuous learning dalam menghadapi perkembangan teknologi, khususnya AI.
+15:35 03/09/2026 Mempelajari Encoder dan Decoder.
+16:01 03/09/2026 Mempelajari HASH, HSM (Hardware Security Module), SM (Security Module), dan CM (Cryptographic Module).
+16:14 03/09/2026 Mendengarkan penjelasan dari mentor terkait aplikasi mikrokontroler Raspberry Pi Pico untuk membuat mini TV.
+
+Pembelajaran yang Diperoleh
+Mengetahui perbedaan mikrokontroler dan Programmable Logic serta memahami bahwa Programmable Logic dapat digunakan untuk membangun fungsi pemrosesan digital, termasuk prosesor atau CPU.
+Memahami spesifikasi dan fungsi KWH meter paskabayar fase tunggal CSI-13, termasuk sistem pengukuran dan pemutusan fasa-netral, fitur tamper untuk mendeteksi penyalahgunaan meter, serta power limit sebagai batas daya maksimum dan mekanisme proteksi terhadap beban lebih.
+Mengetahui pentingnya adaptability, problem solving, dan systems thinking bagi engineer dalam menghadapi perkembangan teknologi serta perubahan tools dan metode kerja akibat perkembangan AI.
+Memahami prinsip kerja encoder dan decoder. Decoder mengubah kode biner menjadi pilihan output tertentu, sedangkan encoder menghasilkan kode biner berdasarkan input yang aktif, seperti pada decimal-to-BCD encoder.
+Mengetahui bahwa HASH merupakan proses mengubah suatu data menjadi nilai/kode dengan panjang tertentu yang disebut hash value, HSM sebagai perangkat keras untuk operasi kriptografi, serta SM dan CM sebagai modul yang menangani fungsi keamanan, pengelolaan kunci, dan fungsi kriptografi.
+
+Kendala yang Dialami
+Masih perlu memperdalam pemahaman mengenai keamanan kriptografi (HASH, HSM, SM, dan CM) karena masih awam dengan konsep, fungsi, dan penerapannya dalam sistem keamanan perangkat elektronik.
+
+

@@ -1,0 +1,24 @@
+8:09 AM 9/3/2026 Membaca BAB 17
+
+Hukum Kirchof
+Thevenin Norton 
+
+analog ke digital 
+hardware itu fisiknya, ALU hardware bisa Verilog HDL language VDL 
+OpenCL (Open Computing Language) untuk mendeskripsikan hardware dari apple.
+
+OLAMA
+
+10:02 AM 9/3/2026 Membuat laporan bulanan
+10:26 AM 9/3/2026 Mempelajari tentang AI dan AGI
+10:54 AM 9/3/2026 Print Laporan Bulanan dan Evaluasi Mentor
+11:23 AM 9/3/2026 Membaca IEEE Spectrum
+
+hardware lebih panjang waktunya, 
+
+1:20 PM 9/3/2026 Lanjut membaca IEEE Spectrum
+
+3:37 PM 9/3/2026 Memahami bagian "Mechanical TV  
+Goes Portable" pada IEEE Spectrum
+
+4:42 PM 9/3/2026 Membaca dan memahami PPT tentang "KWH Paskabayar Fase Tunggal CSI-13

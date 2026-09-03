@@ -1,0 +1,70 @@
+						AI dan AGI
+
+Artificial intelligence (AI) atau kecerdasan buatan, adalah ilmu untuk menciptakan sistem yang mampu meniru kecerdasan manusia. Teknologi ini memungkinkan komputer untuk belajar dari data, mengenali pola, membuat keputusan, dan menyelesaikan berbagai permasalahan kompleks. AI bekerja dengan menggabungkan berbagai disiplin ilmu, seperti pembelajaran mesin (machine learning) dan jaringan saraf tiruan (neural networks). Sistem AI dapat menganalisis data dalam jumlah besar dan menghasilkan solusi yang efisien.
+
+Meskipun kecerdasan buatan saat ini sudah sangat baik, teknologi ini masih tergolong sebagai Artificial Narrow Intelligence (ANI). ANI adalah AI yang hanya bisa melakukan satu jenis pekerjaan dengan sangat baik. Karena itu, munculah inovasi perkembangan teknologi baru yang masih dalam tahap pengembangan bernama Artificial General Intelligence (AGI).
+
+Artificial General Intelligence (AGI) memiliki kemampuan berpikir dan memahami berbagai situasi seperti manusia.
+Seperti kita beajar bahasa baru, mengemudi mobil, menulis buku, menyelesaikan soal matematika, semuanya tanpa perlu diprogram ulang, itulah yang di sebut kecerdasan buatan umum/AGI.
+Berbeda dengan AI tradisional yang dirancang untuk tugas tertentu, AGI dapat beradaptasi dengan bidang apa pun, sama seperti manusia. AGI belajar, bernalar, merencanakan,dan membuat generalisis.Secara teknis, hal ini bergantung pada beberapa elemen dasar seperti pembelajaran multi-fungsi yang memungkinkannya untuk mengelola beberapa keterampilan secara paralel, memori jangka panjang, untuk mempertahankan pengalaman masa lalu, perencanaan otonom, untuk membuat keputusan kompleks."Belum mencapai level tersebut sekarang".
+Faktanya dengan teknologi seperti AGI, sangat memungkinkan untuk membuat robot humanoid yang bekerja selayaknya manusia. AGI juga dapat belajar dari pengalaman baru dan mentransfer/mengaplikasikan pengetahuan dari satu bidang ke bidang lain. Meskipun masih dalam tahap pengembangan, AGI akan merevolusi semua aspek kehidupan manusia pada masanya.
+
+
+
+
+
+Ide mesin roket nuklir ini menggabungkan Nuclear Electric Propulsion dan Nuclear Thermal Propulsion untuk membuat perjalanan manusia ke Mars lebih cepat, dengan tujuan mengurangi paparan radiasi dan mikrogravitasi. Namun, desainnya masih berupa konsep dan membutuhkan penelitian serta pengembangan lebih lanjut.
+Hardware saja tidak cukup. Jepang sudah memiliki pengalaman panjang dalam hardware dan robotika, tetapi untuk bersaing dalam generasi robot berikutnya, Jepang perlu memperkuat AI + software + data + computing + kolaborasi ekosistem.
+Spektrum 6 GHz menjadi rebutan antara Wi-Fi dan jaringan seluler karena sangat penting untuk konektivitas berkapasitas tinggi dan latensi rendah. Amerika Serikat memilih Wi-Fi, sedangkan China memilih jaringan seluler. Uni Eropa dan India masih menentukan kebijakan. Perbedaan penggunaan spektrum antarnegara dapat menyebabkan fragmentasi teknologi, meningkatkan biaya hardware, dan menyulitkan pengembangan perangkat global. Salah satu solusi yang dipertimbangkan adalah spectrum sharing menggunakan teknologi seperti AFC.
+Pasang surut laut → menghasilkan arus air → underwater kite memanfaatkan hydrodynamic lift → kite bergerak dalam pola angka delapan → tether menarik generator → energi kinetik air diubah menjadi energi listrik.
+
+AI dapat mempercepat desain DNA origami dengan menggabungkan diffusion model dan aturan biokimia DNA. Teknologi ini berpotensi menghasilkan struktur nano yang dapat digunakan dalam drug delivery dan imunoterapi.
+High-Bandwidth Flash (HBF) mengadaptasi teknologi stacking dari HBM ke NAND flash. Walaupun bandwidth-nya masih lebih rendah daripada HBM, kapasitas besar dan sifat nonvolatile membuat HBF berpotensi digunakan untuk AI inference, karena inference terutama membutuhkan pembacaan model yang sudah dilatih dan tidak banyak melakukan penulisan data.
+
+AIBO = robot sosial yang menggunakan AI + vision + mobilitas untuk meniru interaksi seperti hewan peliharaan.
+
+Scanwheel menunjukkan bahwa teknologi TV elektromekanik lama dapat dikombinasikan dengan microcontroller modern, LED, motor, PIO, dan 3D printing untuk menghasilkan display portable dengan resolusi horizontal sangat tinggi. 
+PIO memiliki empat coprocessor yang dapat menangani aliran input/output secara independen dari dua CPU core RP2040. Karena itu, PIO dapat menangani pembacaan frame buffer, pengaturan LED, dan sinkronisasi dengan drum yang berputa. Drum bergerak secara bertahap setiap 1 milidetik, sementara data video dikirim ke Pi Pico melalui jaringan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

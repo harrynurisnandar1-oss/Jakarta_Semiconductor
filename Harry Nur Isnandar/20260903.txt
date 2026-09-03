@@ -1,0 +1,35 @@
+08:11 03/09/2026 Read a module Smart Meter PLN CSI-13
+
+09:12 03/09/2026 Study SPLN D3.005:2022
+
+10:02 03/09/2026 Reading Bandwidth dan try simulator Fourier. "https://explerify.com/simulator-fourier-series/#simulator"
+
+10:21 03/09/2026 Capacitor Losses "Practical Electronic For Inventors"
+
+10:57 03/09/2026 Parallel-Resonant Circuits "Practical Electronic For Inventors"
+
+11:28 03/09/2026 Two Networks and Filters "Practical Electronic For Inventors"
+
+11:44 03/09/2026 Two-Port Network and Filters
+
+13:16 03/09/2026 Parallel band pass filter
+
+13:37 03/09/2026 Transient Circuits
+
+14:05 03/09/2026 Circuits with Periodic Nonsinusoidal Source
+
+14:07 03/09/2026 Fourier Series
+
+14:25 03/09/2026 Nonperiodic Source
+
+15:04 03/09/2026 Unpacking smart meter CSI-13 
+
+15:14 03/09/2026 I haven't managed to open the protective cover yet, likely because an adhesive was applied to prevent it from being easily opened.
+
+15:15 03/09/2026 Standard Wire
+
+15:55 03/09/2026 Math a VA in 1 phase and to phase 
+https://sloinstalasilistrik.com/standard-ukuran-material/
+https://www.rapidtables.com/calc/electric/va-to-amps-calculator.html.
+
+16:14 03/09/2026 Study about the wire impedance-matching network

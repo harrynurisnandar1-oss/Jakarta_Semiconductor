@@ -1,0 +1,24 @@
+Attendance
+Present
+
+Activity Description
+07:51 04/09/2026 Preparing presentation materials for today based on concepts learned from the book "Practical Electronics for Inventors."
+09:43 04/09/2026 Creating a PowerPoint presentation on ROM.
+11:32 04/09/2026 Studying the differences between ROM and RAM.
+13:02 04/09/2026 Reviewing the presentation materials.
+13:26 04/09/2026 Listening to Akmal's presentation on single-phase and three-phase generators.
+14:03 04/09/2026 Listening to Diana's presentation on motors.
+14:22 04/09/2026 Presenting material on diode applications in ROM.
+14:52 04/09/2026 Listening to Harry's presentation on Thevenin and Norton voltages.
+15:35 04/09/2026 Discussing laptop storage capacity settings with a teammate.
+
+Lessons Learned
+Understanding the application of diodes in ROM—specifically, utilizing diode characteristics to define logic paths so that decimal inputs yield specific binary output patterns.
+Learning that three-phase generators can employ either Y-connections or Delta-connections for their windings.
+Understanding the operation of DC motors, which utilize electric current flowing through windings within a magnetic field to generate the force that causes the rotor to spin.
+Understanding Thevenin's theorem in DC circuits by simplifying a linear circuit into an equivalent voltage source connected in series with an equivalent resistance.
+
+Obstacles Encountered
+Need to further study the calculation of Thevenin equivalent voltage (VTH) and understand the relationship between these calculations and Norton equivalent circuits.
+Need to deepen the understanding of the concepts and operating principles of single-phase and three-phase generators, particularly regarding differences in their characteristics and circuit configurations.
+

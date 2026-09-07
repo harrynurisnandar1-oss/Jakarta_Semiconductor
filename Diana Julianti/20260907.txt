@@ -1,0 +1,18 @@
+Senin 07/08/2026
+
+Uraian Kegiatan:
+7:48 AM Membaca materi One-Week Embedded Systems Training – STM32U575 sebagai panduan pelaksanaan latihan embedded systems.
+9:00 AM Membuat project NUCLEO-U575ZI-Q melalui STM32CubeMX dengan CMake sebagai toolchain, kemudian melakukan configure dan build project menggunakan VS Code serta melakukan flashing file .elf.
+9:46 AM Berhasil melakukan blinking LED LD3 pada NUCLEO-U575ZI-Q menggunakan program STM32.
+10:24 AM Berhasil melakukan sequential LED blinking pada LD1, LD2, dan LD3 pada NUCLEO-U575ZI-Q.
+11:00 AM Mempelajari struktur CMakeLists.txt, meliputi source file yang dikompilasi, include path, defines, serta referensi linker script, kemudian menambahkan source file baru ke dalam project.
+12:15 AM 9/7/2026 Istirahat
+2:26 AM Berhasil mengimplementasikan push button untuk mengontrol LED LD1, LD2, dan LD3 pada NUCLEO-U575ZI-Q.
+3:55 AM Mengimplementasikan blinking LED dengan kecepatan berbeda dari superloop menggunakan HAL_GetTick() dan konsep non-blocking timing.
+4:45 AM Mempelajari konsep dasar CI/CD dan penerapannya dalam proses pengembangan perangkat lunak.
+
+Pembelajaran yang diperoleh :
+Memahami alur pengembangan project embedded menggunakan STM32CubeMX, CMake, dan VS Code, termasuk proses configure, build, dan flashing file ELF. Memahami struktur CMakeLists.txt dan perannya dalam menentukan source file, include path, defines, serta linker script. Selain itu, memahami penggunaan HAL_Delay() dan HAL_GetTick() untuk pengaturan timing LED serta konsep non-blocking pada superloop.
+
+Kendala yang dialami:
+Mengalami beberapa error selama proses konfigurasi, build, flashing, dan pengujian program sehingga membutuhkan waktu lebih lama untuk melakukan pengecekan dan percobaan ulang. Kendala juga ditemukan saat memastikan konfigurasi CMakeLists.txt dan source file dapat terintegrasi dengan proses build. Masalah ditangani dengan melakukan pengecekan konfigurasi dan pengujian program secara bertahap

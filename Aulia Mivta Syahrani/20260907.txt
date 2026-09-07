@@ -1,0 +1,23 @@
+Attendance
+Present
+
+Activity Description
+08:03 07/09/2026 Reviewed the "One-Week Embedded Systems Training — STM32U575" material as a guide for embedded systems training using the STM32U575.
+09:50 07/09/2026 Successfully made the NUCLEO-U575ZI-Q's LD3 blink.
+10:31 07/09/2026 Successfully implemented sequential blinking of LD3, LD2, and LD1 on the NUCLEO-U575ZI-Q.
+11:43 07/09/2026 Attempted to implement the internal push button as a trigger to toggle LD1 on the NUCLEO-U575ZI, but was unsuccessful.
+13:48 07/09/2026 Made another attempt to implement the internal push button as a trigger to toggle LD1 on the NUCLEO-U575ZI, but was unsuccessful.
+14:12 07/09/2026 Successfully implemented the internal push button as a trigger to toggle LD1 on the NUCLEO-U575ZI.
+15:10 07/09/2026 Successfully implemented the internal push button as a trigger to control sequential LEDs on the NUCLEO-U575ZI-Q.
+16:21 07/09/2026 Successfully implemented non-blocking timing using HAL_GetTick(), where LD1 and LD2 blink at different rates within a single superloop.
+16:43 07/09/2026 Studied the CMakeLists.txt configuration by identifying the source files to be compiled, include paths, and definitions used in the build process.
+
+Lessons Learned
+Understand the use of GPIO and the `HAL_Delay()` function on the STM32 to implement sequential LED blinking with varying on-durations for LD1, LD2, and LD3.
+Understand the super-loop concept in embedded systems, where the program executes repeatedly within a `while(1)` loop to manage the microcontroller's workflow.
+Understand the use of a push-button as a GPIO input and a trigger to change the LED state.
+Understand the use of `HAL_GetTick()` and non-blocking timing concepts to control multiple LEDs at different intervals within a single super-loop.
+Understand the function of `CMakeLists.txt` in managing the project build process, including the configuration of source files, include paths, and definitions.
+
+Obstacles Encountered
+While running the program in Visual Studio Code, a debugging error occurred, triggering an "ENOENT: no such file or directory" notification. The issue was resolved by repeatedly running and debugging the program until it succeeded. The problem was tentatively attributed to configuration issues or errors in referencing the files or directories required by Visual Studio Code.

@@ -1,0 +1,25 @@
+Selasa, 08/09/2026
+
+
+8:41 AM 9/8/2026
+Berhasil mengimplementasikan push button and toggle an LED on press pada board NUCLEO-U575ZI-Q. Hasilnya LD3 toggle bersih 1x per pencetan, berjalan bersamaan dengan LD1 dan LD2 yang tetap blink independen di background tanpa terganggu.
+
+10:52 AM 9/8/2026
+Logika debounce + toggle-on-press-nya jalan dengan baik di board.
+
+11:50 PM 9/8/2026
+Mencoba menyelesaikan bagian observasi switch bounce di logic analyzer. Gagal karena pin PC13 tidak memiliki header fisik di board NUCLEO-U575ZI-Q, sehingga sulit disambungkan ke probe logic analyzer yang hanya berupa jumper wire.
+
+1:45 PM 9/8/2026
+Berpindah mencoba board baru (STM32G431RBT6 / NUCLEO-G431RB) dengan asumsi PC13 lebih mudah diakses. Berhasil membuat ulang implementasi push button + debounce di board baru.
+
+2:30 PM 9/8/2026
+Percobaan logic analyzer di board baru kembali terkendala, kali ini karena konflik koneksi USB antara ST-Link debugger dan alat logic analyzer yang terhubung bersamaan.
+
+3:20 PM 9/8/2026
+Mulai Exercise 1 Day 2: mengubah pembacaan tombol dari polling ke EXTI interrupt-driven.
+
+4:00 PM 9/8/2026
+Berhasil menyelesaikan Exercise 1 Day 2 — ISR terbukti bekerja dengan toggle GPIO yang teramati di logic analyzer, sesuai kriteria penerimaan exercise.
+
+4:35 PM 9/8/2026 Isi logbook di maganghub dan upload daily journal di GIT

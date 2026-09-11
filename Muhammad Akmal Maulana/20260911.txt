@@ -1,0 +1,7 @@
+09:23 11/09/2026 Kunjungan ke lab mentor dan persiapan untuk melakukan Zoom Sharing Knowledge Agentic AI untuk Desain Chip
+09:56 11/09/2026 zoom Sharing Knowledge Agentic AI untuk Desain Chip
+13:10 11/09/2026 DMA ADC
+13:45 11/09/2026 UART Message doesn't send
+14:29 11/09/2026 DMA ADC with TIM done!! Now add RMS
+15:30 11/09/2026 haven't add RMS 
+16:59 11/09/2026 use logic analyser for ADC Input

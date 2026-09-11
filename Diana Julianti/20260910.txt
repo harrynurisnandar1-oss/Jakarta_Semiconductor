@@ -1,0 +1,30 @@
+Kamis 10/09/2026
+
+7:47 AM 9/10/2026  Memahami exercises day 3
+
+printf : digunakan untuk menampilkan output ke layar terminal.
+
+09:20 AM 9/10/2026 Berhasil melakukan example UART Nucleo-G431RBT6
+11:57 AM 9/10/2026 Berhasil melakukan exercises 1 day 3 printf tanpa logiz analyzer
+1:45 PM 9/10/2026 Berhasil melakukan exercises 1 day 3 dengan logiz analyzer
+3:56 PM 9/10/2026 Berhasil melakukan exercises 2 day 3 LED on, Led off, status, di Docklight.
+
+Seeting di Docklight:
+Project Settings
+COM12
+Baude Rate : 115200
+Parity : None
+Data Bits : 8
+Stop Bits : 1
+
+Lalu double klik "Send Sequences"
+
+Name : LedOn
+Sequence "Hex" : 6C 65 64 20 6F 6E 0A
+
+Name : LedOff
+Sequence "Hex" : 6C 65 64 20 6F 66 66 0A
+
+lalu klik ok, setelah itu send data dan amati perubahan pada LD, jangan lupa continue di VSCode terlebih dahulu.
+
+4:20 AM 9/11/2026 Memahami exerises 3 "Parser"

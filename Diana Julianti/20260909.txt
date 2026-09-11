@@ -1,0 +1,36 @@
+Rabu, 09/09/2026 
+
+7:46 AM 9/9/2026 Membaca RN821X User Manual
+
+RN821X adalah chip SoC fase tunggal yang hemat daya, berkinerja tinggi, sangat terintegrasi, dan sangat andal, yang dilengkapi dengan inti ARM Cortex-M0 32-bit; produk ini mampu memenuhi kebutuhan yang terus berkembang terkait fungsi dan kinerja meteran listrik pintar fase tunggal. 
+Tidak tersedia pada RN8217:  Mendukung EEPROM hingga 32 KB, 1.000.000 siklus pemrograman, dukungan untuk operasi byte, serta retensi data lebih dari 20 tahun.
+
+9:08 AM 9/9/2026 Akhirnya terpecahkan masalah day 2 (exps 1) PC13 terlalu rendah impedensi Logic Analyzer tapi kalau di PA5 itu kebaca di logic bisa
+
+9:09 AM 9/9/2026 Mencoba day 2 (exps 2)
+
+11:29 AM 9/9/2026 Berhasil mengonfigurasi TIM2 untuk interrupt periodik 1ms dan membangun software tick counter yang membuat LED blink tepat 1Hz pada board NUCLEO-G431RB.
+
+1: 50 AM 9/9/2026 Berhasil mengonfigurasi TIM2 sebagai PWM generator pada channel 1 (PA5, remap dari TIM2_CH1) dengan prescaler 169 dan ARR 999 (frekuensi PWM ~1kHz). Duty cycle di-update setiap 10ms via flag dari ISR (non-blocking), menghasilkan efek breathing LED pada LD2 board NUCLEO-G431RB — terkonfirmasi visual (dim-terang-dim) dan terverifikasi via logic analyzer: frekuensi terbaca [X]Hz, duty cycle bervariasi [X]-[X]%. Sempat ada konflik PA5 terpakai dua fungsi (GPIO toggle exercise 1 vs PWM output), fixed dengan hapus baris toggle lama di callback.
+
+
+
+
+
+
+
+terus kalau di pin lain misal PA15 itu button bisa digunakan nyala mati dan di salae logic sinyalnya kebaca high low gitu, jadi penyebabnya PC13 itu terlalu rendah impedensi logic analyzernya, apakah hal ini bisa tetep lanjut ke exps 2,3,4
+
+LD Off dia off kalau pake buzzer, bunser
+
+ 
+Uraian Aktivitas:
+Hari ini membaca RN8213 User Manual untuk memahami arsitektur chip SoC fase tunggal berbasis ARM Cortex-M0 yang digunakan pada meteran listrik pintar. Selain itu melanjutkan latihan embedded systems Day 2 yang terdiri dari tiga exercise: (1) mengonversi pembacaan tombol dari metode polling menjadi interrupt-driven menggunakan EXTI, dibuktikan dengan toggle GPIO yang terbaca di logic analyzer; (2) mengonfigurasi TIM2 untuk interrupt periodik 1ms, membangun software tick counter, dan menghasilkan blink LED tepat 1Hz pada board NUCLEO-G431RB, lalu mengukur drift-nya dibanding HAL_Delay() menggunakan logic analyzer; dan (3) menghasilkan sinyal PWM pada salah satu channel timer untuk mengatur duty cycle secara bertahap sehingga LED meredup dan menyala secara halus (breathing effect).
+
+
+Pembelajaran yang Diperoleh :
+Memahami bahwa pin GPIO memiliki karakteristik impedansi yang berbeda-beda tergantung pemetaannya di mikrokontroler, sehingga pemilihan pin untuk probing logic analyzer perlu memperhatikan hal ini, pin dengan impedansi terlalu rendah (seperti PC13 pada kasus yang dialami) dapat menyebabkan sinyal tidak terbaca dengan baik, sementara pin lain seperti PA5 terbukti bekerja normal. Juga memperdalam pemahaman tentang konfigurasi timer sebagai interrupt periodik maupun sebagai PWM generator, termasuk cara memetakan ulang (remap) fungsi alternate function suatu pin ke peripheral timer tertentu, serta pentingnya menghindari busy-wait dengan memakai pendekatan non-blocking berbasis flag dari ISR untuk update duty cycle secara real-time.
+
+
+Kendala yang Dialami
+Kendala utama muncul pada tahap verifikasi menggunakan logic analyzer, di mana perangkat sempat terputus koneksinya (disconnected) dari sesi capture sehingga perlu dilakukan reconnect berulang kali sebelum bisa mengambil data sinyal dengan benar. Selain itu, pada percobaan pertama sinyal PWM 1kHz belum berhasil terbaca dengan jelas karena pengaturan sample rate pada logic analyzer masih menggunakan konfigurasi lama yang disesuaikan untuk sinyal 1Hz, sehingga perlu penyesuaian ulang sample rate ke rentang yang lebih tinggi agar detail sinyal PWM dapat tertangkap secara akurat.

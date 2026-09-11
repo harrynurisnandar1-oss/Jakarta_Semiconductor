@@ -1,0 +1,77 @@
+Jumat 11/09/2026
+
+
+8:46 AM 9/11/2026 Berkunjung ke Laboratorium Bapak Edy
+9:47 AM 9/11/2026 Join Zoom Sharing Knowledge Agentic AI untuk Desain Chip Semikonduktor
+
+Materi: " Agentic AI untuk pengembangan IC design mempercepat iteraasi time-to-timing verification"
+
+GitHub exection, ada yang bisa dimanfaatkan, misalnya mau bikin UART serial transmiter dengan rasbery.
+
+Sebagai perancang, ingin modul UART transmitter 8N1 agar FPGA dapat mengirim data serial ke host. Format 8N1 : 1 start bit rendah, 8 bit data dikirim LSB lebih dulu, 1 stop bit tinggi.
+
+Cara verifikasi AI dengan verifikasi AI yang baru. 
+
+
+Verilog
+Ollama 
+coding : DeepSeek AI
+review : MiniMax AI 
+
+agent-plan, agent trigger (ada 4 agent yang bekerja disini)
+
+Parameter yang digunakan Baud (default 115200).
+ODM memakai UART 1500 Baud, kami menggunakan GitHub kita melakukan testing dengan data yang kita gunakan sendiri,
+
+
+
+11:11 AM 9/11/2026 Zoom selesai
+
+2:25 PM 9/11/2026 Berhasil Day 3 Ex 3 "Extend the parser with a help command and a numeric argument, e.g. blink 500 sets the blink period."
+
+Seeting di Docklight:
+Project Settings
+COM12
+Baude Rate : 115200
+Parity : None
+Data Bits : 8
+Stop Bits : 1
+
+Lalu double klik "Send Sequences"
+
+Name : Help
+Sequence "Hex" : 68 65 6C 70 0A
+	 "ASCII" : helpn
+
+Name : BLINK500
+Sequence "Hex" : 62 6C 69 6E 6B 20 35 30 30 0A
+	 "ASCII" :  blink 500n
+
+lalu klik ok, setelah itu send data dan amati perubahan pada LD, jangan lupa continue di VSCode terlebih dahulu.
+
+4:29 PM 9/11/2026 Berhasil Day 3 Ex 4 "Debugging drill: the program lead introduces three bugs into a working project — a wrong baud rate, an
+off-by-one in the ring buffer, and a missing volatile. Engineers find each using the debugger and analyser,
+and write down the reasoning that led them there."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+m

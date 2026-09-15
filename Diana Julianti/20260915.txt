@@ -1,0 +1,39 @@
+8:30 AM 9/15/2026 Berhasil membenarkan masalah day 4 ex 3 yang kemarin "Compute a running RMS over a buffer of samples and print it once per second. Turn the potentiometer and
+confirm the RMS tracks it."
+
+9:51 AM 9/15/2026 Berhasil melakukan DAC Signal Generatione menggunakan example Nucleo-G431RBT dengan osiloskop (Mifta, STM32Cube, Example, DAC_SignalsGeneration2, Main)
+
+9:52 AM 9/15/2026 DAC diubah dijadikan sumber ADC, DAC disesuaikan kebutuhan
+
+11:57 AM 9/15/2026 Berhasil Day 5 Ex 1 "Physical connection. Wire the MINIE to the board's SWD header: SWDIO, SWCLK, GND, and VDD-sense.
+Power the board, connect with CubeProgrammer CLI (STM32_Programmer_CLI -c port=SWD), and read
+the device ID. Nothing proceeds until the debugger sees the chip."
+ Hasilnya:
+C:\Users\mifta>STM32_Programmer_CLI -c port=SWD
+      -------------------------------------------------------------------
+                       STM32CubeProgrammer v2.23.0
+      -------------------------------------------------------------------
+
+ST-LINK SN  : 0056002C3433510737363934
+ST-LINK FW  : V3J8M3
+Board       : STLINK-V3MINIE
+Voltage     : 3.31V
+SWD freq    : 8000 KHz
+Connect mode: Normal
+Reset mode  : Software reset
+Device ID   : 0x484
+Revision ID : Rev X
+Device name : STM32H56x/573
+NVM size    : 1 MBytes
+Device type : MCU
+Device CPU  : Cortex-M33
+BL Version  : 0xE5
+SFSP Version: v2.6.0
+Debug in Low Power mode enabled
+
+3:47 PM 9/15/2026 Berhasil Blinking STM32H562VGT6 MENGGUNAKAN ST-Link "Port the project. In CubeMX, change the target device from the ZIT6Q to the STM32U575VGT6 and
+regenerate. Note what breaks: pins that do not exist on LQFP100, the CMakeLists.txt and linker script now
+naming a different part, and 1 MB of flash instead of 2 MB. Delete the CMake cache"
+
+
+	

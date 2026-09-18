@@ -1,0 +1,20 @@
+7:51 AM 9/18/2026 Mempelajari dan membaca X-NUCLEO-LPMO1A untuk mengukur arus  
+
+dinamik, ADC nya cangih, bisa sampai 5 mega watt / seccond 
+kalau Avometer static 
+Fokus ke firmware
+
+9:40 PM 9/18/2026 Menginstal aplikasi STM32CubeMonPWR 1.2.1
+9:45 AM 9/18/2026 Current measurement, menghubngkan laptop dengan board STM32L496VGT6, tetapi gagal karena "eror power get" aplikasi STM32CubeMonitorPower berhasil embuka virtual COM Port, tetapi board  X-NUCLEO-LPM01A tidak merespons perintah komunikasi UART yang dikirimkan, dan ternyata untuk Nucleo ini tidak bisa diimplementasikan melalui STM32 Power 1.2.1 dan yang bisa itu melalui STM32 Power 1.1.1
+
+10:15 PM 9/18/2026 Mengamati hasil pengukuran I dalam mikro amper per detik
+10:20 PM 9/18/2026 Menyalakan LED STM32H562VGT6 dengan sumber power dari  X-NUCLEO-LPM01A bersama rekan setim dan mentor
+11:04 PM 9/18/2026 Berhasil blinking menjalankan example project Threadx Low Power pada  X-NUCLEO-LPM01A  bersama rekan setim
+
+13:15 PM 9/18/2026 Melanjutkan membaca debugging chapter 3
+14:01 PM 9/18/2026 Menginstall winmerge
+14:35 PM 9/18/2026 Berhasil menjalankan project Threadx Low Power pada STM32U575VGT6 bersama rekan setim
+
+
+
+Hal yang perlu dipelajari PR : Threadx, Prosesor U575, FreeRTOS didukung oleh amazon, misalnya U5

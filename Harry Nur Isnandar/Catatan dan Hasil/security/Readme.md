@@ -64,3 +64,5 @@ Mengapa Protokol Ini Digunakan?
 - Fitur yang ditambahkan adalah Key Agreement Scheme (TANPA OPENSSL).
 
 - Menambahkan Fitur Security Module, dimana VK (Vending Key) di load dengan ECDH yang diterima dalam security module yang di di cocokan dengan SM prvkey yang sudah.
+
+- Menambahkan fitur pembacaan publik key dan private key dari pengujian TrustZone

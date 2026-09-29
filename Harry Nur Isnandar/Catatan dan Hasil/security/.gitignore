@@ -1,5 +1,6 @@
 # Ignore all executable files
 *.exe
+*.env
 
 # Ignore all database files
 *.db

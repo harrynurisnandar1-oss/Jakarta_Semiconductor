@@ -39,14 +39,10 @@ Perusahaan listrik besar membagi kode SGC ke dalam area/region yang berbeda (mis
 
 ECDH STS merujuk pada gabungan antara protokol pertukaran kunci Elliptic Curve Diffie-Hellman (ECDH) dengan skema autentikasi Station-to-Station (STS) protocol.Secara mendasar, gabungan ini digunakan untuk menghasilkan kunci enkripsi bersama (shared session key) secara aman sekaligus mencegah serangan Man-in-the-Middle (MITM).
 
-1. Apa itu ECDH?
-
 Elliptic Curve Diffie-Hellman (ECDH) adalah protokol kriptografi kunci asimetris yang memungkinkan dua pihak (misalnya Alice dan Bob) membuat satu kunci rahasia yang sama (shared secret) melalui saluran komunikasi yang tidak aman. Kunci ini nantinya digunakan untuk mengenkripsi pesan menggunakan algoritma simetris seperti AES.
     
 Kelemahan dasar ECDH:
 Secara bawaan, ECDH standar bersifat unauthenticated (tidak terautentikasi). Artinya, jika ada peretas di tengah jalur (MITM), peretas tersebut bisa menyamar menjadi Bob di depan Alice, dan menyamar menjadi Alice di depan Bob tanpa ketahuan.
-
-2. Apa itu STS (Station-to-Station)?
 
 Station-to-Station (STS) protocol adalah protokol kesepakatan kunci yang mengombinasikan skema Diffie-Hellman dengan tanda tangan digital (digital signature) untuk memverifikasi identitas kedua belah pihak.
 
@@ -63,8 +59,8 @@ Mengapa Protokol Ini Digunakan?
 - Efisiensi Tinggi: Menggunakan kurva eliptik (ECDH) membutuhkan ukuran kunci yang jauh lebih kecil dibandingkan RSA tradisional, sehingga komputasinya sangat cepat dan hemat memori.
 - PFS (Perfect Forward Secrecy): Jika suatu saat kunci utama bocor, peretas tetap tidak bisa membuka riwayat pesan di masa lalu karena setiap sesi komunikasi menggunakan kunci acak yang berbeda.
 
-### KEY AGREEMENT SCHEME
+### Security Modul
 
 - Fitur yang ditambahkan adalah Key Agreement Scheme (TANPA OPENSSL).
 
-![alt text](workflow_smart_meter_ami.png)
+- Menambahkan Fitur Security Module, dimana VK (Vending Key) di load dengan ECDH yang diterima dalam security module yang di di cocokan dengan SM prvkey yang sudah.

@@ -1,0 +1,6 @@
+08:18 17/09/2026 Mendalami lebih lanjut mengenai StandBy WakeUp dengan mengedit program yang ada
+09:07 17/09/2026 Trying Appendix B with STM32 U575ZIT6Q
+10:14 17/09/2026 fail to print 
+12:56 17/09/2026 try use c complier instead
+14:22 17/09/2026 Appendix B using microcontroller done!!
+15:11 17/09/2026 C Programming Language

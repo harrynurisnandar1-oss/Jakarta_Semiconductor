@@ -1,0 +1,5 @@
+07:56 24/09/2026 Memasang PZEM-T004
+08:57 24/09/2026 Mencoba menggunakan PZEM-T004 dengan load microwave
+09:13 24/09/2026 FreeRTOS
+10:27 24/09/2026 Multiple Tasks 
+10:37 24/09/2026 Intertask Communication 

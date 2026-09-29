@@ -1,0 +1,70 @@
+# KEY MANAGEMENT CENTER
+
+- Mencoba melakukan pengujian degan cryptography (TANPA OPENSSL).
+- Supply Group Code (SGC) adalah kode angka 6 digit yang dipakai pada sistem meter prabayar (seperti kWh meter listrik) untuk menandai wilayah atau area geografis tertentu dari instalasi meter. Kode ini memastikan bahwa token isi ulang hanya bisa digunakan pada meter yang memiliki SGC yang sama.
+- Try Using Key Management Center.
+- Membuat uji KEY MANAGEMENT SYSTEM .
+
+## Rincian fungsi dari masing-masing parameter di dalam SupplyGroup:
+| Parameter| Nama, Ekstensi | Fungsi Utama |
+-------- |----------------| ------------ |
+| sg.sgc | Supply Group Code ("110224") | Kode unik 6 digit yang mengidentifikasi penyedia layanan (utilitas/PLN) atau wilayah geografis tertentu. Ini juga menjadi bahan dasar utama (seed) yang digabungkan dengan nilai acak (rand_val) untuk membentuk Vending Key Plaintext (vk_plain). |
+| sg.krn | Key Revision Number (1) | Nomor revisi kunci. Digunakan untuk menandai versi algoritma atau versi kunci master yang sedang berlaku, sehingga sistem tahu apakah meteran perlu diperbarui kuncinya (Key Change Token). |
+| sg.kt | Key Type (2) | Menentukan tipe/peran kunci yang dihasilkan (misalnya: kunci standar untuk pengisian token, kunci perubahan tarif, atau kunci teknis/pemeliharaan). |
+
+## Rincian fungsi dari masing-masing parameter di dalam Key Type:
+
+Nilai Key Type (KT) | Nama / Peran | Fungsi Utama |
+------------------- |----------------| ------------ |
+KT = 1   | Single Key / Unique Key | Kunci Unik per Meteran. Digunakan khusus untuk transaksi yang sifatnya sangat spesifik ke satu nomor seri meteran tertentu (misalnya token pengisian kredit/listrik harian). Token dibuat menggunakan kombinasi VK unik meteran tersebut sehingga tidak bisa dipakai di meteran milik orang lain.
+KT = 2 | Group Key / Common Key | "Kunci Kelompok. Digunakan untuk operasi yang berlaku serentak pada seluruh meteran dalam satu wilayah/Supply Group Code (SGC) yang sama. Contohnya: token untuk perubahan tarif serentak (Tariff Index Update), token uji coba teknis, atau token pengaturan zona waktu." | 
+KT = 3 | Key Change Key | Kunci Perubahan Versi. Kunci khusus yang digunakan saat sistem ingin mengganti Vending Key pada meteran (misalnya menaikkan KRN dari 1 ke 2). Token jenis ini memuat enkripsi kunci baru yang akan disimpan ke dalam memori permanen meteran. | 
+
+### Cara Menghapus isi dari sebuah sebuah file dari 
+Mengosongkan isi file (Reset tanpa menghapus file):
+> 1. PowerShell
+> 2. Clear-Content kmc_database.db
+
+Menghapus file database sepenuhnya:
+> 1. PowerShell
+> 2. Remove-Item kmc_database.db
+___
+
+### SGC Dalam satu negara kodenya berbeda-beda berdasarkan wilayah geografisnya.
+
+Perusahaan listrik besar membagi kode SGC ke dalam area/region yang berbeda (misalnya per Provinsi atau per Unit Induk Distribusi) karena alasan berikut
+- Keamanan Kunci Enkripsi   : SGC digunakan sebagai basis untuk membuat kunci transaksi (vending key). Jika sistem di suatu daerah diretas atau kuncinya bocor, token ilegal yang dibuat oleh peretas hanya bisa mengacaukan meteran di wilayah SGC itu saja, sementara meteran di wilayah SGC lain di seluruh Indonesia tetap aman.
+- Mencegah Salah Sasaran / Penyelundupan Token: Token listrik yang dibeli di suatu wilayah geografis tidak akan bisa dipakai di wilayah lain.
+- Kemudahan Manajemen Kontraktor: PLN bisa menunjuk vendor penjualan token yang berbeda-beda untuk mengelola wilayah (vending management) tertentu berdasarkan kode SGC-nya.
+
+ECDH STS merujuk pada gabungan antara protokol pertukaran kunci Elliptic Curve Diffie-Hellman (ECDH) dengan skema autentikasi Station-to-Station (STS) protocol.Secara mendasar, gabungan ini digunakan untuk menghasilkan kunci enkripsi bersama (shared session key) secara aman sekaligus mencegah serangan Man-in-the-Middle (MITM).
+
+1. Apa itu ECDH?
+
+Elliptic Curve Diffie-Hellman (ECDH) adalah protokol kriptografi kunci asimetris yang memungkinkan dua pihak (misalnya Alice dan Bob) membuat satu kunci rahasia yang sama (shared secret) melalui saluran komunikasi yang tidak aman. Kunci ini nantinya digunakan untuk mengenkripsi pesan menggunakan algoritma simetris seperti AES.
+    
+Kelemahan dasar ECDH:
+Secara bawaan, ECDH standar bersifat unauthenticated (tidak terautentikasi). Artinya, jika ada peretas di tengah jalur (MITM), peretas tersebut bisa menyamar menjadi Bob di depan Alice, dan menyamar menjadi Alice di depan Bob tanpa ketahuan.
+
+2. Apa itu STS (Station-to-Station)?
+
+Station-to-Station (STS) protocol adalah protokol kesepakatan kunci yang mengombinasikan skema Diffie-Hellman dengan tanda tangan digital (digital signature) untuk memverifikasi identitas kedua belah pihak.
+
+Bagaimana ECDH STS Bekerja?
+
+Ketika ECDH digabungkan dengan STS, kelemahan utama ECDH tertutupi:
+- Pertukaran Kunci Publik: Alice dan Bob saling mengirimkan kunci publik ECDH mereka.
+- Autentikasi Digital: Bersamaan dengan itu, mereka juga saling mengirimkan tanda tangan digital (signature) yang dibuat menggunakan kunci privat jangka panjang mereka beserta sertifikat identitasnya.
+- Verifikasi: Masing-masing pihak memverifikasi tanda tangan tersebut. Jika tanda tangan valid, identitas mereka terkonfirmasi asli.
+- Pembuatan Kunci: Setelah aman dari intersepsi, kedua pihak memproses parameter kurva eliptik untuk menghasilkan kunci enkripsi yang sama secara independen.
+
+Mengapa Protokol Ini Digunakan?
+- Keamanan dari MITM: Penyerang tidak bisa memalsukan tanda tangan digital karena tidak memiliki kunci privat asli milik instansi/pengguna tersebut.
+- Efisiensi Tinggi: Menggunakan kurva eliptik (ECDH) membutuhkan ukuran kunci yang jauh lebih kecil dibandingkan RSA tradisional, sehingga komputasinya sangat cepat dan hemat memori.
+- PFS (Perfect Forward Secrecy): Jika suatu saat kunci utama bocor, peretas tetap tidak bisa membuka riwayat pesan di masa lalu karena setiap sesi komunikasi menggunakan kunci acak yang berbeda.
+
+### KEY AGREEMENT SCHEME
+
+- Fitur yang ditambahkan adalah Key Agreement Scheme (TANPA OPENSSL).
+
+![alt text](workflow_smart_meter_ami.png)

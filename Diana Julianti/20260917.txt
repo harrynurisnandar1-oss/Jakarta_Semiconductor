@@ -1,0 +1,45 @@
+8:10 AM 9/17/2026 Membaca buku Debugging-David J.Agans sampai Chapter 2
+Debugging adalah proses mencari tahu kenapa program atau sistem tidak bekerja seperti yang seharusnya, lalu memperbaikinya.
+
+Dokumen tentang cara melakukan pemecahan masalah (*troubleshooting*), produk tersebut berupa papan sirkuit yang memuat ratusan cip, beberapa mikroprosesor, dan berbagai bus komunikasi.
+
+Kuncinya adalah mengingat dan menerapkannya.
+Fokus utamanya adalah menemukan penyebab bug dan memperbaikinya. 
+"User This Book Here" : Program normal > muncul bug > terjadi masalah > masalah terdeteksi >> debugging >> bug diperbaiki > program kembali normal.
+
+Perbedaan Debugging dan Troubleshooting:
+Debugging biasanya berarti mencari tahu mengapa suatu desain tidak berfungsi sebagaimana mestinya.
+Troubleshooting biasanya berarti mencari tahu apa yang rusak pada unit produk tertentu ketika desain produk tersebut sebenarnya sudah bagus—misalnya ada berkas yang terhapus, kabel yang putus, atau komponen yang rusak.
+
+Debugging - 9 Aturan Penting untuk Menemukan Masalah Perangkat Lunak dan Perangkat Keras yang Paling Sulit Dideteksi. ATURAN DEBUGGING : 
+PAHAMI SISTEMNYA
+BUAT SISTEM GAGAL
+BERHENTI BERPIKIR DAN MULAI MENGAMATI
+BAGI DAN TAKLUKKAN
+UBAH SATU HAL DALAM SATU WAKTU
+SIMPAN REKAM JEJAK PERUBAHAN
+PERIKSA COLOKAN LISTRIK
+DAPATKAN SUDUT PANDANG BARU
+JIKA ANDA BELUM MEMPERBAIKINYA, BERARTI BELUM DIPERBAIKI
+
+
+9:24 AM 9/17/2026 Mencoba kembali day 4 ADC, DMA, and Sampling Analog Signals, Exercises 4 "Stretch, for whoever moves fast: sample two channels and compute the mean of the product of their samples — the arithmetic core of energy measurement, at toy scale."
+
+10:42 AM 9/17/2026 Berhasil mencoba day 4 ADC, DMA, and Sampling Analog Signals, Exercises 4 
+
+kali dua geser ke kiri 1 kali
+kali 4 geser ke kiri 2 kali
+pembagian dua geser ke kanan 1 kali
+pembagian 4 geser ke kanan 2 kali
+
+
+11:37 AM 9/17/2026 Berhasil mengubah output pada docklight pada bagian Produc dari bilangan desimal menjadi hexadecimal 6 digital.
+
+1:15 PM 9/17/2026 mau menyolder tapi tidak jadi dikarenakan tidak ada colokan dan tempat untuk menyolder yang aman
+
+1:52 PM 9/17/2026 membuat laporan tata cara/uji coba "day 4 ADC, DMA, and Sampling Analog Signals"
+
+4:33 PM 9/17/2026 Membaca buku Debugging-David J.Agans sampai Chapter 3
+
+
+paham ngukur arus, makanya harus belajar CT 

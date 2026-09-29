@@ -1,0 +1,159 @@
+7:56 AM 9/16/2026 Memahami untuk mau menentukan pilihan E1/E2/E3/E4
+
+E1 — Metrology & Calibration
+
+Fokus: memastikan meter mengukur listrik dengan "akurat".
+
+Yang harus dipahami:
+- Dasar pengukuran listrik: tegangan (V), arus (I), daya aktif/reaktif, faktor daya (power factor)
+- ADC (Analog-to-Digital Converter): cara kerja sampling, resolusi, noise, dan bagaimana sinyal analog (dari sensor arus/tegangan) diubah jadi angka digital
+- DMA (Direct Memory Access) untuk sampling ADC secara kontinu tanpa membebani CPU
+- Teknik kalibrasi: gain error, offset error, cara mengoreksinya secara software
+- Standar akurasi meter listrik (biasanya ada standar seperti IEC 62053 soal kelas akurasi meter)
+- Matematika sinyal dasar: RMS (Root Mean Square), sampling rate vs frekuensi sinyal (Nyquist)
+
+E2 — DLMS/COSEM & Security
+
+Fokus: komunikasi data meter dengan sistem pusat (AMI/AMR) secara standar dan aman.
+
+Yang harus dipahami:
+- Protokol "DLMS/COSEM" (standar komunikasi meter listrik internasional) — struktur objek data (OBIS code), cara meter "bicara" ke server
+- Model komunikasi: request-response, object modeling
+- Keamanan data: enkripsi, autentikasi, supaya data meter tidak bisa dipalsukan/disadap
+- Protokol jaringan yang dipakai untuk transport (misalnya serial, atau protokol jaringan lain tergantung desain sistem)
+- Parsing data terstruktur dan penanganan error komunikasi
+
+E3 — STS Prepaid & Application
+
+Fokus: logika token prepaid dan aplikasi di sisi meter.
+
+Yang harus dipahami:
+- Standar "STS (Standard Transfer Specification)" — cara kerja token prepaid listrik (format token, enkripsi token)
+- Logika bisnis prepaid: bagaimana kredit/saldo berkurang, validasi token, mencegah token dipakai dua kali (replay attack)
+- Parser data (baca dan proses input token/perintah)
+- Ring buffer dan struktur data untuk menangani antrian data secara efisien di memori terbatas
+- Penanganan protokol yang teliti (karena kalau salah, saldo bisa salah hitung — ini sensitif)
+
+E4 — Platform, Bring-up & Bench
+
+Fokus: membuat hardware dan environment kerja tim berjalan dengan baik.
+
+Yang harus dipahami:
+- Bring-up hardware: cara sistematis mengecek board baru — power supply, clock, jalur wiring, sebelum curiga ke software
+- Toolchain: STM32CubeIDE, debugger (breakpoint, watch expression, logic analyzer)
+- Konfigurasi peripheral MCU (GPIO, timer, komunikasi serial, dll) dengan paham alasan tiap setting, bukan asal contek
+- Dasar elektronik: multimeter, oscilloscope, cara baca datasheet & reference manual
+- Version control (Git) yang rapi untuk kerja tim
+- Kadang jadi "penyelamat" tim lain kalau board/tooling mereka bermasalah, jadi perlu paham dasar semua area sedikit-sedikit
+
+
+
+| E1 | Akurasi pengukuran / Metrology Calibration | Matematika sinyal, ADC, kalibrasi | menghitung dan mengolah data
+| E2 | Komunikasi data meter ↔ server / DLMS COSEM Security | Protokol, keamanan data | tertarik pengin belajar bagaimana meter itu bisa ngobrol dengan server dari jarak jauh (OBIS dan DLMS)
+| E3 | Logika prepaid & token / STS prepaid & application | Parsing, logika bisnis, kriptografi token | tertarik pengin beajar bagaimana meter memproses pulsa yang dibeli user
+| E4 | Hardware & tooling tim / Platform, bench & test | Debugging, bring-up, peripheral MCU | bikin sesuatu bekerja/berkomunikasi dengan hardware
+
+
+Kuat di ADC/DMA & timing → E1
+Kuat di parser/protokol → E2/E3
+Insting cek hardware dulu, kuat tooling → E4
+Komunikasi jelas & rapi sepanjang minggu → E5   
+
+
+Penggunaan ADC (Analog-to-Digital Converter) dengan DMA (Direct Memory Access) adalah metode untuk mentransfer data hasil konversi analog ke digital langsung ke memori sistem tanpa membebani kerja CPU.
+
+
+8:58 AM 9/16/2026 Rogowsky, punyanya ADE AC
+
+
+9:29 AM 9/16/2026 Pilih E4, 
+
+
+Saya pilih E4 karena saya suka proses bikin sesuatu bekerja dan berkomunikasi dengan hardware. Saya ingin mengasah insting bring-up hardware dan debugging tingkat fisik, karena itu fondasi yang perlu dikuasai sebelum masuk ke lane yang lebih spesifik
+
+Soak : menjalankan sistem terus-menerus dalam jangka waktu lama tanpa henti, untuk melihat apakah ada masalah yang cuma muncul kalau dipakai lama.
+
+
+E4 (Platform, Bench & Test) adalah orang yang bertanggung jawab membuat hardware bekerja dan bisa diandalkan untuk seluruh tim. Secara konkret, tugasnya meliputi:
+
+Bring-up hardware — menyalakan dan menguji board/kit evaluasi pertama kali: flashing, debugging, koneksi serial
+Membangun fondasi software dasar — HAL (Hardware Abstraction Layer) dan kerangka RTOS yang dipakai semua lane lain
+Merakit dan menjaga bench test — setup meter referensi, beban listrik, alat ukur/isolasi
+Mengelola infrastruktur pendukung — input device (mock keypad/console), RTC (jam), non-volatile storage, watchdog, logging
+Menjalankan soak test — menguji sistem berjalan lama nonstop (48 jam lalu 72 jam) untuk memastikan sistem stabil, bukan cuma "kelihatan jalan" sebentar
+Jadi tulang punggung integrasi — di Fase 3, E4 (berpasangan dengan E3) menghubungkan semua subsistem jadi satu sistem yang utuh
+
+
+Membingungkan:
+HAL yang dimaksud Minggu 5 itu pakai HAL bawaan vendor MCU (STM32 HAL), atau saya bikin abstraction layer sendiri dari nol?"
+Non-volatile storage di Minggu 11-12 itu pakai internal flash MCU, atau ada chip eksternal (EEPROM/flash SPI)? Ini menentukan saya belajar apa duluan
+"RTOS yang dipakai di proyek 26 minggu ini apa? Apakah FreeRTOS yang disebut di follow-on bootcamp minggu pertama itu yang dipakai di sini juga?
+"Soak 48 jam di Minggu 13-14 itu bedanya apa dengan soak 72 jam di Minggu 21? Apakah yang 48 jam itu cuma nguji platform/HAL doang, sedangkan yang 72 jam nguji sistem penuh (metrologi + DLMS + STS)? Dan apakah rig-nya sama, atau saya perlu bikin ulang setup-nya di Minggu 21?
+berarti E4 itu 
+produk akhir kita tuh produk fisik atau dalam bentuk apa ya bapak, kalau misal produk fisik kan harusnya ada PCB.
+
+
+E4 (Platform, Bench & Test) adalah peran yang bertanggung jawab membuat seluruh fondasi hardware proyek meter AMI ini hidup, stabil, dan bisa diandalkan oleh tim lain. Pekerjaannya dimulai dari **bring-up** — menyalakan kit evaluasi untuk pertama kali, melakukan flashing firmware, debugging lewat koneksi serial, dan memastikan board benar-benar berfungsi sebelum siapa pun mulai menulis logika di atasnya. Dari situ, E4 membangun fondasi software dasar berupa HAL (Hardware Abstraction Layer
+
+) dan kerangka RTOS yang nantinya dipakai bersama oleh lane lain (E1 untuk metrologi, E2 untuk DLMS, E3 untuk STS/prepaid), sehingga mereka tidak perlu berurusan langsung dengan detail low-level hardware.
+
+Selain membangun fondasi software, E4 juga merakit dan menjaga **bench test** — lingkungan pengujian fisik yang terdiri dari meter referensi, sumber beban listrik, dan alat isolasi, yang dipakai untuk memvalidasi hasil kerja tim secara nyata. Di pertengahan proyek, tanggung jawabnya melebar ke infrastruktur pendukung seperti RTC (jam sistem), non-volatile storage (penyimpanan data yang bertahan meski listrik mati), watchdog (mekanisme pengaman kalau sistem hang), dan logging, sekaligus menyiapkan jalur input simulasi seperti mock keypad/console. Semua ini adalah "urat nadi" yang membuat sistem bisa dipercaya menyimpan dan memproses data dengan benar dalam kondisi apa pun.
+
+Salah satu tanggung jawab paling khas dari E4 adalah menjalankan **soak test** — menjalankan sistem terus-menerus tanpa henti selama 48 jam, lalu 72 jam menjelang akhir proyek, untuk menemukan masalah yang hanya muncul kalau sistem dipakai dalam waktu lama, seperti kebocoran memori, overflow counter, atau ketidakstabilan data. Di fase integrasi, E4 berpasangan dengan E3 untuk menyambungkan seluruh subsistem — metrologi, komunikasi, dan prepaid — menjadi satu sistem yang bekerja end-to-end secara real-time.
+
+Secara keseluruhan, E4 adalah peran yang menuntut insting kuat untuk membuktikan dulu kondisi hardware sebelum menyalahkan software, kemampuan berpikir sistemik (bukan cuma satu fitur, tapi bagaimana semua bagian saling terhubung dan tetap stabil dalam jangka panjang), dan ketekunan menjaga infrastruktur yang dipakai seluruh tim. Peran ini cocok untuk orang yang senang melihat langsung sesuatu bekerja dan berkomunikasi dengan hardware secara nyata — bukan hanya menulis logika abstrak di atas kertas.
+  
+
+
+Ada versi 12 jam. 
+
+Fokus ke software 6 bulan ini. 
+
+
+11:20 AM 9/16/2026 Diskusi dengan pak edy terkait pembagian tuga E1, E2, E3, E4
+
+1:13 PM 9/16/2026 Membaca buku 
+
+3:07 PM 9/16/2026 Mencoba day 4 ex 4 "Stretch, for whoever moves fast: sample two channels and compute the mean of the product of their samples —
+the arithmetic core of energy measurement, at toy scale."
+
+
+
+
+
+
+
+
+
+netral dan GND bedanya apa?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

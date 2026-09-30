@@ -66,3 +66,55 @@ Mengapa Protokol Ini Digunakan?
 - Menambahkan Fitur Security Module, dimana VK (Vending Key) di load dengan ECDH yang diterima dalam security module yang di di cocokan dengan SM prvkey yang sudah.
 
 - Menambahkan fitur pembacaan publik key dan private key dari pengujian TrustZone
+
+### POS
+Dalam sistem prabayar dan enkripsi token berbasis **SPLN** (yang mengacu pada standar **STS / IEC 62055-41**), jenis-jenis **Key Type (KT)**, **Key Revision Number (KRN)**, dan **Supply Group Code (SGC)** diklasifikasikan sebagai berikut:
+
+---
+
+### 1. Jenis Key Type (KT)
+**Key Type (KT)** diwakili oleh angka 1-digit desimal dengan rentang **0 hingga 3**. Atribut KT menentukan sifat operasional dan tingkat diversifikasi kunci vending (*VendingKey*) serta kunci decoder (*DecoderKey*):
+
+* **KT = 0 (Initialization / DITK)**
+  * **Kunci**: *Decoder Initialisation Transfer Key* (DITK).
+  * **Fungsi**: Digunakan oleh pabrikan meteran untuk pemuatan kunci awal dan pengujian sebelum meteran keluar dari pabrik.
+* **KT = 1 (Default / VDDK & DDTK)**
+  * **Kunci**: *Vending Default DES Key* (VDDK) dan *Decoder Default Transfer Key* (DDTK).
+  * **Fungsi**: Digunakan untuk meteran baru atau meteran yang disimpan di gudang. Pada KT 1, sistem **hanya diizinkan memproses token pergantian kunci (*keychange*) dan token manajemen**, serta **dilarang menerbitkan atau menerima token isi ulang kredit**.
+* **KT = 2 (Unique / VUDK & DUTK)**
+  * **Kunci**: *Vending Unique DES Key* (VUDK) dan *Decoder Unique Transfer Key* (DUTK).
+  * **Fungsi**: Merupakan tipe operasional standar untuk transaksi pelanggan. Kunci didiversifikasikan secara unik untuk setiap meteran berdasarkan *MeterPAN/DRN*, sehingga token kredit yang diterbitkan hanya berlaku pada satu meteran spesifik.
+* **KT = 3 (Common / VCDK & DCTK)**
+  * **Kunci**: *Vending Common DES Key* (VCDK) dan *Decoder Common Transfer Key* (DCTK).
+  * **Fungsi**: Digunakan untuk kelompok meteran yang menggunakan kunci bersama (misalnya pada media token kartu magnetik yang dapat ditulis/dihapus ulang).
+
+---
+
+### 2. Jenis & Ketentuan Key Revision Number (KRN)
+**Key Revision Number (KRN)** diwakili oleh angka 1-digit desimal dengan rentang **1 hingga 9**:
+
+* **KRN = 1 hingga 9 (Untuk VendingKey & DecoderKey Operasional)**:
+  * Menunjukkan urutan atau revisi versi kunci aktif pada suatu SGC.
+  * Nilai KRN diawali dari **1** untuk kunci pertama suatu SGC, kemudian dinaikkan secara berurutan setiap kali terjadi pergantian kunci (*keychange*), dan berulang kembali ke **1** setelah mencapai angka 9.
+* **KRN = 0 (Khusus DITK)**:
+  * Konsep revisi kunci tidak berlaku untuk kunci inisialisasi pabrikan (*DITK*), sehingga nilai KRN pada meteran yang memuat DITK selalu diatur ke **0**.
+
+---
+
+### 3. Jenis & Klasifikasi Supply Group Code (SGC)
+**Supply Group Code (SGC)** adalah kode angka unik **6-digit desimal** (rentang `000001` hingga `999999`) yang dialokasikan oleh *Key Management Centre* (KMC) untuk mengelompokkan meteran secara geografis atau administratif:
+
+* **Default SGC (KT = 1)**:
+  * SGC yang dikaitkan dengan kunci VDDK/DDTK. Digunakan untuk pengiriman meteran dari pabrik ke gudang PLN. Hanya diizinkan untuk eksekusi *keychange* ke SGC operasional.
+* **Unique SGC (KT = 2)**:
+  * SGC standar unit/wilayah operasional PLN yang dikaitkan dengan kunci VUDK/DUTK per pelanggan. Digunakan untuk transaksi pembuatan token kredit unik per meteran.
+* **Common SGC (KT = 3)**:
+  * SGC grup yang dikaitkan dengan kunci VCDK/DCTK untuk skema kunci kelompok/umum.
+
+### Pengklasifikasian SGC
+
+Dalam sistem enkripsi meteran STS (Standard Transfer Specification) PLN, contoh kode SGC (Supply Group Code) yang umum digunakan untuk wilayah Jakarta Selatan (khususnya area di bawah UP3 Bulungan / UID Jakarta Raya) adalah:
+
+• *000305* atau variasi regional DKI Jakarta lainnya seperti *000300* hingga *000309*.
+
+SGC merupakan kode 6 digit. Angka spesifik meteran Anda bisa saja berbeda tergantung pada generator sistem saat meteran prabayar tersebut dipasang atau dilakukan update (KCT/Key Change Token).

@@ -1,6 +1,13 @@
 # Ignore all executable files
 *.exe
 *.env
+*.pem
 
 # Ignore all database files
 *.db
+
+# Ignore all file docs
+*.pdf
+*.jpg
+*.PNG
+*.jpeg

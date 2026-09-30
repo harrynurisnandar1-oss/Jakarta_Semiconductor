@@ -128,7 +128,7 @@ SGC merupakan kode 6 digit. Angka spesifik meteran Anda bisa saja berbeda tergan
 * **Manajemen Kunci Terisolasi Berdasarkan Triple Parameter (SGC, KRN, KT)**:
   * Fungsi `SECURE_GetOrCreateKeypair` memeriksa file `sm_prvkey.env` untuk mencari **Private Key** menggunakan format penamaan variabel unik `SGC_<sgc>_KRN_<krn>_KT_<kt>_SM_PRVKEY`.
   * Jika Private Key belum ada, sistem membuat kunci privat baru (`generate_private_key`) dan menyimpannya ke dalam file lingkungan aman.
-  * Menghasilkan **Public Key** terkait melalui perkalian skalar kurva eliptik (`ecdh_scalar_multiply`) dari titik generator \\(G\\) dan Private Key.
+  * Menghasilkan **Public Key** terkait melalui perkalian skalar kurva eliptik (`ecdh_scalar_multiply`) dari titik generator (***G***) dan Private Key.
 * **Dekripsi Payload Terisolasi (`SECURE_DecryptPayload`)**:
   * Mengisolasi proses dekripsi *ciphertext* (`hex_cipher`) di dalam domain TrustZone dengan menghitung *shared secret* berbasis `peer_pubkey` dan `prvkey` menggunakan mekanisme XOR masking.
 

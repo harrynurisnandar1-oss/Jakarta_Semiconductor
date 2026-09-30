@@ -58,7 +58,7 @@ int main() {
     printf("  SELECT RECORD (SGC, KRN, KT) FOR KEY GENERATION   \n");
     printf("====================================================\n");
 
-    // 1. Input kriteria pencarian spesifik dari user
+    // 1. Input specific search criteria from the user.
     char target_sgc[10];
     int target_krn, target_kt;
 
@@ -69,7 +69,7 @@ int main() {
     printf("Masukkan KT   (contoh: 2)     : ");
     scanf("%d", &target_kt);
 
-    // 2. Cari baris yang cocok persis (SGC, KRN, dan KT) di kmc_database.db
+    // 2. Seacrh SGC, KRN, KT in kmc_database.db
     FILE *db_file = fopen("kmc_database.db", "r");
     if (db_file == NULL) {
         printf("[-] Error: 'kmc_database.db' tidak ditemukan.\n");

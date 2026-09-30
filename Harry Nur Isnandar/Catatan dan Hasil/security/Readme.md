@@ -1,3 +1,4 @@
+# Fitur 28/09/2026
 # KEY MANAGEMENT CENTER
 
 - Mencoba melakukan pengujian degan cryptography (TANPA OPENSSL).
@@ -59,6 +60,7 @@ Mengapa Protokol Ini Digunakan?
 - Efisiensi Tinggi: Menggunakan kurva eliptik (ECDH) membutuhkan ukuran kunci yang jauh lebih kecil dibandingkan RSA tradisional, sehingga komputasinya sangat cepat dan hemat memori.
 - PFS (Perfect Forward Secrecy): Jika suatu saat kunci utama bocor, peretas tetap tidak bisa membuka riwayat pesan di masa lalu karena setiap sesi komunikasi menggunakan kunci acak yang berbeda.
 
+# Fitur 29/09/2026
 ### Security Modul
 
 - Fitur yang ditambahkan adalah Key Agreement Scheme (TANPA OPENSSL).
@@ -111,6 +113,7 @@ Dalam sistem prabayar dan enkripsi token berbasis **SPLN** (yang mengacu pada st
 * **Common SGC (KT = 3)**:
   * SGC grup yang dikaitkan dengan kunci VCDK/DCTK untuk skema kunci kelompok/umum.
 
+
 ### Pengklasifikasian SGC
 
 Dalam sistem enkripsi meteran STS (Standard Transfer Specification) PLN, contoh kode SGC (Supply Group Code) yang umum digunakan untuk wilayah Jakarta Selatan (khususnya area di bawah UP3 Bulungan / UID Jakarta Raya) adalah:
@@ -118,3 +121,26 @@ Dalam sistem enkripsi meteran STS (Standard Transfer Specification) PLN, contoh 
 • *000305* atau variasi regional DKI Jakarta lainnya seperti *000300* hingga *000309*.
 
 SGC merupakan kode 6 digit. Angka spesifik meteran Anda bisa saja berbeda tergantung pada generator sistem saat meteran prabayar tersebut dipasang atau dilakukan update (KCT/Key Change Token).
+
+# FITUR 30/09/2026
+
+### **1. Fitur pada Domain Secure (`secure_sm.txt`)**
+* **Manajemen Kunci Terisolasi Berdasarkan Triple Parameter (SGC, KRN, KT)**:
+  * Fungsi `SECURE_GetOrCreateKeypair` memeriksa file `sm_prvkey.env` untuk mencari **Private Key** menggunakan format penamaan variabel unik `SGC_<sgc>_KRN_<krn>_KT_<kt>_SM_PRVKEY`.
+  * Jika Private Key belum ada, sistem membuat kunci privat baru (`generate_private_key`) dan menyimpannya ke dalam file lingkungan aman.
+  * Menghasilkan **Public Key** terkait melalui perkalian skalar kurva eliptik (`ecdh_scalar_multiply`) dari titik generator \\(G\\) dan Private Key.
+* **Dekripsi Payload Terisolasi (`SECURE_DecryptPayload`)**:
+  * Mengisolasi proses dekripsi *ciphertext* (`hex_cipher`) di dalam domain TrustZone dengan menghitung *shared secret* berbasis `peer_pubkey` dan `prvkey` menggunakan mekanisme XOR masking.
+
+---
+
+### **2. Fitur pada Domain Non-Secure (`nonsecure_sm.txt`)**
+* **Pencarian Database Multi-Kriteria**:
+  * Meminta input pencarian spesifik dari pengguna yang mencakup **Supply Group Code (SGC)**, **Key Revision Number (KRN)**, dan **Key Type (KT)**.
+  * Membaca file `kmc_database.db` dan mencocokkan ketiga parameter tersebut secara bersamaan untuk menemukan *Encrypted Vending Key* yang sesuai.
+* **Penyimpanan dan Pembaruan Public Key (`NONSECURE_SaveOrUpdatePubkey`)**:
+  * Menyimpan atau memperbarui koordinat Kunci Publik (***X***) dan (***Y***) di dalam file `sm_pubkey.env` dengan variabel berformat unik berbasis SGC, KRN, dan KT.
+* **Integrasi Lintas Domain (Non-Secure Callable / NSC)**:
+  * Menghubungkan aplikasi Non-Secure ke Secure World dengan memanggil fungsi `SECURE_GetOrCreateKeypair` dan `SECURE_DecryptPayload`.
+* **Eksekusi dan Penayangan Plaintext VK**:
+  * Menampilkan Vending Key dalam bentuk *plaintext* hasil dekripsi aman dari Secure World.

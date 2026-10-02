@@ -1,13 +1,8 @@
-# Ignore all executable files
-*.exe
+build/
+*.db
+*.key
 *.env
 *.pem
-
-# Ignore all database files
-*.db
-
-# Ignore all file docs
-*.pdf
-*.jpg
-*.PNG
-*.jpeg
+*.log
+.vscode/
+.idea/

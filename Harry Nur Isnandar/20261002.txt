@@ -8,3 +8,17 @@
 
 13:24 02/10/2026 Melakukan Test CI untuk di agar bisa berjalan di freertos.
 
+15:14 02/10/2026 Melakukan Test
+
+1/10	crypto
+2/10	kmc
+3/10	provisionig
+4/10	storage
+5/10	autentification
+6/10	tamper
+7/10	replay
+8/10	key_lifecycle
+9/10	security_state
+10/10	integration
+
+16:44 02/10/2026 Mengelami kegagalan dalam penambahan fitur.

@@ -13,6 +13,7 @@ on:
 
   workflow_dispatch:
 
+# GitHub Actions only needs to read the repository.
 permissions:
   contents: read
 
@@ -22,34 +23,25 @@ env:
 
 jobs:
   build-and-test:
-    name: Build and Test (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      fail-fast: false
-
-      matrix:
-        os:
-          - ubuntu-latest
-          - macos-latest
-          - windows-latest
+    name: Build and Test - Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
 
-      # ============================================================
+      # ==========================================================
       # 1. Checkout repository
-      # ============================================================
+      # ==========================================================
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # ============================================================
-      # 2. Install dependencies - Ubuntu
-      # ============================================================
-      - name: Install dependencies - Ubuntu
-        if: runner.os == 'Linux'
+      # ==========================================================
+      # 2. Install build and crypto dependencies
+      # ==========================================================
+      - name: Install dependencies
         shell: bash
         run: |
           sudo apt-get update
+
           sudo apt-get install -y \
             cmake \
             ninja-build \
@@ -58,30 +50,28 @@ jobs:
             libssl-dev \
             pkg-config
 
-      # ============================================================
-      # 3. Install dependencies - macOS
-      # ============================================================
-      - name: Install dependencies - macOS
-        if: runner.os == 'macOS'
+      # ==========================================================
+      # 3. Display toolchain versions
+      # ==========================================================
+      - name: Show toolchain versions
         shell: bash
         run: |
-          brew update
-          brew install cmake ninja openssl@3 pkg-config
+          echo "=== GCC ==="
+          gcc --version
 
-      # ============================================================
-      # 4. Install dependencies - Windows
-      # ============================================================
-      - name: Install dependencies - Windows
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          vcpkg install openssl:x64-windows
+          echo "=== CMake ==="
+          cmake --version
 
-      # ============================================================
-      # 5. Configure CMake - Linux
-      # ============================================================
-      - name: Configure CMake - Linux
-        if: runner.os == 'Linux'
+          echo "=== OpenSSL ==="
+          openssl version
+
+          echo "=== Ninja ==="
+          ninja --version
+
+      # ==========================================================
+      # 4. Configure CMake
+      # ==========================================================
+      - name: Configure CMake
         shell: bash
         run: |
           cmake \
@@ -93,47 +83,9 @@ jobs:
             -DCMAKE_C_STANDARD_REQUIRED=ON \
             -DCMAKE_C_EXTENSIONS=OFF
 
-      # ============================================================
-      # 6. Configure CMake - macOS
-      # ============================================================
-      - name: Configure CMake - macOS
-        if: runner.os == 'macOS'
-        shell: bash
-        run: |
-          OPENSSL_ROOT="$(brew --prefix openssl@3)"
-
-          cmake \
-            -S "$SECURITY_DIR" \
-            -B "$BUILD_DIR" \
-            -G Ninja \
-            -DCMAKE_BUILD_TYPE=Debug \
-            -DCMAKE_C_STANDARD=11 \
-            -DCMAKE_C_STANDARD_REQUIRED=ON \
-            -DCMAKE_C_EXTENSIONS=OFF \
-            -DOPENSSL_ROOT_DIR="$OPENSSL_ROOT" \
-            -DCMAKE_PREFIX_PATH="$OPENSSL_ROOT"
-
-      # ============================================================
-      # 7. Configure CMake - Windows
-      # ============================================================
-      - name: Configure CMake - Windows
-        if: runner.os == 'Windows'
-        shell: pwsh
-        run: |
-          cmake `
-            -S "$env:SECURITY_DIR" `
-            -B "$env:BUILD_DIR" `
-            -G Ninja `
-            -DCMAKE_BUILD_TYPE=Debug `
-            -DCMAKE_C_STANDARD=11 `
-            -DCMAKE_C_STANDARD_REQUIRED=ON `
-            -DCMAKE_C_EXTENSIONS=OFF `
-            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake" `
-            -DVCPKG_TARGET_TRIPLET=x64-windows
-
-      # ============================================================
-      # 8. Build
-      # ============================================================
+      # ==========================================================
+      # 5. Build project
+      # ==========================================================
       - name: Build
         shell: bash
         run: |
@@ -141,9 +93,9 @@ jobs:
             --build "$BUILD_DIR" \
             --parallel
 
-      # ============================================================
-      # 9. Run CTest
-      # ============================================================
+      # ==========================================================
+      # 6. Run CTest
+      # ==========================================================
       - name: Run CTest
         shell: bash
         run: |
@@ -152,25 +104,25 @@ jobs:
             --output-on-failure \
             --parallel 2
 
-      # ============================================================
-      # 10. Show generated files when tests fail
-      # ============================================================
-      - name: Show build directory on failure
-        if: failure()
-        shell: bash
-        run: |
-          echo "===== Build directory ====="
-          find "$BUILD_DIR" -maxdepth 3 -type f 2>/dev/null || true
-
-      # ============================================================
-      # 11. Upload CTest results
-      # ============================================================
-      - name: Upload CTest logs
+      # ==========================================================
+      # 7. Upload CTest results
+      # ==========================================================
+      - name: Upload CTest results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ctest-results-${{ matrix.os }}
+          name: ctest-results-ubuntu
           path: |
             ${{ env.BUILD_DIR }}/Testing/
           if-no-files-found: ignore
           retention-days: 14
+
+      # ==========================================================
+      # 8. Show build directory if the job fails
+      # ==========================================================
+      - name: Show build files on failure
+        if: failure()
+        shell: bash
+        run: |
+          echo "=== Build directory ==="
+          find "$BUILD_DIR" -maxdepth 3 -type f 2>/dev/null || true

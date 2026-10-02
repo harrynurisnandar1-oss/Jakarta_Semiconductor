@@ -19,7 +19,7 @@ int main(void) {
     uint8_t frame_buf[512];
     size_t frame_len = dlms_hdlc_encode_frame(HDLC_CTRL_SNRM, 0x0001, 0x10, NULL, 0, frame_buf, sizeof(frame_buf));
     assert(frame_len > 0);
-    assert(frame_buf == HDLC_FLAG);
+    assert(frame_buf[0] == HDLC_FLAG);
     assert(frame_buf[frame_len - 1] == HDLC_FLAG);
 
     /* Dekode Bingkai SNRM */

@@ -32,7 +32,7 @@ int main(void) {
     g_last_tx_len = 0;
     assert(dlms_task_step(&task_ctx) == DLMS_OK);
     assert(g_last_tx_len > 0);
-    assert(g_last_tx_buf == HDLC_FLAG);
+    assert(g_last_tx_buf[0] == HDLC_FLAG);
 
     /* 2. Simulasi AARQ Frame masuk */
     uint8_t aarq_apdu[] = {0x60, 0x04, 0x00, 0x10};

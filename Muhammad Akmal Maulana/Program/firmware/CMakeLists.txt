@@ -6,8 +6,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 option(BUILD_TESTS "Build Host Unit Tests" ON)
 
-include_directories(protocols/dlms/inc)
-
+# Modern CMake Target: dlms_core
 add_library(dlms_core STATIC
     protocols/dlms/src/dlms_association.c
     protocols/dlms/src/dlms_transport.c
@@ -19,50 +18,71 @@ add_library(dlms_core STATIC
     protocols/dlms/src/dlms_task.c
     protocols/dlms/src/dlms_nvm.c
     drivers/bsp/src/bsp_lpuart_dma.c
+    app/display/src/display.c
+    app/tamper/src/tamper_manager.c
+    app/fsm/src/fsm_statechart.c
+    app/fsm/src/rtos_tasks.c
+    app/profiling/src/load_profile.c
+    app/profiling/src/load_profile_dlms_adapter.c
+    app/profiling/src/nvram_storage.c
 )
 
- 
 target_include_directories(dlms_core PUBLIC 
-protocols/dlms/inc
-drivers/bsp/inc )
+    protocols/dlms/inc
+    drivers/bsp/inc
+    app/display/inc
+    app/tamper/inc 
+    app/fsm/inc
+    sys/inc
+    app/profiling/inc
+)
 
+# Host Unit Testing Setup
 if(BUILD_TESTS)
     enable_testing()
 
-    add_executable(test_dlms_association tests/protocols/test_dlms_association.c)
-    target_link_libraries(test_dlms_association PRIVATE dlms_core)
-    add_test(NAME test_dlms_association COMMAND $<TARGET_FILE:test_dlms_association>)
+    set(TEST_NAMES
+        test_dlms_association
+        test_dlms_apdu
+        test_dlms_integration
+        test_dlms_tamper_log
+        test_dlms_hdlc
+        test_dlms_server
+        test_dlms_task
+        test_dlms_nvm
+        test_bsp_lpuart
+        test_e3_app
+        test_fsm_statechart
+        test_load_profile
+        test_load_profile_dlms_adapter
+        test_nvram_storage
+        test_rtos_tasks
 
-    add_executable(test_dlms_apdu tests/protocols/test_dlms_apdu.c)
-    target_link_libraries(test_dlms_apdu PRIVATE dlms_core)
-    add_test(NAME test_dlms_apdu COMMAND $<TARGET_FILE:test_dlms_apdu>)
+    )
 
-    add_executable(test_dlms_integration tests/protocols/test_dlms_integration.c)
-    target_link_libraries(test_dlms_integration PRIVATE dlms_core)
-    add_test(NAME test_dlms_integration COMMAND $<TARGET_FILE:test_dlms_integration>)
+    set(TEST_SOURCES
+        tests/protocols/test_dlms_association.c
+        tests/protocols/test_dlms_apdu.c
+        tests/protocols/test_dlms_integration.c
+        tests/protocols/test_dlms_tamper_log.c
+        tests/protocols/test_dlms_hdlc.c
+        tests/protocols/test_dlms_server.c
+        tests/protocols/test_dlms_task.c
+        tests/protocols/test_dlms_nvm.c
+        tests/drivers/test_bsp_lpuart.c
+        tests/app/test_e3_app.c
+        tests/app/test_fsm_statechart.c
+        tests/app/test_load_profile.c
+        tests/app/test_load_profile_dlms_adapter.c
+        tests/app/test_nvram_storage.c
+        tests/app/test_rtos_tasks.c
 
-    add_executable(test_dlms_tamper_log tests/protocols/test_dlms_tamper_log.c)
-    target_link_libraries(test_dlms_tamper_log PRIVATE dlms_core)
-    add_test(NAME test_dlms_tamper_log COMMAND $<TARGET_FILE:test_dlms_integration>)
+    )
 
-    add_executable(test_dlms_hdlc tests/protocols/test_dlms_hdlc.c)
-    target_link_libraries(test_dlms_hdlc PRIVATE dlms_core)
-    add_test(NAME test_dlms_hdlc COMMAND $<TARGET_FILE:test_dlms_integration>)
-
-    add_executable(test_dlms_server tests/protocols/test_dlms_server.c)
-    target_link_libraries(test_dlms_server PRIVATE dlms_core)
-    add_test(NAME test_dlms_server COMMAND $<TARGET_FILE:test_dlms_integration>)
-
-    add_executable(test_dlms_task tests/protocols/test_dlms_task.c)
-    target_link_libraries(test_dlms_task PRIVATE dlms_core)
-    add_test(NAME test_dlms_task COMMAND $<TARGET_FILE:test_dlms_integration>)
-
-    add_executable(test_dlms_nvm tests/protocols/test_dlms_nvm.c)
-    target_link_libraries(test_dlms_nvm PRIVATE dlms_core)
-    add_test(NAME test_dlms_nvm COMMAND $<TARGET_FILE:test_dlms_integration>)
-
-    add_executable(test_bsp_lpuart tests/drivers/test_bsp_lpuart.c)
-    target_link_libraries(test_bsp_lpuart PRIVATE dlms_core)
-    add_test(NAME test_bsp_lpuart COMMAND $<TARGET_FILE:test_dlms_integration>)
-
+    # Memasangkan nama target dan source file secara aman menggunakan ZIP_LISTS
+    foreach(TEST_NAME TEST_SRC IN ZIP_LISTS TEST_NAMES TEST_SOURCES)
+        add_executable(${TEST_NAME} ${TEST_SRC})
+        target_link_libraries(${TEST_NAME} PRIVATE dlms_core)
+        add_test(NAME ${TEST_NAME} COMMAND $<TARGET_FILE:${TEST_NAME}>)
+    endforeach()
 endif()

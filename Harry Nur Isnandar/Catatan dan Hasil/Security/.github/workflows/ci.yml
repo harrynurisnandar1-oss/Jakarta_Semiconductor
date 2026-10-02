@@ -1,45 +1,177 @@
-name: CMake + CTest
+name: Security - CMake + CTest
 
 on:
   push:
+    branches:
+      - main
+      - master
+
   pull_request:
+    branches:
+      - main
+      - master
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  SECURITY_DIR: "Harry Nur Isnandar/Catatan dan Hasil/Security"
+  BUILD_DIR: "build-security"
 
 jobs:
   build-and-test:
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+    name: Build and Test (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+          - windows-latest
+
     steps:
-      - uses: actions/checkout@v4
 
-      - name: Install OpenSSL (Ubuntu)
+      # ============================================================
+      # 1. Checkout repository
+      # ============================================================
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ============================================================
+      # 2. Install dependencies - Ubuntu
+      # ============================================================
+      - name: Install dependencies - Ubuntu
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            cmake \
+            ninja-build \
+            gcc \
+            g++ \
+            libssl-dev \
+            pkg-config
 
-      - name: Install OpenSSL (macOS)
+      # ============================================================
+      # 3. Install dependencies - macOS
+      # ============================================================
+      - name: Install dependencies - macOS
         if: runner.os == 'macOS'
-        run: brew install openssl@3
+        shell: bash
+        run: |
+          brew update
+          brew install cmake ninja openssl@3 pkg-config
 
-      - name: Install OpenSSL (Windows)
+      # ============================================================
+      # 4. Install dependencies - Windows
+      # ============================================================
+      - name: Install dependencies - Windows
         if: runner.os == 'Windows'
         shell: pwsh
         run: |
           vcpkg install openssl:x64-windows
 
-      - name: Configure (Unix)
-        if: runner.os != 'Windows'
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DOPENSSL_ROOT_DIR="${OPENSSL_ROOT_DIR}"
-        env:
-          OPENSSL_ROOT_DIR: ${{ runner.os == 'macOS' && '/opt/homebrew/opt/openssl@3' || '' }}
+      # ============================================================
+      # 5. Configure CMake - Linux
+      # ============================================================
+      - name: Configure CMake - Linux
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          cmake \
+            -S "$SECURITY_DIR" \
+            -B "$BUILD_DIR" \
+            -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_C_STANDARD=11 \
+            -DCMAKE_C_STANDARD_REQUIRED=ON \
+            -DCMAKE_C_EXTENSIONS=OFF
 
-      - name: Configure (Windows)
+      # ============================================================
+      # 6. Configure CMake - macOS
+      # ============================================================
+      - name: Configure CMake - macOS
+        if: runner.os == 'macOS'
+        shell: bash
+        run: |
+          OPENSSL_ROOT="$(brew --prefix openssl@3)"
+
+          cmake \
+            -S "$SECURITY_DIR" \
+            -B "$BUILD_DIR" \
+            -G Ninja \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_C_STANDARD=11 \
+            -DCMAKE_C_STANDARD_REQUIRED=ON \
+            -DCMAKE_C_EXTENSIONS=OFF \
+            -DOPENSSL_ROOT_DIR="$OPENSSL_ROOT" \
+            -DCMAKE_PREFIX_PATH="$OPENSSL_ROOT"
+
+      # ============================================================
+      # 7. Configure CMake - Windows
+      # ============================================================
+      - name: Configure CMake - Windows
         if: runner.os == 'Windows'
         shell: pwsh
-        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake" -DVCPKG_TARGET_TRIPLET=x64-windows
+        run: |
+          cmake `
+            -S "$env:SECURITY_DIR" `
+            -B "$env:BUILD_DIR" `
+            -G Ninja `
+            -DCMAKE_BUILD_TYPE=Debug `
+            -DCMAKE_C_STANDARD=11 `
+            -DCMAKE_C_STANDARD_REQUIRED=ON `
+            -DCMAKE_C_EXTENSIONS=OFF `
+            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake" `
+            -DVCPKG_TARGET_TRIPLET=x64-windows
 
+      # ============================================================
+      # 8. Build
+      # ============================================================
       - name: Build
-        run: cmake --build build --config Debug --parallel
+        shell: bash
+        run: |
+          cmake \
+            --build "$BUILD_DIR" \
+            --parallel
 
-      - name: CTest
-        run: ctest --test-dir build --build-config Debug --output-on-failure
+      # ============================================================
+      # 9. Run CTest
+      # ============================================================
+      - name: Run CTest
+        shell: bash
+        run: |
+          ctest \
+            --test-dir "$BUILD_DIR" \
+            --output-on-failure \
+            --parallel 2
+
+      # ============================================================
+      # 10. Show generated files when tests fail
+      # ============================================================
+      - name: Show build directory on failure
+        if: failure()
+        shell: bash
+        run: |
+          echo "===== Build directory ====="
+          find "$BUILD_DIR" -maxdepth 3 -type f 2>/dev/null || true
+
+      # ============================================================
+      # 11. Upload CTest results
+      # ============================================================
+      - name: Upload CTest logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ctest-results-${{ matrix.os }}
+          path: |
+            ${{ env.BUILD_DIR }}/Testing/
+          if-no-files-found: ignore
+          retention-days: 14
+```

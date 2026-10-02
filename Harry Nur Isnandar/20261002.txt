@@ -1,0 +1,3 @@
+08:00 02/10/2026 Membuat rancangan kerja 
+
+09:04 02/10/2026 Menambahkan openSSL ke dalam Kodingan.

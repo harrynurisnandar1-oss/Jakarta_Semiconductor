@@ -20,7 +20,7 @@ int main(void) {
 
     assert(dlms_server_process_bytes(&server, snrm_frame, snrm_len, tx_buf, sizeof(tx_buf), &tx_len) == DLMS_OK);
     assert(tx_len > 0);
-    assert(tx_buf == HDLC_FLAG);
+    assert(tx_buf[0] == HDLC_FLAG);
 
     /* 2. Transaksi AARQ (Asosiasi DLMS Upper Layer) */
     uint8_t aarq_apdu[] = {0x60, 0x04, 0x00, 0x10};
@@ -50,8 +50,8 @@ int main(void) {
 
     assert(dlms_hdlc_decode_frame(tx_buf, tx_len, &res_ctrl, &res_dest, &res_src, res_apdu, &res_apdu_len) == DLMS_OK);
     assert(res_apdu_len >= 9);
-    assert(res_apdu == DLMS_TAG_GET_RESPONSE);
-    assert(res_apdu == DLMS_DATA_TYPE_DOUBLE_LONG_UNSIGNED);
+    assert(res_apdu[0] == DLMS_TAG_GET_RESPONSE);
+    assert(res_apdu[4] == DLMS_DATA_TYPE_DOUBLE_LONG_UNSIGNED);
 
     /* 4. Transaksi DISC (Pelepasan Koneksi HDLC) */
     uint8_t disc_frame[128];

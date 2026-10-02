@@ -1,0 +1,12 @@
+10:07 28/09/2026 Mencoba melakukan pengujian degan cryptography.
+
+10:07 28/09/2026 Supply Group Code (SGC) adalah kode angka 6 digit yang dipakai pada sistem meter prabayar (seperti kWh meter listrik) untuk menandai wilayah atau area geografis tertentu dari instalasi meter. Kode ini memastikan bahwa token isi ulang hanya bisa digunakan pada meter yang memiliki SGC.
+
+11:00 28/09/2026 Membuat uji KEY MANAGEMENT SYSTEM 
+
+13:02 28/09/2026 Membuat Key agreement Scheme dari database Key Management System
+
+15:12 28/09/2026 Mendecryption Key Agreement Schme ke Key Management System
+
+16:33 28/09/2026 Membuat sebuah Database dari Private key dan Signature Key Meteran yang dilindung dengan security secara local.
+s

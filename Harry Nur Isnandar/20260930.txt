@@ -1,0 +1,18 @@
+08:00 30/09/2026 Menambahkan Sebuah fitur penyimpanan kmc_database.db
+
+Sistem Key Management Center (KMC) menerima input parameter Supply Group Code (SGC), Key Revision Number (KRN), dan Key Type (KT), menggenerasi Vending Key (VK) acak, mengenkripsinya dengan System Master Key (SMK), lalu mencatatnya ke `kmc_database.db` dalam format `SGC,KRN,KT,Encrypted_VK`
+
+09:54 30/09/2026 Memabahkan fitur di non secure pembacaan VK(Vending Key) dari kmc_database.db yang akan di generate dengan Elliptic Curve Diffie-Hellman (EDCH).
+
+Aplikasi Non-Secure melakukan pencarian record berdasarkan pencocokan tiga kriteria sekaligus (SGC, KRN, KT) untuk mengambil *payload ciphertext* VK yang sesuai
+
+11:40 30/09/2026 Membuat sebuah SM yang dibedakan dalam TrustZone dimana nonsecure.c untuk mengambil VK dalam ECDH (Elliptic Curve Diffie-Hellman).
+
+Private Key dikelola secara tertutup di file `sm_prvkey.env` (Domain Secure) menggunakan penamaan variabel unik berbasis SGC, KRN, dan KT.
+Public Key yang dihasilkan dari perkalian skalar kurva eliptik disimpan/diperbarui di file `sm_pubkey.env` (Domain Non-Secure)
+
+13:30 30/09/2026 Membuat penyimpanan public key dan private key dalam yang dapat berhubungan di dalam SM.
+
+Aplikasi Non-Secure memanggil fungsi Non-Secure Callable (NSC) `SECURE_GetOrCreateKeypair` dan `SECURE_DecryptPayload` di dalam Secure World. Proses kalkulasi shared secret dan dekripsi XOR dilakukan di dalam isolasi Secure World sebelum hasilnya dikembalikan ke aplikasi Non-Secure
+
+16:06 30/09/2026 Membuat sebuah komunikasi lintas domain yang dapat membaca SGC, KRN, dan KT dalam bentuk yang diminta dengan meminta public key yang kemudian di signature dengan private key.

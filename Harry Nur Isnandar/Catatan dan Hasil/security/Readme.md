@@ -6,10 +6,10 @@ This project upgrades the original STS prototype from custom XOR/fake-ECC primit
 
 - CSPRNG: OpenSSL `RAND_bytes`
 - Key agreement: ECDH over NIST P-256 (`prime256v1`)
-- KDF: HKDF-SHA-256
+- KDF: HKDF-SHA-256.
 - Authenticated encryption: AES-256-GCM
 - Private-key-at-rest protection in the host simulator: AES-256-GCM using a 32-byte secret supplied through `STS_STORAGE_KEY_HEX`
-- Private key is never returned by the Secure World API
+- Private key is never returned by the Secure World API.
 
 ## Important security boundary
 

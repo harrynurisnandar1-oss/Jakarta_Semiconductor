@@ -1,0 +1,8 @@
+build/
+*.db
+*.key
+*.env
+*.pem
+*.log
+.vscode/
+.idea/

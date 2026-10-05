@@ -1,0 +1,33 @@
+08:00 16/09/2026 Membaca tentang Standard Transfer Spesicication (STS) di SPLN.D3
+
+09:28 16/09/2026 Memahami IEC 62055-41 (Standard transfer specification (STS) – Application layer protocol for one-way token carrier systems Reference.
+
+09:56 16/09/2026 Memahami Arti penamaan SPLN D3.xxx adalah sistem pengodean standar internal PT PLN (Persero) untuk mengelompokkan spesifikasi teknis peralatan ketenagalistrikan.
+
+1. Arti Per Elemen Kode
+
+SPLN: Singkatan dari Standar Perusahaan Listrik Negara. Ini adalah dokumen acuan resmi yang diterbitkan oleh PLN Pusarlis (Pusat Penelitian dan Pengembangan Ketenagalistrikan) sebagai standar teknis pengadaan dan pemasangan material di jaringan PLN.
+
+Huruf "D": Menunjukkan kode Bidang Distribusi. Artinya, semua materi di dalam standar ini mengatur peralatan yang digunakan pada jaringan tegangan menengah (JTM), tegangan rendah (JTR), sambungan rumah, hingga alat pengukur di sisi pelanggan.
+
+Angka "3": Menunjukkan sub-kelompok Alat Pengukur, Pembatas, dan Aksesori. Angka ini mengunci spesifikasi khusus untuk kWh meter (pascabayar/prabayar), Current Transformer (CT), Potential Transformer (PT), kotak pengaman (panel meter), hingga perlengkapan segel.
+
+Angka ".xxx" (Tiga Digit Terakhir): Menunjukkan Nomor Urut Spesifik Peralatan. Contohnya:
+
+.006: Meter Statik Pascabayar Fase Tiga.
+
+.009: Meter Statik Prabayar Sistem STS.
+
+10:01 16/09/2026 Diskusi pembagian JOB
+
+10:45 16/09/2026 Melakukan sesi one on one dengan mentor untuk mendalami cryptography.
+
+CIE cryptography, ECC cryptography, Delphi Encryption Compendium (DEC)
+
+11:19 16/09/2026 AES vs. RSA: What’s the Difference? https://rublon.com/blog/aes-vs-rsa-difference/
+
+13:19 16/09/2026 CIE Cryptography.
+
+15:15 16/09/2026 beda kunci AES dan HASH KEY
+Kunci AES digunakan untuk menyembunyikan data yang nantinya bisa dibaca lagi. Hash key digunakan untuk mencocokkan data tanpa perlu tahu isi aslinya.
+

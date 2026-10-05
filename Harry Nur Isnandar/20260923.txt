@@ -1,0 +1,5 @@
+08:00 23/09/2026 mempelajari RSA yang di encode dan decode dengan public dan private key hash
+
+09:40 23/09/2026 Mencoba membuat pemograman dengan HASH
+
+10:58 23/09/2026 Belajar cara membuat HASH

@@ -1,0 +1,30 @@
+08:37 14/09/2026 Melanjutkan Tugas Pekerjaan pada hari Jumat kemarin.
+
+09:25 14/09/2026 Membuat sebuah ADC yang dipicu timer + DMA ke dalam circular buffer pada frekuensi 1 kHz.
+
+10:20 14/09/2026 Berhasil Menkonversi timer ADC+DMA dengan circular buffer di 1 kHZ. dan buktikan dengan menggunakan logic analyzer.
+
+11:31 14/09/2026 menambahkan di CMakeLists.txt untuk mengenali float
+
+#enable float support for printf
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE -u _printf_float) 
+
+13:34 14/09/2026 Menambahkan di code PFD dan code while
+
+static float calculate_RMSE_voltage(const uint32_t *adc_data,float reference_voltage, uint32_t size);
+
+while (1)
+  {
+    float rmse = calculate_RMSE_voltage(aADCxConvertedData,3.3f,ADC_CONVERTED_DATA_BUFFER_SIZE);
+
+printf("RMSE: %.6f V\r\n", rmse);
+
+13:40 14/09/2026 Menghitung Root Mean Square Error (RMSE) dan menampilakan ouput di docklight RMSE VOLTAGE
+
+14:00 14/09/2026 Melakukan kodingan LED dengan STM32H562VGT6
+
+15:13 14/09/2026 ST-LINK berhasil "berkomunikasi" dengan chip mikrokontroler (STM32H562VGT6) di board custom dan berhasil membaca Device ID-nya. 
+
+15:43 14/09/2026 Berhasil melakukan kodingan blink di led2 dengan menggunakan kodingan di NUCLEO U575ZI-Q, degan LED2 di PIN PB7
+
+16:16 14/09/2026 Mencoba melakukan percobaan UART Dengan STM32H562VGT6 custom board.

@@ -1,0 +1,21 @@
+08:00 22/09/2026 Belajar tentang konsep public key.
+
+08:55 22/09/2026 RSA
+
+09:02 22/09/2026 Modular Arithmetic
+
+10:08 22/09/2026 the integers and the integers modulo n
+
+10:32 22/09/2026 Fundamental Theorem of Arimethic.
+
+11:16 22/09/2026 Hash Cryptography.
+
+13:26 22/09/2026 Hash Function.
+
+13:56 22/09/2026 Data Integrity and message authentication
+
+14:07 22/09/2026 Beda Modification detection code dan message authentication codes.
+
+15:24 22/09/2026 Hash function as random functions.
+
+16:21 22/09/2026 signature hash function.

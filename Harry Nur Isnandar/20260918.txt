@@ -1,0 +1,13 @@
+08:00 18/09/2026 Mensolder Pin STM32U575VGT6
+
+09:45 18/09/2026 Mensimulasikan ARUS X-NUCLEO-LPM01A
+
+10:31 18/09/2026 Simulasi Dengan percobaan LED
+
+11:31 18/09/2026 Mencoba mesimulasikan low power 
+
+13:15 18/09/2026 Mencoba melakukan Perbedaan dengan Mengunakan WinMerge
+
+14:52 18/09/2026 Melakukan pengujian pengukuran arus ThreadX dengan STM32H562VGT6
+
+16:36 18/09/2026 Mempelajari security dari FreeRTOS yaitu MISRA C dan COVERITY SCAN

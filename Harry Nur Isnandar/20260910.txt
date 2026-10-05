@@ -1,0 +1,1 @@
+Mempelajari dasar-dasar akuisisi data analog dengan menginisialisasi pin ADC dan menulis kode konversi dasar dalam mode blocking atau polling.

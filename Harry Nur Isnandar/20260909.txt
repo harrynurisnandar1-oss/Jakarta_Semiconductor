@@ -1,0 +1,15 @@
+08:00 09/09/2026 Menganalisa Board Smart Meter CSI-13
+
+08:53 09/09/2026 Mencoba melakukann user button dengan STM32G74RE
+
+09:20 09/09/2026 Melakukan Analisa UART_HyperTerminal_IT 
+
+10:37 09/09/2026 Melakukan Analisa tentang UART_WakeUpFromStopUsingFIFO menggunakan STM32U575ZITxQ
+
+13:26 09/09/2026 Menganailisa UART_WakeUpFromStopUsingFIFO menggunakan NUCLEO STM32U575ZIT6Q menggunakan ring buffer.
+
+13:52 09/09/2026 Membuat UART_WakeUpFromStopUsingFIFO dengan menggunakan ring buffer
+
+14:57 05/10/2026 Mengkonfigurasikan UART dari NUCLEO U575ZITQ.
+
+16:00 05/10/2026 Menambahkan UART sebagai pengiriman data yang ditampilkan dengan docklight

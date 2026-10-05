@@ -1,0 +1,17 @@
+07:56 17/09/2026 Mempelajari buku introduction in to crypyogrpahy
+
+08:03 17/09/2026 Mempelajari CI/CD, dan perbedana asymmetric dan simetrical
+
+09:49 17/09/2026 Membuat catatan tentang Cyptograhy.
+
+10:54 17/09/2026 Membuat Sebuah Stream Ciphers.
+
+11:25 17/09/2026 Making a basic code about Stream Ciphers.
+
+13:52 17/09/2026 Membuat program sederhana berbasis DES (Data Encryption Standard).
+
+15:05 17/09/2026 Mempelajari Verman's One-Time Pad.
+
+15:58 17/09/2026 Mensimulasikan verman cipher.
+
+16:11 17/09/2026 Mesimulasikan block chipher DES

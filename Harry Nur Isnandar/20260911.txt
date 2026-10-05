@@ -1,0 +1,13 @@
+07:25 11/09/2026 Melakukan kunjungan lab mentor untuk melakukan Hardware dan berdiskui dengan zoom.
+
+09:24 11/09/2026 Persiapan zoom di 09:30 bertema Sharing Knowledge Agentic AI untuk Desain Chip Semikonduktor.
+
+10:18 11/09/2026 Mengikuti kegiatan materi zoom tentang mengimpletasikan AI tentang IC Design, kenapa harus Fabless design.
+
+13:36 11/09/2026 Berhasil menganalisa ADC-DMA-Transfer dengan menggunakan NUCLEO U575ZI-Q
+
+15:25 11/09/2026 Menganalisa hasil dari ADC-DMA-Transfer yang menggunakan UART1 yang kemudian di tampilkan dengan Docklight.
+
+15:52 11/09/2026 Melakukan perubahan pada DC-DMA-Transfer yang menggunakan UART1 dengan di tambahkan timer, dan gagal.
+
+16:59 11/09/2026 Menganalisa Potensio_ADC_IN dengan memakai logic analyzer

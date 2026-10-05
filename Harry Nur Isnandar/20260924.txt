@@ -1,0 +1,5 @@
+08:55 24/09/2026 Memcoba melakuka TrustZone dengan NUCLEO U575 ZI-Q.
+
+09:21 24/09/2026 Berhasil Melakuka kompilasi flash untuk example GPIO_IOToggle_TrustZone
+
+10:58 24/09/2026 Mencoba Melakukan TrustZone dengan freertos.

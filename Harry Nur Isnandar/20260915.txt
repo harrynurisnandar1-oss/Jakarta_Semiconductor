@@ -1,0 +1,18 @@
+07:31 15/09/2026 Mencoba melakukan code STM32H562VGT6 mempelajari ADC.
+
+08:30 15/09/2026 Berhasil melakukan ujicoba di oscilloscope FNIRSI 2C53P DAC dengan STM32H562VGT6.
+
+09:18 15/09/2026 Melakukan DAC 2 output di pin PA4 dan PA5.
+
+10:20 15/09/2026 Melakukan Double DAC dengan menggunakan ARRAY.
+
+11:31 15/09/2026 Menganalisis hasil dari oscilloscope. 
+
+13:42 15/09/2026 Membuat percbaan Low Power, RTC, and Persistence dengan STM32H562VGT6.
+
+14:25 15/09/2026 Mengkonfigurasi STM32CubeMX di STM32H562VGT6 custom board yang tidak ada user manualnya.
+
+15:17 15/09/2026 Error USART 1 yang tidak dapat muncul di docklight.
+
+15:27 15/09/2026 Mencoba melakuka RTC dengan menambahkan print_UART
+

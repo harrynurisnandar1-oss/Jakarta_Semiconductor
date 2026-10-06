@@ -42,7 +42,7 @@ $$I = x\text{IRMS} \times \text{Current Conversion Constant} \times 10^{-6}$$
 
 $$P = x\text{WATT} \times \text{Power Conversion Constant} \times 10^{-3}$$
 
-$$E = x\text{WATTHR\_HI} \times \text{Energy Conversion Constant} \times 10^{-6}$$
+$$E = x\text{WATTHR\ HI} \times \text{Energy Conversion Constant} \times 10^{-6}$$
 
 ---
 
@@ -217,7 +217,7 @@ Kondisi pengujian menggunakan tegangan dan arus nominal dengan **power factor = 
 13. Verifikasi hasil.
 14. Ulangi untuk Phase B dan C.
 
-$$\text{APGAIN} = \frac{\text{AWATTHR\_HI}_{\text{expected}} - \text{AWATTHR\_HI}_{\text{measured}}}{\text{AWATTHR\_HI}_{\text{measured}}} \times 2^{27}$$
+$$\text{APGAIN} = \frac{\text{AWATTHR HI}_{\text{expected}} - \text{AWATTHR HI}_{\text{measured}}}{\text{AWATTHR HI}_{\text{measured}}} \times 2^{27}$$
 
 ---
 
@@ -255,9 +255,9 @@ Power offset dilakukan untuk mengurangi eror pada daerah pengukuran daya rendah.
 
 $$\text{Init Configuration} \longrightarrow \text{Current Gain (AIGAIN/BIGAIN/CIGAIN)} \longrightarrow \text{Voltage Gain (AVGAIN/BVGAIN/CVGAIN)}$$
 $$\downarrow$$
-$$\text{RMS Offset (Current \& Voltage Offset)} \longrightarrow \text{Phase Calibration (APHCAL0/BPHCAL0/CPHCAL0)}$$
+$$\text{RMS Offset (Current and Voltage Offset)} \longrightarrow \text{Phase Calibration (APHCAL0/BPHCAL0/CPHCAL0)}$$
 $$\downarrow$$
-$$\text{Power Gain (APGAIN/BPGAIN/CPGAIN)} \longrightarrow \text{Power Offset (Active \& Reactive Power Offset)}$$
+$$\text{Power Gain (APGAIN/BPGAIN/CPGAIN)} \longrightarrow \text{Power Offset (Active and Reactive Power Offset)}$$
 $$\downarrow$$
 $$\text{Verification} \longrightarrow \text{Save Calibration Result}$$
 
@@ -301,7 +301,7 @@ Setelah seluruh *calibration coefficient* diterapkan:
 6. Catat hasil pengukuran.
 7. Evaluasi terhadap *acceptance limit* yang telah ditetapkan oleh proyek.
 
-$$\text{Error (\%)} = \frac{X_{\text{ADE9000}} - X_{\text{ref}}}{X_{\text{ref}}} \times 100\%$$
+$$\text{Persentase Eror %\} = \frac{X_{\text{ADE9000}} - X_{\text{ref}}}{X_{\text{ref}}} \times 100\%$$ %
 
 > Untuk kondisi referensi yang mendekati nol, evaluasi tidak sebaiknya menggunakan persentase relatif biasa; batas *absolute error/tolerance* perlu ditentukan secara terpisah. Batas kelulusan tidak ditetapkan pada draft ini karena *acceptance limit* harus mengikuti spesifikasi proyek dan standar yang berlaku.
 

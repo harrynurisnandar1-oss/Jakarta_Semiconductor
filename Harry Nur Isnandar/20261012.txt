@@ -1,0 +1,13 @@
+08:00 12/10/2026 Melanjutkan source code Juma'at lalu.
+
+09:13 12/10/2026 Mengetest fitur baru
+
+10:05 12/10/2026 Menguji coba dengan C compiler web
+
+11:00 12/10/2026 Menambahkan fitur yang mau ditambahkan 
+
+13:00 12/10/2026 Membuat OBIS CODE bersumber PLN pada ami_cosem_model.c
+
+15:39 12/10/2026 Membaca OBIS yang sudah ditambahkan di di file markdown.
+
+15:53 12/10/2026 Mengetest OBIS yang sudah di tambahkan.

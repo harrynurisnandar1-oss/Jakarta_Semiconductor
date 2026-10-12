@@ -1,0 +1,16 @@
+08:01 08/10/2026 Membersihkan main.c karena masih sangat bergantung pada main.c
+09:14 08/10/2026 Mengisi laporan monitoring
+10:05 08/10/2026 Mempelajari cara menggunakan trustzone lebih lanjut
+14:10 08/10/2026 Gagal mengubah program trustzone yang digunakan
+14:48 08/10/2026 Penyebab ditemukan 
+
+Baudrate 115200 mengalami data corrupt 
+
+pada 9600 bps, setiap 1 bit sinyal dikirim selama 104 microsecond 
+pada 115200 bps, setiap 1 bit sinyal dikirim selama 8,68 microsecond
+Pulsa yang lebih Panjang memberikan Waktu yang cukup bagi mikrokontroler untuk melakukan sampling 
+
+Cara mengatasinya bisa dengan menurunkan baudrate
+Opsi lainnya meningkatkan clock uart
+USARTDIV=fCK/Baud Rate​​
+4.000.000​/115.200≈34,7

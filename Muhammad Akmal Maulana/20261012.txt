@@ -1,0 +1,5 @@
+08:01 12/10/2026 Cek display yang ada di spln
+09:39 12/10/2026 Menyamakan apa yang diimplementasikan pada trustzone ke non trustzone
+10:24 12/10/2026 Kembali Menyamakan program dengan ketentuan PLN
+13:07 12/10/2026 Flash ke NUCLEO-U575ZI-Q
+14:28 12/10/2026 Test apakah sudah sesuai dengan yang seharusnya

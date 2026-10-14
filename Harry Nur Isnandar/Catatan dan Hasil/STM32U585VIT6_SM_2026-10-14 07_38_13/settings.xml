@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GXConformanceSettings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaitTimeAsString>PT0S</WaitTimeAsString>
+  <DelayAsString>PT0S</DelayAsString>
+  <DelayConnectionAsString>PT0S</DelayConnectionAsString>
+  <ImageVerifyWaitTimeAsString>PT10S</ImageVerifyWaitTimeAsString>
+  <ImageActivateWaitTimeAsString>PT10S</ImageActivateWaitTimeAsString>
+  <ExcludedHdlcTests />
+  <ExcludedApplicationTests />
+  <ExcludedGuruxTests>
+    <ClockTests />
+    <ProfileGenericTests />
+    <ServiceTests />
+    <AuthenticationTests />
+  </ExcludedGuruxTests>
+</GXConformanceSettings>

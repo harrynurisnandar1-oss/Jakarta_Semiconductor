@@ -1,0 +1,20 @@
+07:27:36 Send SNRM request.
+TX:	 7E A0 08 02 03 2D 93 26 CE 7E
+07:27:36 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:27:36 Send AARQ request.
+TX:	 7E A0 2C 02 03 2D 10 34 35 E6 E6 00 60 1D A1 09 06 07 60 85 74 05 08 01 01 BE 10 04 0E 01 00 00 00 06 5F 1F 04 00 62 1E 5D FF FF 88 55 7E
+07:27:41
+Data send failed. Try to resend 1/3 
+07:27:46
+Data send failed. Try to resend 2/3 
+07:27:51
+Failed to receive reply from the device in given time. 
+07:27:51 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:27:51
+Failed to receive reply from the device in given time. 
+07:27:51 Disconnect request
+TX:	 7E A0 08 02 03 2D 53 2A 08 7E
+07:27:51 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E

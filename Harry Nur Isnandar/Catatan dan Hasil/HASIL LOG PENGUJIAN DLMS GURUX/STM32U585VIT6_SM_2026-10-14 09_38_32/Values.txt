@@ -1,0 +1,38 @@
+Starting to execute test for STM32U585VIT6_SM.
+Starting T_APPL_IDLE_N1 test. 
+Passed.
+Starting T_APPL_OPEN_1 test. 
+Passed.
+Starting T_APPL_OPEN_3 test. 
+Starting T_APPL_IDLE_N1 test. 
+Starting APPL_OPEN_4 test. 
+Passed.
+Starting T_APPL_OPEN_5 test. 
+Starting T_APPL_OPEN_5 test. 
+Passed.
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Passed.
+Starting T_APPL_OPEN_7 test. 
+Starting T_APPL_OPEN_7 test. 
+Passed.
+Starting T_APPL_OPEN_9 test. 
+Starting T_APPL_OPEN_9 test. 
+Passed.
+Starting T_APPL_OPEN_11 test. 
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_11">T_APPL_OPEN_11 failed.</a>Starting T_APPL_OPEN_12 test.
+Passed.
+Starting T_APPL_OPEN_14 test.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_14">T_APPL_OPEN_14 test failed.</a>Starting T_APPL_DATA_LN_N1 tests.
+T_APPL_DATA_LN_N1 subtest 1 failed. Access Error : Long Get Or Read Aborted.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N1">T_APPL_DATA_LN_N1 failed.</a>Starting T_APPL_DATA_LN_N3 tests.
+T_APPL_DATA_LN_N3 test failed.. Access Error : Long Get Or Read Aborted.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N3">T_APPL_DATA_LN_N3 failed.</a>Starting T_APPL_DATA_LN_N4 tests.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N4">T_APPL_DATA_LN_N4 failed.</a>Starting APPL_REL_P1 tests.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#APPL_REL_P1">APPL_REL_P1 failed.</a>Basic tests are ignored.
+Empty service test failed. Invalid conformance.Proposed conformance service test failed.Read service test failed. Access Error : Long Get Or Read Aborted.Attribute0SupportedWithGet service test skipped. There are no data objects.

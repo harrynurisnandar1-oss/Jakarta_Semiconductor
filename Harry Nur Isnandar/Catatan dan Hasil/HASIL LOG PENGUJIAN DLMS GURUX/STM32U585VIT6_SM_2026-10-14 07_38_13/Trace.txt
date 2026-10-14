@@ -1,0 +1,55 @@
+07:38:15 Send SNRM request.
+TX:	 7E A0 08 02 03 2D 93 26 CE 7E
+07:38:15 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:15 Send AARQ request.
+TX:	 7E A0 2C 02 03 2D 10 34 35 E6 E6 00 60 1D A1 09 06 07 60 85 74 05 08 01 01 BE 10 04 0E 01 00 00 00 06 5F 1F 04 00 62 1E 5D FF FF 88 55 7E
+07:38:15 
+RX:	 7E A0 38 2D 02 03 30 33 53 E6 E7 00 61 29 A1 09 06 07 60 85 74 05 08 01 01 A2 03 02 01 00 A3 05 A1 03 02 01 00 BE 10 04 0E 08 00 06 5F 1F 04 00 00 50 1F 01 F4 00 07 19 0A 7E
+07:38:15 HDLC test #1. Disconnect request
+TX:	 7E A0 08 02 03 2D 53 2A 08 7E
+07:38:15 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:15 HDLC test #1. SNRM request
+TX:	 7E A0 08 02 03 2D 93 26 CE 7E
+07:38:15 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:15
+SNRM request succeeded. MaxInfoLengthTransmit: 128 MaxInfoLengthReceive: 128 WindowSizeTransmit: 1 WindowSizeReceive: 1 
+07:38:15 HDLC test #1. Receiver Ready 
+TX:	 7E A0 08 02 03 2D 11 3C 69 7E
+07:38:20
+Data send failed. Try to resend 1/3 
+07:38:25
+Data send failed. Try to resend 2/3 
+07:38:30
+Failed to receive reply from the device in given time. 
+07:38:30
+Receiver Ready failed. 
+07:38:30 HDLC test #1. Disconnect request
+TX:	 7E A0 08 02 03 2D 53 2A 08 7E
+07:38:30 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:30
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#hdlc1">Test #1 failed.</a> 
+07:38:30 HDLC test #2. SNRM request
+TX:	 7E A0 08 02 03 2D 93 26 CE 7E
+07:38:30 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:30
+SNRM request succeeded. MaxInfoLengthTransmit: 128 MaxInfoLengthReceive: 128 WindowSizeTransmit: 1 WindowSizeReceive: 1 
+07:38:30 HDLC test #2. Illegal frame.
+TX:	 7E A0 08 02 03 2D 53 2A 08
+07:38:35
+Data send failed. Try to resend 1/3 
+07:38:35 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E
+07:38:35
+Illegal frame failed. 
+07:38:35
+Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index 
+07:38:35 Disconnect request
+TX:	 7E A0 08 02 03 2D 53 2A 08 7E
+07:38:35 
+RX:	 7E A0 08 2D 02 03 73 7D F7 7E

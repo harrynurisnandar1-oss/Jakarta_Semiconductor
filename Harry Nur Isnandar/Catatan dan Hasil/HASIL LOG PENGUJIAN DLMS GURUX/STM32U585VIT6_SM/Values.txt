@@ -1,0 +1,2 @@
+Starting to execute test for STM32U585VIT6_SM.
+Failed to receive reply from the device in given time.

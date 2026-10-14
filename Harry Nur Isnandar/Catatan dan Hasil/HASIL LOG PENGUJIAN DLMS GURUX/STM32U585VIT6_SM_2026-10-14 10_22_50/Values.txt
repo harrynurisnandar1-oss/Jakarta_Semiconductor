@@ -1,0 +1,38 @@
+Starting to execute test for STM32U585VIT6_SM.
+Starting T_APPL_IDLE_N1 test. 
+Passed.
+Starting T_APPL_OPEN_1 test. 
+Passed.
+Starting T_APPL_OPEN_3 test. 
+Starting T_APPL_IDLE_N1 test. 
+Starting APPL_OPEN_4 test. 
+Passed.
+Starting T_APPL_OPEN_5 test. 
+Starting T_APPL_OPEN_5 test. 
+Passed.
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Passed.
+Starting T_APPL_OPEN_7 test. 
+Starting T_APPL_OPEN_7 test. 
+Passed.
+Starting T_APPL_OPEN_9 test. 
+Starting T_APPL_OPEN_9 test. 
+Passed.
+Starting T_APPL_OPEN_11 test. 
+Passed.
+Starting T_APPL_OPEN_12 test.
+Passed.
+Starting T_APPL_OPEN_14 test.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_14">T_APPL_OPEN_14 test failed.</a>Starting T_APPL_DATA_LN_N1 tests.
+Passed.
+Starting T_APPL_DATA_LN_N3 tests.
+Passed.
+Starting T_APPL_DATA_LN_N4 tests.
+Passed.
+Starting APPL_REL_P1 tests.
+Passed.
+Basic tests are ignored.
+Profile generic 0.0.99.98.0.255 failed. ReadRowsByEntry returned invalid amount of columns when only first one was read.Testing Profile Generic 0.0.99.98.0.255 Access Error : Device reports a unavailable object.Profile generic 1.0.98.1.0.255 failed. ReadRowsByEntry returned invalid amount of columns when only first one was read.Testing Profile Generic 1.0.98.1.0.255 Access Error : Device reports a unavailable object.Empty service test failed. Invalid conformance.Attribute0SupportedWithGet service test skipped. There are no data objects.

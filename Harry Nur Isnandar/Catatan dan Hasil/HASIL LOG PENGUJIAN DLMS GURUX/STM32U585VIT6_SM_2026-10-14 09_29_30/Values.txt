@@ -1,0 +1,37 @@
+Starting to execute test for STM32U585VIT6_SM.
+Starting T_APPL_IDLE_N1 test. 
+T_APPL_IDLE_N1 test failed.. Exception response returned Exception response. "Service not allowed"-exception. Operation not possible.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_IDLE_N1">T_APPL_IDLE_N1 test failed.</a>Starting T_APPL_OPEN_1 test. 
+Passed.
+Starting T_APPL_OPEN_3 test. 
+Starting T_APPL_IDLE_N1 test. 
+Starting APPL_OPEN_4 test. 
+Passed.
+Starting T_APPL_OPEN_5 test. 
+Starting T_APPL_OPEN_5 test. 
+Passed.
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Starting T_APPL_OPEN_6 test. 
+Passed.
+Starting T_APPL_OPEN_7 test. 
+T_APPL_OPEN_7 test failed.. Connection is permanently rejected. The application context name is not supported.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_7">T_APPL_OPEN_7 failed.</a>Starting T_APPL_OPEN_9 test. 
+Starting T_APPL_OPEN_9 test. 
+Passed.
+Starting T_APPL_OPEN_11 test. 
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_11">T_APPL_OPEN_11 failed.</a>Starting T_APPL_OPEN_12 test.
+Passed.
+Starting T_APPL_OPEN_14 test.
+T_APPL_OPEN_14 test failed.. PDU size 11.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_OPEN_14">T_APPL_OPEN_14 test failed.</a>Starting T_APPL_DATA_LN_N1 tests.
+T_APPL_DATA_LN_N1 subtest 1 failed. Access Error : Long Get Or Read Aborted.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N1">T_APPL_DATA_LN_N1 failed.</a>Starting T_APPL_DATA_LN_N3 tests.
+T_APPL_DATA_LN_N3 test failed.. Access Error : Long Get Or Read Aborted.Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N3">T_APPL_DATA_LN_N3 failed.</a>Starting T_APPL_DATA_LN_N4 tests.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#T_APPL_DATA_LN_N4">T_APPL_DATA_LN_N4 failed.</a>Starting APPL_REL_P1 tests.
+Failed.
+<a href="https://www.gurux.fi/gurux.dlms.ctt.tests#APPL_REL_P1">APPL_REL_P1 failed.</a>Logical Device Name is not implemented.Basic tests are ignored.
+Access Error : Device reports a temporary failure.

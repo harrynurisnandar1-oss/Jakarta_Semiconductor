@@ -1,0 +1,1 @@
+14/10/2026 07:27:51;Failed to receive reply from the device in given time.

@@ -1,0 +1,1 @@
+14/10/2026 08:29:42;Access Error : Device reports a undefined object.

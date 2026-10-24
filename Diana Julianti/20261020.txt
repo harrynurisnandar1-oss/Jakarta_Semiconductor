@@ -1,0 +1,24 @@
+				Day 1 (October 20, 2026)
+Activities:
+09:00 – ITS K3L (Occupational Health, Safety, and Environment) Session – Earthquake Safety Induction
+09:30 – Opening Remarks (Mr. Dwi, Mr. Heri, Mr. Rifqi)
+10:03 – Ceremony
+10:10 – Group Photo
+10:15 – Introduction to Arm
+10:50 – Break
+11:10 – Introduction to Arm CPU – Cortex-A
+12:25 – Company Showcase – Polytron
+12:45 – Lunch + Demo
+14:10 – Introduction to Arm CPU – Cortex-R and Cortex-M
+14:50 – Introduction to Arm Mali: Mobile GPU Architecture and Graphics Fundamentals
+15:43 – What Arm Technology Enables
+16:10 – Booth Visits (with snacks)
+
+Speakers:
+•	Dwi Susanto, Ph.D. ➞ Managing Director, Technology Advancement, Danantara
+•	Prof. Dr.rer.pol. Heri Kuswanto, M.Si. ➞ Director of Research and Development Talent Development
+•	Rifqi Ansari, S.TP., M.T., MBA. ➞ Director of Electronics and Telematics Industry (IET)
+•	Prof. Dr. (HC). Ir. Bambang Pramujati, S.T., M.Sc.Eng., Ph.D., IPU, ASEAN Eng. ➞ Rector of ITS
+
+Key Points from Remarks:
+The speakers emphasized the importance of semiconductor training to enhance Indonesia’s capability in independently mastering chip technology and reducing reliance on imported chips. Semiconductor development encompasses three primary stages: design, fabrication (foundry), and assembly, testing, and packaging (ATP). Through Arm technology, participants are introduced to chip design—a critical aspect of the semiconductor industry. The training is conducted in-person over 3 days, followed by 200 hours of independent online training. This program aims to enhance participants' competencies, enabling them to understand and develop semiconductor technology, so that Indonesia may transition from being merely a user to becoming a creator of such technology.

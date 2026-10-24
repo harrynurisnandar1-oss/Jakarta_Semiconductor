@@ -12,3 +12,111 @@ Activity:
 14:45 – Introduction to Arm Corstone compute subsystem
 15:20 – Panel Discussion: Career Path Sharing/Ask Me Anything
 16:30 – Booth Visits
+
+
+
+                                                                    Tim Menasvota (FAE Director)
+                                                              Introduction to Arm NPU and AI Framework
+
+Edge AI Soluction- NPU Hardware Introduction
+
+Edge AI market challenges : navigating growing compute performance demands and increased software complexity (range of performance, Security, low-power desgn, machine learning integration, software portability, broad ecosystem support)
+
+ARM IP: Unlocking the Full Potential of Edge AI 
+Cortex-M55 Cortex-M85 (16 GOPS)
+Cortex-A320 (64 GOPS 128 GOPS)
+Ethos-U55 (64 GOPS 512 gops)
+GOPS+ MACs *2* Operation Frequency 
+GPOS/TOPS expressed at iso-frequency (1 GHz)
+Note that Cortex-A320 achiesves significanlity higher operating frequencies that Cortex-M CPUs
+
+Helium-Vector Extension for Cortex-M to enable AI ability
+•	A vector processing instruction set
+•	Goals: bring to M-Profile CPUs (for a x2 datapath increase, achieve a x4 uplift in DSP/ML performance)
+
+ARM Cortex-A Efficientyly prose
+ARM Ethos-U (next gen machine learning accelerator for edge) higher energy efficiency : targeting 20% over current generaton.
+
+Ethos NPU in a system : Three main ways to integrate Ethos-U85, which is the right option depends on use-case (EndPoint AI (Cortex-M based system), ML Island (Cortex-A based system) , Cortex-A Direct Drive (Cortex-A based system))
+
+Typical Ethos-U85 data flow-as for all Ethos-U NPUs:
+ 0 an offline compiled command stream 
+ 1 Input activations are put into system SRAM or DRAM
+ 2 The host starts Ethos-U85 by defining all memory regions to be used
+ 3 Ethos-85 autonomusly runs all commands
+ 4 Interupt on completion of writing that final result
+
+LlM2-tiny on Ethos-85:
+15M parameter modal
+7.874 tokens/sec @ 32 MHz 
+
+Voice UI Everywhere : conformer speech recognition on MCU (Cortex-M85 & Ethos-U85).
+
+Edge AI Solution - Software Ecosystem
+
+
+Arm AI Software Ecosystem :
+•	Machine Learning (Frameworks, ML Runtimes) 
+•	Device Software (Compilers, Libaries)
+•	Developer Tools (Ecosystem Tools, Arm Development Tools) 
+•	Developer Resources (Evaluation, Education)
+
+AI Application Developer Workflow : from model development to deployment on Arm-based silicon 
+(FP32 model
+INT8, Ethos-U compatible model, Ethos-U command stream, Inference application binary, 
+
+functional performance validation : Steeps Validate on virtual platform Toos Corstone 320 FVPs 
+
+inference on silicon : Steeps Deplot on hardware, Tools C/C+ build toolchain).
+
+
+Arm is driving standardization across edge AI to Achieve Scalability :
+•	Operator proliferatiob  (TensorFlow >1000, TensorFlowLite 158, PyTarch >2000)
+•	Complexity in Deployments (multiple frameworks, multiple back ends, multiple runtimes, multiple targets)
+
+ML Workload Flow with Cortex-M + Ethos-U NPU:
+Host Offline 
+•	Train network in TensorFlow o PyTorch 
+•	Quantize it to lnt8
+Target/Device
+•	Runtime executable loads model on device
+•	Accelerates kernels on Ethos-U (drive handles the communication)
+
+Arm CMSIS-NN for Cortex-M:
+Optimized low-level kernels for Cortex-M processors
+The librry is divided into a number of functions each covering a specift.
+
+Network support in Ethos-U:
+With the supported operator set, Ethos-U can completely execute most of the popular
+
+More Operators Coverage in Ethos-85:
+•	Ethos-85 supports native hardware support for transformer based networks
+•	Support the TOSA(Tensor Operator Set Architecture)
+
+A-Class based system software flow (with ML Island):
+•	Based flow same as Ethos-U55
+Example M-class wrapper app
+Ethos-U65 driver
+•	Optimization strategis for DRAM and SRAM
+
+A-Class based system software flow  (With Linux Direct Driver).
+
+
+Arm Kleidi Libraries : Transparently enabling outstanding performance of Arm Cortex CPUs (AI Apps, AI Frameworks, arm Kleidi Libraries)
+
+KleidiAI
+Target users: 
+AI Experts (AI Framework, AI SDKs, AI Pipeline developers)
+
+Domain ( Classic ML, sLLM, Speech interaction)
+Resources:
+KleidiAI Introduction Big
+
+Evolution of Arm AI Stack : enabling best performance in existing AI Frameworks.
+
+ARM IoT ML Software Stack:
+•	TensorFlow and PyTorch networks
+•	Runtime support for all Arm IPs:
+Ethos-U : Open-source backend
+Cortex-M : CMSIS-NN acceleration
+Cortex-A : KleidiAI via XNNPack

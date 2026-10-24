@@ -1,0 +1,14 @@
+Day 2 (21 October 2026)
+Activity:
+09:56 – Watch ITS K3L (Induction: Earthquake Safety)
+10:00 – Quiz
+10:15 – Introduction to Arm NPU and AI Framework
+11:00 – Company Showcase - Nicslab
+11:15 – Break
+11:30 – Cortex-A Deep Dive
+12:30 – Launch
+13:40 – Company Showcase - PERURI
+13:50 – Modern Graphics Technologies on Mali GPUs
+14:45 – Introduction to Arm Corstone compute subsystem
+15:20 – Panel Discussion: Career Path Sharing/Ask Me Anything
+16:30 – Booth Visits

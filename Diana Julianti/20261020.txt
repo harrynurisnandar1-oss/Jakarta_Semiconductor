@@ -22,3 +22,144 @@ Speakers:
 
 Key Points from Remarks:
 The speakers emphasized the importance of semiconductor training to enhance Indonesia’s capability in independently mastering chip technology and reducing reliance on imported chips. Semiconductor development encompasses three primary stages: design, fabrication (foundry), and assembly, testing, and packaging (ATP). Through Arm technology, participants are introduced to chip design—a critical aspect of the semiconductor industry. The training is conducted in-person over 3 days, followed by 200 hours of independent online training. This program aims to enhance participants' competencies, enabling them to understand and develop semiconductor technology, so that Indonesia may transition from being merely a user to becoming a creator of such technology.
+
+
+												Matt Rushton (Director Arm Training Services)
+															Introduction to Arm
+What area of technology are you most experienced in?
+•	Hardware design: 45%
+•	Software development: 27%
+•	Physical implementation: 22%
+•	Other: 6%
+How many Arm-based chips have shipped since 1990? Over 350 billion chips.
+How many software developers are there today on Arm? Over 22 million.
+What percentage of the connected global population touches an Arm-based product?
+100%.
+Where it all started-Arm today: over 20 offices worldwide.
+How Arm grew to the company it is today (Keyboard, Nokia, Blueberry)
+•	Power efficiency
+•	Licensing model
+•	Ecosystem
+Arm is the only company that can address all markets
+•	Edge AI
+•	Physical AI
+•	Cloud AI
+•	Consistent AI compute platform + software
+•	Arm AI Compute Platform
+Perkembangan dan ekosistem Arm
+Arm is the CPU.
+vivo launches flagship smartphone X300 series based on Arm.
+Base.
+Nvidia.
+Nuro driver is built on Arm compute.
+Arm partners with Aston Martin Aramco Formula One team to advance AI, innovation.
+35+ years of innovation : Arm announces its expansion to production silicon for the first time in company history. Beginning with the launch (2026).
+Arm Architecture, IP, Compute Subsystems and Silicon
+Architecture (Arm Specification Manual), IP (CPU, GPU, NPU, System IP), CSS (Compute Subsystem), Silicon (Arm, AGI, CPU).
+The Arm Architecture
+•	Architecture (seperti desain buku)
+•	IP (logo yang berhasil dibuat)
+•	CSS (logo yang sedang dirangkai)
+•	Silicon (logo yang berhasil dirangkai)
+
+
+																Yun Yi (Application Engineer Arm)
+													Introduction to Arm CPU – Cortex-A, A-Profile Architecture
+													
+
+
+
+														Joegianto (General Manager of Polytron)
+
+
+
+																Tim Menasvota (FAE Director)
+
+
+																	Hayden Lim (Software Engineer)
+														Mobile GPU Architecture and Graphics Fundamentals
+Mobile GPU Usage
+•	3D gaming, 2D gaming
+•	User interfaces
+•	Multimedia
+•	Computer vision
+•	Machine learning
+Mobile Systems
+•	CPU
+•	GPU (Window & Surface)
+•	DPU
+•	Resources
+•	Commands
+Power Consuming of Gaming Desktop.
+Desktop Systems
+•	CPU: 65-170 W
+•	GPU + VRAM: 220-350 W
+•	DRAM: 20-40 W
+Total power: 300-600 W
+Mobile Systems: 
+•	CPU, GPU, DRAM
+•	Power budget: 4-8 W (typical)
+Power budget on the mobile platform: 10-15 W (peak) and 800 lumens.
+Catatan:
+Mobile systems have a unified memory pool that is shared by all of the components (Big CPUs, LITTLE CPUs).
+DRAM accesses are expensive: 50-70 mW/(GB/s).
+Rendering Pipeline
+Alur pemrosesan grafis:
+CPU: Command Processing
+Geometry Processing
+Pixel Processing
+Tahapan yang tercatat pada bagian bawah foto:
+Compute Processing
+Vertex Shader
+Tessellation Shaders
+Geometry Shaders
+Primitive Assembly
+Clipping
+Rasterizer
+Early ZS
+Fragment Test
+Fragment Shader
+Pixel Processing
+B. Pipeline Parallel Processing
+Application Software
+Geometry Processing
+Pixel Processing
+Catatan pembagian komponen:
+•	CPU: Application Software
+•	GPU: Geometry Processing dan Pixel Processing
+GPU Architecture
+Performance gained by computational
+Shader core essentials: Single Program Multiple Thread (SPMT) and (Warp, Wavefront, Subgroup)
+5th Generation GPU Architecture
+•	CSU
+•	DVS
+•	HSR FP
+
+
+												Christion Jarden (Software Engineer, Developer Relations)
+•	100% of the connected global population.
+•	More than 350 billion Arm-based chips shipped to date.
+•	More than 22 million software developers on Arm.
+•	Only Arm has the breadth for Edge AI technologies, from sensors to smartphones. Arm provides the architecture and ecosystem to deploy AI everywhere efficiently.
+•	Trillions of tokens (used to develop OpenAI).
+Demo: Alif Ensemble E8 DevKit
+•	Arm-based CPU: A32 + 2 × MSS
+•	NPU: Ethos-U85 + 2 × Ethos-U55
+Yang tadi didemokan:
+•	A next-generation endpoint AI platform delivering transformer-class and ambient AI workloads at ultra-low power, enabling intelligent IoT, wearables, sensors, and battery-powered devices to run advanced models directly on the edge.
+The Edge Constraints
+•	More inference
+•	More contextual data
+•	Always-on
+•	Limited power
+•	Real-time execution
+•	Finite resources
+Can useful AI fit within a compute, memory and power budget?
+•	Edge AI
+•	Local by design
+•	Powered by Arm
+
+
+
+
+ 

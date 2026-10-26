@@ -64,20 +64,186 @@ The Arm Architecture
 
 
 																Yun Yi (Application Engineer Arm)
-													Introduction to Arm CPU – Cortex-A, A-Profile Architecture
+													Introduction to Arm CPU – Cortex-A, A-Profile 
+•	Arm CPU Architecture and Micro-Architecture
+•	Arm A-Profile Architecture – development & evolution
+What is Architecture?
+Arm CPU Architecture a foundation for computing everywhere.
+•	Cortex-A CPU product micro- architecture is the implementation of rchitecture.
+What is Architecture an analogy?
+•	A-profile Architecture 
+•	Cortex-A CPU microa architecture
+
+Latest versions: Armv9-A and Armv8-A | Armv8-R | Armv8-M
+Product lines: Cortex-A, Cortex-X
+
+CPU Architecture Profiles in mobile
+•	A-Profile: Application Processors
+•	R-Profile:Typically run bare-metal code or RTOS
+•	M-Profile: microcontrollers
+
+Development of Arm Architecture – A-Profile (1990-2011)
+Armv4, Armv5, Armv6, Armv7, Armv8
+Armv7-A: NEON advanced SIMD extensions
+
+Development of Arm Architecture: Armv4 & Armv5
+Armv4 Arc
+•	Introduced the Thumb (16 bit) instruction set
+•	Implemented by ARM7TDMI and ARM9TDMI
+
+Development of Arm Architecture: Armv6 & Armv7
+Armv7: Support Advanced SIMD extensions (NEON)
+
+Armv8:
+•	Vector extension: SVE and SVE2 (Scalable Vector Extension)
+•	Improved virtualization
+•	bfloat16 is a floating-point format that occupies 16 bits
+•	the first 64 bit version of the Arm architecture
+
+Armv9:
+•	machine learning
+•	INT8 MatMult, SME, CME
+•	Enhanced vector processing and digital signal processing → SVE2
+In short: compact code → SIMD & multicore → 64-bit → Security & ML acceleration
+Execution state & exception model:
+•	Armv8-A and Armv9-A support two execution states: AArch32 (32-bit) and AArch64 (64-bit)
+•	32-bit wide (R0-R15) registers (backward compatible with Armv7-A)
+•	64-bit wide (X0-X30, W0-W30) registers (code can only use the 64)
+•	An application may mix A32 and T32 code, but not 32-bit and 64-bit code
+•	Processor (PE) can only change execution state at reset or exception level changes.
+AArch32
+AArch64 (defines Armv8 Exception model).
+AArch32 (Supports the Armv7-A Exception model, based on PE modes.
+Level:
+EL3 – Secure monitor	Highest	AARCH63
+EL2 – hypervisor		PE must Implement EL1 and EL0
+EL1 – OS		
+EL0 – Applications	Lowest	
+
+AArch64 – moving between exception levels
+exception types:
+•	Synchronous (SVC, MMU faults, Undefined Instruction)
+•	IRQ Interrupt
+•	FIQ Interrupt
+•	SError
+AArch32 – Exception levels and modes
+CPS – Change Processor State:
+•	Syntax: CPS #mode
+•	Operation: Change mode to #mode
+
+A-Profile Arc – v8, v9 extensions and features
+•	the following diagram shows the parallel releases:
+ Armv8.4-A — Armv8.5-A — Armv8.6-A — future versions
+ Armv9.0-A — Armv9.1-A — Armv9.2-A — future versions
+•	Armv8.2-A
+1.	Statistical Profiling (FEAT_SPE) (AArch64)
+2.	Support for 52-bit addresses (FEAT_LPA) (AArch64)
+3.	FP16 data processing instructions (FEAT_FP16) (AArch32 and AArch64)
+
+•	FEAT_SPE, Statistical profiling extension
+ as defined by the instruction set architecture or by microarchitectural operations.
+Armv8.3-A:
+•	Pointer authentication (FEAT_PAuth)
+the PAC algorithm features are:
+ 	FEAT_PACQARMA5
+ 	FEAT_PACIMP
+FEAT_PACQ
+•	Nested Virtualization (FEAT_NV)
+Armv8.5-A and Armv9.0-A:
+•	Memory tagging (FEAT_MTE)
+•	Branch Target Identification (FEAT_BTI)
+Security-Branch Protection: Link register X30, Return, Address, PAC Code
+Which extension does my processor implement? the arm architecture includes a set of feature registers that report.
+Arm big.LITTLE Technology
+•	modern Software Stacks place conflicting requirements on Mobile systems
+ 	→ high performance gaming
+•	Both types core in a big.LITTLE system are fully cache coherent and share the same instruction. Big core : Cortex-A15 and LITTLE core : Cortex-A7
+Cache Coherent Interface (CCI)
+•	AMBA 4 ACE is released in 2011
+•	The Corelink CCI-400 is an implementations of AMBA 4 ACE
+•	Extending hardware coherency to a multi-cluster system requires a coherent bus protocol
+Arm DynamIQ (Armv8.2+)
+•	Arm DynamIQ technology has redefined multi-core computing by combining the big and LITTLE CPUs into a single
+•	Armv9.2 – DynamIQ big.LITTLE – DynamIQ Shared Unit (DSU-120)
+System-IP and AMBA Architectures
+•	Other arm architectures that make up modern SoC
+•	Arm System-IP Arch
+Generic Interrupt Controller (GIC)
+System memory management unit (SMMU)
+Generic timer
+SBSA and TBSA
+AMBA
+
+
+AMBA Overview
+What is AMBA?  the advanced Microcontroller Bus Architecture (AMBA). An Open Standard, On-Chip Interconnect Specification.
+•	Key AMBA Specifications
+•	AMBA in SoC Design
+•	AMBA-Related products
+Summary
+	CPU Architecture and Micro-Arch
+	Architecture evolution – Armv4 to Armv8, Armv9
+	Arm Architecture Reference Manual (A-Profile)
+	execution state – AArch32, AArch64
+	Execution model – EL0 to EL3
+	Architecture and features (v8, v9) – SPE, PAC/BTI, MTE
+	Arm big.LITTLE and DynamIQ Technology
+	System IP and AMBA Architecture
+
 													
 
 
-
 														Joegianto (General Manager of Polytron)
+I Indonesia A IN Technology
+Polytron 1975
+Our Journey 1975 – 2025
+•	menguasai Chip-design
+ electric vehicle
+ Renewable energy (solar energi)
+ energy
+ Chip design
+•	STEM disciplines Powering tomorrow's Innovation
+•	Indonesia mempunyai tenaga solar yg banyak, kita ingin memanfaatkan itu.
+•	Innovation in perovskite Solar cells, organic power
+•	Genetic Engineering
+Precision Medicine
+Synthetic Biology
+•	Innovation In advanced Material
+•	The Semiconductor Industry
+•	Real Indonesia Deep-Tech Builders
+ICDEC
+FROGS
+NISLB
 
 
 
 																Tim Menasvota (FAE Director)
+How to select a suitable Cortex-M?
+•	Cost / die area
+•	low Power
+•	DSP
+•	Security
+•	Performance
+•	machine learning
+Arm Cortex-M processor Portfolio?
+Armv7-M:
+•	Cortex-M7 : maximum performance, control and DSP
+•	Cortex-M3 : Performance efficiency
+•	Cortex-M4 : Mainstream control and DSP
+Armv6-M:
+•	Cortex-M0 : lowest cost, low power
+•	Cortex-M0+ : highest energy efficiency
+Armv8-M:
+•	Cortex-M85 : highest Scalar performance and ML/DSP acceleration
+•	Cortex-M33 : Flexibility Control and DSP
+•	Cortex-M55 : Balanced performance and efficiency for ML
+•	Cortex-M23 : Smallest area, Lowest Power
+Cortex-M0 overview
+Block Diagram of the Cortex-M55 Processor
 
 
 																	Hayden Lim (Software Engineer)
-														Mobile GPU Architecture and Graphics Fundamentals
+														Mobile GPU Architecture and Graphics Fundamentals 
 Mobile GPU Usage
 •	3D gaming, 2D gaming
 •	User interfaces
@@ -86,10 +252,9 @@ Mobile GPU Usage
 •	Machine learning
 Mobile Systems
 •	CPU
-•	GPU (Window & Surface)
+•	GPU (Resources & Commands)
+•	Window & Surface
 •	DPU
-•	Resources
-•	Commands
 Power Consuming of Gaming Desktop.
 Desktop Systems
 •	CPU: 65-170 W
@@ -105,59 +270,20 @@ Mobile systems have a unified memory pool that is shared by all of the component
 DRAM accesses are expensive: 50-70 mW/(GB/s).
 Rendering Pipeline
 Alur pemrosesan grafis:
-CPU: Command Processing
-Geometry Processing
-Pixel Processing
-Tahapan yang tercatat pada bagian bawah foto:
-Compute Processing
-Vertex Shader
-Tessellation Shaders
-Geometry Shaders
-Primitive Assembly
-Clipping
-Rasterizer
-Early ZS
-Fragment Test
-Fragment Shader
-Pixel Processing
-B. Pipeline Parallel Processing
-Application Software
-Geometry Processing
-Pixel Processing
-Catatan pembagian komponen:
+CPU – Command Processing (Compute Processing) – Geometry Processing (Vertex Hader - Tessellation Shaders - Geometry Shaders - Primitive Assembly - Printile Culling) – Pixel Processing (Rasterizer - Early ZS - Fragment Test - Fragment Shader - lutezs) – Blend – Test
+Pipeline Parallel Processing
 •	CPU: Application Software
 •	GPU: Geometry Processing dan Pixel Processing
 GPU Architecture
-Performance gained by computational
-Shader core essentials: Single Program Multiple Thread (SPMT) and (Warp, Wavefront, Subgroup)
+•	Performance gained by computational
+•	Shader core essentials: Single Program Multiple Thread (SPMT) and (Warp, Wavefront, Subgroup)
 5th Generation GPU Architecture
 •	CSU
 •	DVS
 •	HSR FP
 
 
-												Christion Jarden (Software Engineer, Developer Relations)
-•	100% of the connected global population.
-•	More than 350 billion Arm-based chips shipped to date.
-•	More than 22 million software developers on Arm.
-•	Only Arm has the breadth for Edge AI technologies, from sensors to smartphones. Arm provides the architecture and ecosystem to deploy AI everywhere efficiently.
-•	Trillions of tokens (used to develop OpenAI).
-Demo: Alif Ensemble E8 DevKit
-•	Arm-based CPU: A32 + 2 × MSS
-•	NPU: Ethos-U85 + 2 × Ethos-U55
-Yang tadi didemokan:
-•	A next-generation endpoint AI platform delivering transformer-class and ambient AI workloads at ultra-low power, enabling intelligent IoT, wearables, sensors, and battery-powered devices to run advanced models directly on the edge.
-The Edge Constraints
-•	More inference
-•	More contextual data
-•	Always-on
-•	Limited power
-•	Real-time execution
-•	Finite resources
-Can useful AI fit within a compute, memory and power budget?
-•	Edge AI
-•	Local by design
-•	Powered by Arm
+												
 
 
 

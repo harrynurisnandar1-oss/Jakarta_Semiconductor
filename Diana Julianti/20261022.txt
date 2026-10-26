@@ -8,3 +8,168 @@ Activities:
 12:20 – Quick Start Guide for the Arm Training Portal
 12:40 – ICDEC Presentation
 13:00 – Networking
+
+
+
+                                                                        Heyden Lim
+                                                        Modern Graphic Technologies on Mali GPUs
+A full-stack approach to mobile gaming excellence, >12Bn Arm GPUs shipped to dst.
+Arm GPUs-enablimg mext generation graph experiences : empowering high quality, longser visual experiences.
+CSF : command stream frontend replacing JM.
+DVS : deferred vertex shading performance, less memory bandwich and consumoon.
+HSR FP: remorev overdrawn fragments, reduce redundant shading.
+
+Arm Mali GPU innovation (2021-2026).
+Mori on immortalis brings console- render quality to mobile:
+•	High quality PBR shading
+•	Vivid motion blur
+•	High polygon assets 
+•	Global illumination
+
+Ray tracing : 
+•	A new way to find geometry
+•	A new way to anage occclustion
+•	An enabler for new tecbquis
+
+Hybrid rechniques:
+Rasterization nd ray tracing can be mixed
+Allows some ray tracing op
+
+Basic shadowing (occlude and object).
+Indirect reflections:
+•	Ray tracing cam handle multi bounces reflectons 
+A hard problem for a
+
+Indirect illmuniation:
+•	The goal: ray thrace all the things
+•	Nut needs LOTS MORE rays
+•	Solution : use stac
+
+Use machine learning 
+•	The goal ; ML all the things
+•	 Ferwer rays :
+•	Lower resolution
+•	ML Deice
+
+Ray query 
+Ray query provide the basics (ability to cast rays)
+Accessible from existing shader stages 
+ATraversal results returned to user shader (user shader coordinates what)
+
+Ray Tracing :
+Pipeline is pure ray tracing (hardware managed traversal, hardware managed ray scheduling, hardware managed shader dispatch)
+
+Trasering a million triangles:
+ How do we traverse our scene geometry (millions of rays).
+
+Acceleration structure constains geometery (bounding volume hierarchy, triangles in the leaft nodes)
+Design enables efficient traversal (skip subtree if no volume intersection)
+
+BLAS and TLAS
+acceleration structure  Spilt in two levels (bottom-level acceleration structure (BLAS), Top-level acceleration structure (TLAS)).
+BLAS constains geometry for an object 
+
+Construction best practice :
+Application influeunces AS 
+Gemotery grouping into a BLAS
+Gemotery Orientataion in a BLAS
+
+Traversal best practice:
+Application can limit hit selection
+Facing test
+Opaque Only
+
+On Mobile?
+ Ar hardware since Immortalis-G715 (2022)
+Hybrid rendering running
+
+RTUv2 : next generation ray tracing unit
+Leap in mobile ray tracing performance 
+From mali G1-ultra
+Optimized for the rise of real-time ray tracing in mobile 
+	Shited from packed to single ray model 
+
+RTU (Ray Tracing Unit)
+Introduction to Arm Neutral Technology
+
+What is Neutral Graphics?Why Neural Graphics?
+
+Definition : Neural Graphics COMBINES Machine Learning (ML) with the Graphics Rendering Pipeline.
+
+Neural Technology :
+Neural Accelerators in Arm GPUs
+ML Etensions for the vulkan Graphics API
+ 
+NPU Accelerators coming to Arm GPUs in 2026:
+NPU-class HW embedded in the GPU
+High efficiency, high throughput
+
+Neural Graphics-Use Cases:
+Neural super sampling (NSS) 
+Neural Frame Rate Upscaling (NFRU)
+Neural Super Sampling and Denoising (NSDD)
+
+•	Super Resolution Evolution (Spatial Upscaling, Temporal Upscaling, Neural Upscaling)
+•	Super Resolution Evolution: Spatial Super Sampling (Anti-Aliased Render – Tone Mapping – Upscaler – Post-Processing – User Interface)
+•	Super Resolution Evolution : Temporal Super Sampling
+•	Temporal Super Sampling Through Neural Technology 
+
+Neural Super Sampling (NSS)
+Implemented as a Kernel Prediction Network.
+•	Mildenhall et.al described how to stabilies an denise frames using KPNs.
+
+Open Standars and Model : A unique approach to supporting innovation across the industry.
+Shaping the futureNeural Graphics is open to all
+Key Takeaway:
+Ray tracing fundamentals and techniques
+Efficient mobile ray tracing
+ML in the rendering pipeline
+Neural technology on Mali
+
+ 
+                                                                          Christian Jardine
+                                                        Getting Started Building on Arm (Education Resources)
+Everything you need to lean, build and innovate (Learn, Experiment, Build, Optimize, Explore, Connect).
+Arm Learning Paths (reproducible tutorials teaching developers how to build better software, faster, on Arm) https://learn.arm.com/
+
+•	For all software developers
+•	Learn by doing
+•	Written by the community
+Arm developer labs : project spotlight
+Alwys-on-AI with the Ethos-U85 NPU
+Media Provenance in the Age of Ai 
+Edge AI on-device w/SME2
+Windows on Arm Porting Challenges
+
+Arm Developer Docs : Technical guidance to understand Arm Architecture.
+•	Find the right reference 
+•	Build with confidance
+
+Arm Software and tools : Build, debug, profile and optimize software across Arm-powered platfroms.
+•	Develop on Arm (Access dompilers, IDEs and embedded development environments).
+•	Understand performance (use profiling and analysis tools to identify bottlenecks across CPU and GPU).
+•	Optimize with evidence (debug workloads and validate improvements with developer tooling).
+
+Arm Community : Connect with developers and Arm expert through discussions, blogs and technical guidance.
+•	Be part of the Community (
+•	Learn from engineers
+•	Share what you build 
+Arm Developer Videos : watch technical walkthroughs, demonstrations and engineering 
+
+
+ 
+                                                                                  Graciela Lin
+                                                            Quick Start Guide for Arm On Demand Training Portal
+
+Arm Training for Indonesia 
+•	Technical training created by experienced Arm Engineers, delivered when and where you want it
+Astria Nur Irfansyah (ICDC)
+Semiconductor ecosystem development in indonesia & how you can be part of it
+Design : IC Design Fabless Companies, EDA Tools
+Manufacturing : Front-end Fab / Foundry, Back-end Assembly, Testing, Packaging
+Indonesia Chip Design Collaborative Center : 21+ universities, Industry, Talent development, technology access
+
+
+
+
+

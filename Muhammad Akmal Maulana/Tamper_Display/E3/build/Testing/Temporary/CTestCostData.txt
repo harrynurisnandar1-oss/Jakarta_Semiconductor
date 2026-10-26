@@ -1,0 +1,6 @@
+Integration_E3_Demo 3 0.00646683
+Unit_E3_Display_Tamper 3 0.0053662
+Unit_E3_Power_Relay 5 0.00342078
+Unit_E3_FSM_Statechart 5 0.00365902
+Unit_E3_Load_Profile 5 0.00303412
+---

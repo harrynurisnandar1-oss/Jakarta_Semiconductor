@@ -1,6 +1,6 @@
 # Paket Pekerjaan Pilar E3 &ndash; Application, HMI Display, Tamper Manager & RTOS Orchestrator
 
-Folder ini berisi seluruh kode sumber, pengujian unit, driver pendukung, dan dokumentasi arsitektur untuk **Pilar E3 (Engineer 3 / Application & System Integration Lead)** pada proyek Smart Meter 3-Fasa berbasis mikrokontroler STM32U585/STM32U575 dan standar **SPLN D3.006: 2021**.
+Folder ini berisi seluruh kode sumber, pengujian unit, driver pendukung, dan dokumentasi arsitektur untuk **Pilar E3 (Engineer 3 / Display & Tamper Lead)** pada proyek Smart Meter 3-Fasa berbasis mikrokontroler STM32U585/STM32U575 dan standar **SPLN D3.006: 2021**.
 
 ---
 

@@ -120,3 +120,183 @@ ARM IoT ML Software Stack:
 Ethos-U : Open-source backend
 Cortex-M : CMSIS-NN acceleration
 Cortex-A : KleidiAI via XNNPack
+
+
+                                                                    Joddy Tjakrawinata (Nicslab)
+                                                            Design, control, and scale integrated photonics
+                                                    Co-Packaged Electronic Control for Photonic Integrated Circuit
+Who we are : A fabless deep-tech company building tools for photonics and semicontuctor systems.
+Application : AI, Data centers.
+The Beginning : Large instruments, Expensive setup, power-hungry, manual process.
+Our Products : control systems, driver/DACs, and automation for photonic chips.
+Purpose-built electronic control in photonic system : XDAC Series (scalable multi-channel source measurement), mini-ATE, XSOM. 
+Nislab provides customized multichannel control-stack solutions tailored to specific PIC systems 
+
+
+                                                            Yun Yi (Application Engineer Arm)
+                                                                Cortex-A CPU Deep-dive
+                                                              Part ll – DSU and Cortex-A76
+DSU (DynamlQ Shared Unit) 
+•	DSU (v8) is the 1st generation of DynamlQ shared unit.
+•	DSU specification versions supported.
+•	DSU Configuration of Cores (Maximal 8 cores in total).
+DSU Memory Interfaces 
+•	Manager interface :ACE5 or CHI protocol
+•	Subordinate interface : ACP 
+DSU – ACE Manager Interface 
+•	DSU can be implemented with one or two CHI interfaces (AMBA 5 CHI protocol).
+•	Two interfaces give greater bandwidth for memory transactions.
+DSU-ACP Subordinate Interface 
+•	ACP interface conforms subset of ACE5-Lite specifitaction
+DSU-AXI Manager Peripheral Port
+•	Provides low-latency access to tightly coupled devices.
+DSU L3 Cache
+L3 Cache Overview 
+•	L3 cache sizes: 256KB 512KB 1MB 1.5 MB 2MB 3MB or 4 MB
+L3 Cache Features
+•	Dynamically optimized cache allocation policy: exclusive allocation (data is allocated only in 1 core), Inclusive allocation (data is shared between cores)
+•	Cache stashing : On CHI interface , On ACP interface.
+L3 Cache Features - Partitioning 
+•	L3 Cache supports partitioning scheme: Achieved by groups of cache ways and partition scheme IDs alters victim selection policy.
+•	Private to one Scheme ID, or To more than one Scheme IDs, or To be left unassigned, can be shared by all 8 Scheme IDs
+•	Each core must be assigned to at laeast 1 Scheme ID
+L3 Cache Features – Cache Slices & ECC
+•	L3 cache ECC:
+SECDEC ECC on the L3 data RAMs (per 64 bit)
+DSU Clocks and Power Management
+•	DSU supports clock, voltage, and power domains that can be controlled by external logic
+DSU Clock, Voltage and Power Domains 
+•	Voltage domains 
+•	
+DSU Power Management 
+•	On mode : normal mode of operation where all the core and DSU functionality is available
+•	P-Channels : Allow external power controller to set power mode of cluster
+DSU and Cortex-A76 – WFI, WFE instructions 
+•	Cores can request entry to Low-Power state using WFI (Wait for interrupt)
+DSU CPU Bridges
+•	Control buffering and synchronization between cores and DSU
+•	Spilt with (1 half
+Debug DSU DebugBlock and Debug Methods
+ATCLK domain – PCLK domain (APB max) – DebugBlock
+External Debug  
+Debug host
+Protocol converter 
+Debug target
+Debug Unit 
+Assist debugging of software 
+
+DSU DebugBlock 
+•	DebugBlock includes 3 APB 
+RAS (Reliability, Availability, and Serviceability)
+•	CortexA76 cache protection capability.
+•	SED, Interleaved parity.
+PMU (Performance Monitor Unit)
+PMU interfaces and counters:
+Evenet interface 
+System registers
+Counters
+PMU interrups: DSU asserts nCLUSTERPMUIRQ signal when PMU generates an interrupt can be used by external 
+DSU GIC Interface
+Interrupt interface (GIC signals) :
+FIQ
+IRQ
+VFIQ
+VIRQ
+VCPUMNTIRQ 
+AMBA ACE5 or AMBA 5 CHI main bus interface
+Optional 128 bit & 64 bit.
+Cortex-A76 Introduction
+•	Cortex-A76 is designed to be with DSU
+•	Isa support (A64, A32 and T32 (at EL0 ONLY)
+•	Extensions (ARMv8.1)
+•	Performance uploft c.f. previous cores. 
+IFU (Instruction Fetch Unit):
+•	Fetches instruction from L1 instruction cache
+•	IFU includes:
+A 64KB, 4-way, set associative L1
+A fully associative L1 instruction TLB with native support 
+A dynamic branch predictor
+Cortex-A76 - Decode, Rename Issue:
+•	Instruction decode unit (supports the A32, T32, and A64 instruction sets)
+•	Register rename unit (performance register renaming to facilitate out0of-ordr execution)
+•	Instruction issue unit (Include issue queues for storing instruction)
+Execution pipeline, L1 and L2 memory system 
+•	Execution pipeline : integer execute unit that performs arithmetic and logical data processing operations.
+•	L1 data memory system
+•	L2 data memory system (An 8-way set associative L2 cache with data ECC)
+Configuration parameters : there are 4 other parameters on ELA, POP, Ram and PBHA.
+
+Cortex-A76 - Micro-architecture summary 
+Cortex-A76- Memory Management Unit (MMU)
+Virtual Address Space (ARM Core, MMU(TLBs , Table walk unit))
+Physical Address Space (Caches, Memory (Translation Tables))
+
+How a physical addess is formed? 
+Top bits of VA identify which block is being accessed, used to index translation table. 
+
+MMU
+TLB hot (matched cached translation) in L1 TLB provides single CLK cycle translation and returning PA for cache comparison.
+L2 TLB : Handles misses from instruction and data L1 TLBs.
+
+MMU performs an L1 TLB lookup for rewuested VA (With ASID,VMID and translation regime)
+If miss in L1 TLBs (With ASID,VMID and translation regime)
+if miss in L2 TLB (if MMU enabled and trans. Not disabled) 
+
+Summary :
+•	Arm DSU v8 (DynamlQ Shared Unit) designed for flexible multi-core 
+
+
+
+
+
+
+                                                                       Dr. Adi Saputra (PERURI)
+                                                                        Chip e-Paspor PERURI
+                                                                Membangun kedaulata chip identifikasi nasional
+
+Mandat & peluang nasional
+Riset & Use case e-Paspor
+Sandbox, 
+Desain mandiri menjaga data biometric bangsa : Zero-Trust, Anti-Backdoor, Kontrol Nasional.
+Teknologi Paspor elektronik republic Indonesia 
+Isi sebuah chip e-Paspor  (AFE AF, CPU, ROM, RAM, RNM, Crypto engine, TRNG, Sensor).
+Arsitektur keamanan & fitur utama e-paspr: Chipset, data biometric terenskiripsi, operating system, polkarbonat/cover, secutiy object (SOD), Global interoperability.
+Kedaulatan Silikon Indonesia (Desain, validasi, kolaborasi).
+4 momentum mengubah visi menjadi platform nyata (kesepakatan-talenta-hilirisasi-eksekusi). (Danantara x arm, pelatihan chip, peruri x ITB, Peluncuran Sandbox Chip).
+Penguasaaan desain chip menjaga nilai strategis di Indonesia (Hemat devisa, pekerjaan high-value, posisi strategis).
+Kebutuhan talenta dan entry point di Industri Semikonduktor : System Archtecture, Digital Design (RTL),  Verification, Phycial Design
+Sandbox chip merah putih hadir sebagai rumah kolaborasi bagi akademisi, industry
+Agentic AI & DevOps Memampatkan Siklus desain ke Validasi (desai,  RTL - vertifikasi - validasi).
+
+Sandbox Chip Merah Putih 
+
+
+
+
+                                                                  Christion Jarden 
+                                                          Software Engineer, Developer Relations
+•	100% of the connected global population.
+•	More than 350 billion Arm-based chips shipped to date.
+•	More than 22 million software developers on Arm.
+•	Only Arm has the breadth for Edge AI technologies, from sensors to smartphones. Arm provides the architecture and ecosystem to deploy AI everywhere efficiently.
+•	Trillions of tokens (used to develop OpenAI).
+Demo: Alif Ensemble E8 DevKit
+•	Arm-based CPU: A32 + 2 × MSS
+•	NPU: Ethos-U85 + 2 × Ethos-U55
+Yang tadi didemokan:
+•	A next-generation endpoint AI platform delivering transformer-class and ambient AI workloads at ultra-low power, enabling intelligent IoT, wearables, sensors, and battery-powered devices to run advanced models directly on the edge.
+The Edge Constraints
+•	More inference
+•	More contextual data
+•	Always-on
+•	Limited power
+•	Real-time execution
+•	Finite resources
+Can useful AI fit within a compute, memory and power budget?
+•	Edge AI
+•	Local by design
+•	Powered by Arm
+
+
+
+

@@ -76,7 +76,7 @@
 
 > > > * Exception Level pada AArch64
 
-  **AArch64** menyediakan 4 tingkat pengecualian, yaitu **EL0, EL1, EL2, dan** EL3, yang memiliki tingkat hak akses berbeda.
+  **AArch64** menyediakan 4 tingkat pengecualian, yaitu **EL0, EL1, EL2, dan EL3**, yang memiliki tingkat hak akses berbeda.
 
   EL0 digunakan untuk aplikasi.
 
@@ -152,10 +152,9 @@
 
   ***Graphics Rendering Pipeline***
 
-  ![][image1]
+<img width="842" height="277" alt="Rendering Pipeline" src="https://github.com/user-attachments/assets/b79214f3-1cd7-445e-9eff-7135c16776b9" />
 
-
-  ![][image2]
+<img width="772" height="82" alt="GPU architecture" src="https://github.com/user-attachments/assets/fdbcbbd9-60fc-4873-840a-b335e5166a95" />
 
   **Gambar 2.1 Proses *rendering pipeline***
 
@@ -195,7 +194,8 @@
 
    **Kurva Daya Prosessor**
 
-   ![][image3]
+<img width="880" height="450" alt="Processor Power Curva" src="https://github.com/user-attachments/assets/d1bf7ac0-7047-48d9-b6eb-46454be3328b" />
+
 
    **Gambar 2.2 Grafik *performance versus power*.**
 
@@ -243,7 +243,7 @@
 
 2.7 **What Arm Technology Enables**
 
-   Christion Jardine*, Software engineer, Developer relations*
+   Christion Jardine, Software engineer, Developer relations
 
    Teknologi Arm dan Perkembangan AI
 
@@ -251,7 +251,7 @@
 * Kebutuhan komputasi AI terus meningkat, termasuk penggunaan AI pada perangkat secara lokal (*on-device AI*) 🡪 mendukung pemrosesan dengan keterbatasan daya, memori, dan kebutuhan respons waktu nyata.  
   **Alif Ensemble E8 DevKit**  
 > > > * Alif Ensemble E8 DevKit merupakan platform pengembangan sistem embedded yang menggabungkan prosesor berbasis Arm dengan akselerator neural network untuk aplikasi AI.  
-> > > * CPU**: Arm Cortex-A32** dan **dua prosesor Arm Cortex-M55**.  
+> > > * CPU: Arm Cortex-A32 dan **dua prosesor Arm Cortex-M55**.  
 > > > * NPU: **satu Arm Ethos-U85** dan **dua Arm Ethos-U55**.  
 > > > * Fungsi CPU: menjalankan program utama, mengatur sistem, dan mengoordinasikan pekerjaan AI.  
 > > > * Fungsi NPU: mempercepat komputasi neural network untuk menjalankan inferensi AI secara efisien.

@@ -1,0 +1,21 @@
+08:08 30/10/2026 melakuakn warm up 
+
+08:23 30/10/2026 Melakuan pengujian pada docker,ctest dan melakukan Analisa dan mengecek security-rules yang sudah dibuat.
+
+09:02 30/10/2026 Meriview fitur terkait SPLN D3.006:2021
+
+10:08 30/10/2026 Mengupdate dan melakukan pengujian pada gurux
+
+11:08 30/10/2026 Menambah fitur key pada dengan HLS 5 sesuai dengan standar NIST
+
+11:30 30/10/2026 Menambhahkan OBIS kedalam GURUX DIRECTOR
+
+13:08 30/10/2026 Melakukan pengujian akhir pada firmware untuk mentape out firmware prototype dengan memakai DLMS DIRECTOR "Conformace Test" dan memasukan semua OBIS untuk objek hanya membaca atau read only
+
+13:50 30/10/2026 Membagi firmware untuk prototype dan product akhir.
+
+14:20 30/10/2026 menidentifikasi fitur pada sprint 2 dan Security rules yang telah dibuat
+
+15:20 30/10/2026 Melakukan perkerjaan
+
+16:10 30/10/2026 Melakukan test hosting dengan CTEST

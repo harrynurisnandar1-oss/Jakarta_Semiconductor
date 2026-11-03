@@ -1,0 +1,2 @@
+08:04 26/10/2026 Penambahan dan perbaikan dari Pin yang digunakan
+09:55 26/10/2026 Penyesuaian program dengan pin yang digunakan dan fitur lainnya

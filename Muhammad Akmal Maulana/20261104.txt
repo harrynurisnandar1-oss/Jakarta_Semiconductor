@@ -1,0 +1,5 @@
+08:08 04/11/2026 Membuat Flowchart untuk Siklus Utama E3
+09:39 04/11/2026 Pembuatan Flowchart Untuk Sabotase & Relai 
+10:22 04/11/2026 Pembuatan Flowchart Tampilan HMI
+13.09 04/11/2026 Pembuatan Flowchart Listrik Padam & Stop 2
+14:26 04/11/2026 Pembuatan Flowchart BOOTSTRAPPING & KEAMANAN TRUSTZONE

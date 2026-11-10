@@ -1,0 +1,2 @@
+Drafting the documentation for Subsystem 2, specifically section 3.3.2.1: Host MCU Selection. This section covers the selection of the STM32U585VIT6 from STMicroelectronics as the host MCU.
+Exploring and testing Protoflow AI Copilot. I used it to cross-reference the schematic design against the datasheet, serving as a validation step to ensure there are no discrepancies or errors.

@@ -1,0 +1,9 @@
+08:00 09/11/2026 Warm up pekerjaan jumaat,
+
+08:22 09/11/2026 Melakukan fix CVE/celah yang terdapat pada firmware
+
+08:44 09/11/2026 menambahkan coverage, mutation testing, negative testing, dan batas antara lulus pengujian dengan aman.
+
+09:08 09/11/2026 mengujicoba dahulu apakah bisa melakukan ujicoba security ke stm32u575vgt6 untuk sementara
+
+11:37 09/11/2026 Melakukan Debug dengan ST-LINK dan ditampilkan di PuTTY

@@ -1,0 +1,1 @@
+Finishing the schematic design documentation for subsystem 1 (Shield 2) in the system design document after the revision process, covering subsections 3.4.1.4 to 3.4.1.8.

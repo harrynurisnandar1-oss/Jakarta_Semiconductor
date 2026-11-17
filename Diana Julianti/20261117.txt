@@ -1,0 +1,2 @@
+3.4.2 Subsystem 2
+3.4.2.1 Design of the MCU Core Circuit and Power Supply Distribution

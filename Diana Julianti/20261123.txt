@@ -1,0 +1,3 @@
+Addition of a subsection on Hardware Design and Component Selection in B.300.
+Correction of all chapter/subsection, table, and figure numbering in B.300 (completed).
+Revision of the formatting and numbering of tables, subsections, and figures in B.200 (all, completed).

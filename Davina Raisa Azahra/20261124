@@ -1,0 +1,15 @@
+# DAILY REPORT 24 NOV 2026
+
+## Task
+- Melakukan penelusuran sumber referensi standar untuk rumus-rumus pada dokumen parameter metrologi (display, data historikal, load profile, dan instant profile).
+- Melakukan revisi rumus serta standardisasi simbol variabel dan indeks fasa agar selaras dengan konvensi SPLN.
+
+## Activities
+- Melakukan penelusuran referensi standar internasional untuk memverifikasi rumus-rumus yang digunakan seperti daya semu 3 fasa, metode penjumlahan aljabar ekspor-impor, serta rumus THD arus.
+- Melakukan revisi pada beberapa rumus yang kurang sesuai dan menyeragamkan simbol variabel mengikuti konvensi penulisan di SPLN (seperti penggunaan simbol VA untuk daya semu dan VAR untuk daya reaktif) meskipun rumus bersumber dari standar lain, guna menjaga konsistensi tampilan display.
+- Menyesuaikan indeks variabel pada rumus agar spesifik merujuk pada parameter fasa yang dicari (R, S, atau T).
+- Mencatat bagian yang masih memerlukan penelusuran sumber lebih lanjut, yaitu rumus TDD dan rumus frekuensi berdasarkan jumlah siklus gelombang penuh.
+
+## Issues
+- Belum menemukan dokumen sumber referensi yang memuat secara eksplisit rumus Total Demand Distortion (TDD).
+- Sumber referensi untuk rumus frekuensi berdasarkan jumlah siklus gelombang penuh masih belum ditemukan.

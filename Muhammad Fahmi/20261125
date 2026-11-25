@@ -1,0 +1,44 @@
+# Daily Journal — 25 November 2026
+
+## 1. Today's Work Plan
+- Melaksanakan *daily meeting* pagi hari untuk menentukan *today's work plan* dan prioritas revisi dokumen **B.300 Desain Sistem**.
+- Merevisi **Subsistem 3 (Catu Daya Multikanal dan Manajemen Energi Cadangan) pada Level 2**, khususnya bagian tabel fungsi.
+- Merevisi **Subsistem 4 (Kompartemen Komunikasi Modular dan Porta Optik Lokal)** dari Level 1 hingga Level 2, termasuk tabel, penjelasan, dan *block diagram*.
+- Menyiapkan landasan untuk tahap selanjutnya, yaitu perancangan skematik.
+
+## 2. Activities
+- **Daily Meeting & Koordinasi:** Mengikuti rapat rutin pagi untuk menetapkan target kerja harian dan pembagian progres revisi dokumen desain sistem.
+- **Revisi Subsistem 3 Level 2 (Tabel 3.14 sampai 3.18):**
+  - Memeriksa kesesuaian *Gambar 3.3* terhadap tabel fungsi dan keseimbangan antarmuka dengan Level 1 (IF-01 masuk; IF-12, IF-13, dan IF-16 sebagai kondisi stres/uji; keluaran REL-S3-S1, S2, S4, S5, S6, dan S7).
+  - Memecah **Tabel 3.15 bagian Keluaran** yang semula menumpuk enam aliran daya dalam satu butir menjadi delapan butir terpisah dengan format seragam (*"[Daya, ke Subsistem X]"*). Memperbaiki salah ketik penamaan aliran (*REL S3-S2* menjadi *REL-S3-S2*) dan tanda baca yang hilang.
+  - Menyelaraskan penamaan keluaran status ke Subsistem 2 dan 7 (PFAIL_N, BATLOW_N, ERR06) pada **Tabel 3.18**, serta merapikan lompatan penomoran tabel.
+  - Menyelaraskan alur daya IF-17 dengan keputusan terbaru: Subsistem 3 menyuplai daya modem eksternal (12 VDC ±5%, ≤ 5 W) langsung, tanpa diteruskan melalui Subsistem 4.
+- **Revisi Subsistem 4 Level 1 hingga Level 2:**
+  - Memeriksa keseimbangan masukan dan keluaran antara **Tabel 2.6 (Level 1)** dan tabel fungsi Level 2 (antarmuka serial kompartemen modem, port optik inframerah lokal, serta proteksi ESD dan isolasi antarmuka).
+  - Mengidentifikasi ketidakkonsistenan pada dokumen terbaru (*update_6*):
+    - *Gambar 3.4* masih memakai fungsi lama (modul telemetri dan penyaluran catu daya yang sudah tidak ada di tabel).
+    - IF-17 data masuk didefinisikan di dua fungsi sekaligus.
+    - Keluaran fungsi proteksi ESD belum berupa sinyal bernama.
+    - Panjang gelombang optik belum seragam (550–1.000 nm pada spesifikasi, 800–1.000 nm pada tabel, 850–950 nm pada teks Level 1).
+    - Sinyal MOD_PWR_EN belum memiliki tujuan yang valid.
+  - Membuat ulang *block diagram* Subsistem 4 Level 2 di **draw.io** dengan gaya blok putih dan hanya panah yang berwarna, serta panah dua arah (Level 2 tidak harus mengikuti kaidah masukan kiri dan keluaran kanan).
+- **Pemeriksaan FSM Siklus Daya dan Mode Operasi Sistem:** Merumuskan teks pengganti pada Tabel FSM untuk kondisi baterai bermasalah (simbol baterai berkedip, pencatatan ERR03 pada *Alarm Log*, dan LED kuning aktif). Merumuskan juga pernyataan bahwa modem (IF-17) dan keluaran bantu tidak dijamin tersedia saat pasokan utama padam.
+- **Dokumentasi dan Serah Terima:** Menyusun ekspor seluruh hasil review (daftar kesalahan, lokasi halaman, teks pengganti, dan sumber diagram draw.io) dalam bentuk PDF agar dapat dilanjutkan di akun lain.
+- **Lampiran Dokumen & Diagram:**
+  - **Level 2 Architecture:**
+    1. Subsistem 3 *(revisi tabel selesai, diagram dalam proses penyelarasan ulang dengan keputusan IF-17)*
+    2. Subsistem 4: [Lihat Dokumen Subsistem 4](https://drive.google.com/file/d/1R6O8_k2PgyGTcP3c9P5LBAFkVVbaGJsj/view?usp=sharing)
+
+## 3. Comments, Questions, Complaints
+
+## Comments
+- Pemeriksaan silang antara tabel Level 1, tabel Level 2, dan *block diagram* menunjukkan bahwa penamaan antarmuka (REL-Sx-Sy, INT-xx, PWR-xx) perlu dipakai konsisten agar tidak menimbulkan kesalahan integrasi pada tahap skematik.
+- Pembuatan *block diagram* di **draw.io** mempermudah revisi berulang ketika dokumen desain diperbarui (*update_5* ke *update_6*), karena perubahan cukup dilakukan pada file sumber diagram.
+
+## Questions
+- Apakah sinyal **MOD_PWR_EN** (kendali nyala modem dari Subsistem 2) tetap dipertahankan? Saat ini sinyal tersebut masih ada di tabel Subsistem 2 tetapi tidak diterima oleh Subsistem 3 maupun 4.
+- Rentang panjang gelombang port optik mana yang dijadikan acuan: 550–1.000 nm (spesifikasi B.200) atau 800–1.000 nm (tabel desain)?
+
+## Complaints
+- Gambar blok pada dokumen Word (*Gambar 2.5, 2.6, 3.3, dan 3.4*) masih berupa versi lama, sehingga setiap revisi tabel harus diperiksa ulang terhadap diagram.
+- Konteks percakapan yang panjang menyebabkan sebagian riwayat awal harus diringkas, sehingga hasil review perlu diekspor dan didokumentasikan secara terpisah.

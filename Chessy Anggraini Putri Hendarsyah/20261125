@@ -1,0 +1,17 @@
+1. Today's Work Plan
+- Mengikuti briefing harian bersama tim ODM Semiconductor.
+- Merancang dan menambahkan rangkaian proteksi surja (surge protection circuit) pada skematik PCB Subsistem 1.
+- Memperbaiki dan melengkapi skematik PCB Subsistem 1, khususnya pada bagian Current Channels, Voltage Input, dan rangkaian pendukung IC ADE9000.
+
+2. Activities (Objective)
+- Mengikuti kegiatan evaluasi bulanan yang diselenggarakan oleh HC PT Len Industri (Persero) untuk membahas pelaksanaan dan perkembangan kegiatan magang, PKL, KP, dan program terkait lainnya.
+- Mengikuti briefing harian bersama tim ODM Semiconductor untuk memperoleh informasi mengenai koordinasi dan perkembangan pekerjaan tim.
+- Merancang serta menambahkan rangkaian proteksi surja pada skematik PCB Subsistem 1 sebagai upaya melindungi rangkaian dari tegangan transien.
+- Memperbaiki dan melengkapi skematik PCB Subsistem 1 pada bagian Current Channels dan Voltage Input.
+- Melengkapi rangkaian pendukung IC ADE9000 yang meliputi decoupling capacitor, pull-up resistor, rangkaian reset, dan rangkaian crystal.
+
+3. Comments, Questions, Complaints (Subjective)
+- Memperoleh pemahaman mengenai penyusunan skematik PCB yang terstruktur dan mudah ditelusuri, mulai dari pengaturan net classes hingga pengelompokan rangkaian berdasarkan blok fungsional untuk mempermudah proses debugging.
+- Memahami fungsi penggunaan resistor 0 ohm pada desain PCB, antara lain sebagai komponen penghubung yang dapat dilepas untuk mengisolasi jalur tertentu, mempermudah proses pengujian dan debugging, serta memberikan fleksibilitas dalam konfigurasi rangkaian.
+- Koneksi internet di ruang kerja yang cukup lambat menjadi salah satu kendala karena menghambat kelancaran pekerjaan.
+- Skematik PCB Subsistem 1 masih memerlukan beberapa perbaikan dan penyesuaian, terutama pada bagian rangkaian catu daya (*power supply*). Oleh karena itu, diperlukan peninjauan lebih lanjut agar rangkaian dapat memenuhi kebutuhan dan spesifikasi sistem.

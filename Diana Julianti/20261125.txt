@@ -1,0 +1,6 @@
+Activity Description:
+
+The day began with a team briefing. Afterward, I refined the text in document B.300 and converted the manual table and figure numbering into an automated system, ensuring that numbers update automatically whenever the content changes—eliminating the need for manual adjustments. I also consolidated various flowcharts, which were previously scattered across different locations, into a single, centralized folder on the team drive, making them easier to locate and keeping the workspace organized.
+
+Key Takeaways:
+Today’s tasks highlighted that using automated numbering for tables and figures ensures document consistency and saves time, as both the numbers and their corresponding references adjust automatically whenever content is added or modified. Furthermore, I learned that centralizing file management-such as storing all flowcharts in one shared team drive—simplifies retrieval, minimizes the risk of files being misplaced or duplicated, and ensures that all team members are working with the same, up-to-date version.

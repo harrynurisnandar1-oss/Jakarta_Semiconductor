@@ -15,4 +15,4 @@ ACTIVITIES :
 
 
 COMMENT :
-Yang saya dapatkan dari pengalaman beberapa hari ini yang masih terbilang awal, ada banyak pelajaran dari proses desain produk ini. Untuk betul-betul merancang produk yang kompleks dan butuh pembagian subsistem, kenyataannya butuh kesabaran dari sisi manusianya sendiri untuk mau belajar detail desainnya. Sehingga, saat proses yang paling penting dilakukan, kita bisa memahami kosntrain desain dan kebutuhannya secara akurat.
+Yang saya dapatkan dari pengalaman beberapa hari ini yang masih terbilang awal, ada banyak pelajaran dari proses desain produk ini. Untuk betul-betul merancang produk yang kompleks dan butuh pembagian subsistem, kenyataannya butuh kesabaran dari sisi manusianya sendiri untuk mau belajar detail desainnya. Sehingga, saat proses yang paling penting dilakukan (analisis interkoneksi dengan subsistem lain, layout, etc), kita bisa memahami kosntrain desain dan kebutuhannya secara akurat.
